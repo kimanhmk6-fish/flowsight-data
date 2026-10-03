@@ -1,0 +1,18 @@
+fmea_code,fmea_category,fmea_description,station_id,severity,occurrence,detection,rpn,rpn_threshold,recommended_action
+FMEA-M2-001,TOOL_WEAR,Mòn khuôn ép,STN-M2,8,3,4,96,MEDIUM,Đổi khuôn định kỳ
+FMEA-M2-002,TOOL_JAM,Kẹt khuôn,STN-M2,7,2,3,42,LOW,Vệ sinh khuôn
+FMEA-M2-003,FORCE_DEVIATION,Lệch lực ép,STN-M2,7,2,4,56,MEDIUM,Hiệu chuẩn loadcell
+FMEA-M1-001,TOOL_WEAR,Mòn dao CNC,STN-M1,6,3,3,54,MEDIUM,Đổi dao định kỳ
+FMEA-M1-002,TOOL_VIBRATION,Rung dao CNC,STN-M1,6,3,3,54,MEDIUM,Cân bằng trục
+FMEA-M1-003,TOOL_BREAKAGE,Gãy dao,STN-M1,9,1,2,18,LOW,Giám sát tải
+FMEA-HT-001,TEMP_DEVIATION,Lệch nhiệt độ lò,STN-HT,9,3,5,135,HIGH,Hiệu chuẩn thermocouple
+FMEA-HT-002,TIME_DEVIATION,Lệch thời gian mẻ,STN-HT,6,2,3,36,LOW,Kiểm tra timer
+FMEA-AS1-001,TORQUE_DEVIATION,Lệch mô-men robot,STN-AS1,7,2,4,56,MEDIUM,Hiệu chuẩn sensor
+FMEA-AS2-001,OPERATOR_ERROR,Lỗi thao tác thủ công,STN-AS2,5,3,2,30,LOW,Đào tạo lại
+FMEA-T1-001,VOLTAGE_DROP,Sụt áp máy test,STN-T1,7,2,3,42,LOW,Ổn định nguồn
+FMEA-LAB-001,MEASUREMENT_ERROR,Sai số đo LAB,STN-LAB,5,2,2,20,LOW,Hiệu chuẩn thiết bị
+FMEA-SUP-001,SUPPLIER_QUALITY,Lỗi vật tư NCC,,8,3,4,96,MEDIUM,Kiểm tra đầu vào
+FMEA-SUP-002,MATERIAL_BATCH,Lô vật tư lỗi,,9,2,6,108,HIGH,Truy xuất containment
+FMEA-DATA-001,LABEL_DUPLICATION,Trùng nhãn Lot,STN-HT,7,2,3,42,LOW,Kiểm tra scan 2 lần
+FMEA-COMB-001,COMBINED_CAUSES,Nguyên nhân kết hợp,,6,2,4,48,LOW,Phân tích đa biến
+FMEA-UNKNOWN,INSUFFICIENT_EVIDENCE,Chưa đủ bằng chứng,,0,0,0,0,NA,Kiểm tra thủ công

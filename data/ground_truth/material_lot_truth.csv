@@ -1,0 +1,4 @@
+mat_lot_id,component_id,supplier_code,qty_received,received_day,received_ts
+MAT-C1-0917-01,COMP-C1,NCC-X,5000,D0,2026-09-29T07:00:00
+MAT-C3-0917-02,COMP-C3,NCC-X,5000,D0,2026-09-29T07:00:00
+MAT-C4-0917-01,COMP-C4,NCC-Y,3000,D0,2026-09-29T07:00:00

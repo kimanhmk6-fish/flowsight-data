@@ -1,0 +1,21 @@
+{
+  "D01": {
+    "detected_offset_min": -4.0,
+    "tolerance_sec": 15
+  },
+  "D02": {
+    "missing_scans_detected": 100,
+    "entity_restoration_rate": 0.95
+  },
+  "D03": {
+    "duplicates_detected": 4,
+    "duplicate_rate": 0.01
+  },
+  "D04": {
+    "schema_drift_detected": true,
+    "mapped_columns": {
+      "M\u00e3 l\u00f4": "lot_id",
+      "Gi\u00e1 tr\u1ecb": "value"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+component_id,component_name,supplier_code,lead_time_days,safety_stock_qty,uom,inspection_required,fmea_code_supplier
+COMP-C1,Trục thép chính,NCC-X,3.0,3000,pcs,True,
+COMP-C2,Vòng bi loại A,NCC-X,3.0,2000,pcs,True,
+COMP-C3,Phớt cao su đặc biệt,NCC-X,5.0,1500,pcs,True,FMEA-SUP-001
+COMP-C4,Keo công nghiệp loại B,NCC-Y,4.0,800,kg,False,
+COMP-C5,Đai ốc inox M8,NCC-Y,4.0,5000,pcs,False,
+COMP-C6,Vật liệu đệm chống rung,NCC-Z,7.0,600,pcs,True,

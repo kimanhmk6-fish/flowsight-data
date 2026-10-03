@@ -1,0 +1,32 @@
+routing_id,product_id,seq_no,station_id,std_cycle_time_s,yield_rate,scrap_rate,is_bottleneck,is_optional,notes
+RT-P1-01,PROD-P1,1,STN-INB,60.0,1.0,0.0,False,False,Nhập kho
+RT-P1-02,PROD-P1,2,STN-M1,28.0,0.999,0.001,False,False,CNC
+RT-P1-03,PROD-P1,3,STN-M2,36.0,0.9985,0.0015,True,False,Ép - Bottleneck
+RT-P1-04,PROD-P1,4,STN-HT,7200.0,0.9975,0.0025,False,False,Nhiệt luyện
+RT-P1-05,PROD-P1,5,STN-AS1,42.0,0.998,0.002,False,False,Robot AS1
+RT-P1-06,PROD-P1,6,STN-T1,15.0,0.9995,0.0005,False,False,Test tự động
+RT-P1-07,PROD-P1,7,STN-PK,45.0,0.9995,0.0005,False,False,Đóng gói
+RT-P1-08,PROD-P1,8,STN-SHP,120.0,1.0,0.0,False,False,Xuất hàng
+RT-P2-01,PROD-P2,1,STN-INB,60.0,1.0,0.0,False,False,
+RT-P2-02,PROD-P2,2,STN-M1,32.0,0.999,0.001,False,False,
+RT-P2-03,PROD-P2,3,STN-M2,36.0,0.9985,0.0015,True,False,Bottleneck
+RT-P2-04,PROD-P2,4,STN-HT,7200.0,0.9975,0.0025,False,False,
+RT-P2-05,PROD-P2,5,STN-AS1,45.0,0.998,0.002,False,False,
+RT-P2-06,PROD-P2,6,STN-T1,15.0,0.9995,0.0005,False,False,
+RT-P2-07,PROD-P2,7,STN-LAB,900.0,0.999,0.001,False,True,Mẫu 10%
+RT-P2-08,PROD-P2,8,STN-PK,45.0,0.9995,0.0005,False,False,
+RT-P2-09,PROD-P2,9,STN-SHP,120.0,1.0,0.0,False,False,
+RT-P3-01,PROD-P3,1,STN-INB,60.0,1.0,0.0,False,False,
+RT-P3-02,PROD-P3,2,STN-M1,30.0,0.999,0.001,False,False,
+RT-P3-03,PROD-P3,3,STN-HT,7200.0,0.9975,0.0025,False,False,
+RT-P3-04,PROD-P3,4,STN-AS2,55.0,0.9965,0.0035,False,False,Thủ công Line B
+RT-P3-05,PROD-P3,5,STN-T1,15.0,0.9995,0.0005,False,False,
+RT-P3-06,PROD-P3,6,STN-PK,45.0,0.9995,0.0005,False,False,
+RT-P3-07,PROD-P3,7,STN-SHP,120.0,1.0,0.0,False,False,
+RT-P4-01,PROD-P4,1,STN-INB,60.0,1.0,0.0,False,False,
+RT-P4-02,PROD-P4,2,STN-M1,32.0,0.999,0.001,False,False,
+RT-P4-03,PROD-P4,3,STN-HT,7200.0,0.9975,0.0025,False,False,
+RT-P4-04,PROD-P4,4,STN-AS2,58.0,0.9965,0.0035,False,False,
+RT-P4-05,PROD-P4,5,STN-LAB,900.0,0.999,0.001,False,False,
+RT-P4-06,PROD-P4,6,STN-PK,45.0,0.9995,0.0005,False,False,
+RT-P4-07,PROD-P4,7,STN-SHP,120.0,1.0,0.0,False,False,

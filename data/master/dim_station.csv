@@ -1,0 +1,11 @@
+station_id,station_name,line_id,stage,station_type,rated_rate_per_h,cycle_time_s,is_shared,is_bottleneck,spare_capacity_h_per_day,changeover_time_s,fmea_code_primary,spc_characteristics
+STN-INB,Trạm nhập kho linh kiện,SHARED,INBOUND,MANUAL,,60.0,True,False,4.0,0.0,FMEA-INB-001,material_receipt_rate
+STN-M1,Máy phay CNC M1,A,MACHINING,MACHINE,128.57,28.0,False,False,1.5,600.0,FMEA-M1-001,Đường kính trục
+STN-M2,Máy ép thủy lực M2,A,MACHINING,MACHINE,100.0,36.0,False,True,2.5,1800.0,FMEA-M2-001,Lực ép
+STN-HT,Lò nhiệt luyện HT (dùng chung),SHARED,MACHINING,BATCH,20.0,7200.0,True,False,1.0,3600.0,FMEA-HT-001,Độ cứng
+STN-AS1,Lắp ráp robot AS1,A,ASSEMBLY,MACHINE,85.71,42.0,False,False,1.0,900.0,FMEA-AS1-001,Mô-men xoắn
+STN-AS2,Lắp ráp thủ công AS2,B,ASSEMBLY,MANUAL,65.45,55.0,False,False,0.5,1200.0,FMEA-AS2-001,Mô-men xoắn
+STN-T1,Máy test tự động T1,A,QC,TEST,240.0,15.0,False,False,2.0,300.0,FMEA-T1-001,Kích thước tổng thể
+STN-LAB,Phòng đo LAB,SHARED,QC,TEST,,900.0,True,False,3.0,0.0,FMEA-LAB-001,Độ cứng
+STN-PK,Đóng gói PK,SHARED,PACKING,MANUAL,,45.0,True,False,2.0,120.0,FMEA-PK-001,
+STN-SHP,Bến xuất hàng SHP,SHARED,SHIPPING,TRANSPORT,,120.0,True,False,0.5,0.0,FMEA-SHP-001,

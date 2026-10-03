@@ -1,0 +1,14 @@
+{
+  "case_id": "R01",
+  "expected_result": {
+    "top_cause": "MAT-C3-0917-02",
+    "cause_type": "MATERIAL",
+    "fmea_code": "FMEA-SUP-001",
+    "rpn": 96,
+    "confidence": 0.92,
+    "isolate_lots": [
+      "LOT-0403",
+      "LOT-0404"
+    ]
+  }
+}

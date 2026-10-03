@@ -1,0 +1,5 @@
+product_id,product_name,product_family,uom,target_daily_qty,customer_code,active_flag,assembly_line_primary,changeover_group
+PROD-P1,Sản phẩm truyền động A,Drivetrain,pcs,900,KHACH_X,True,A,GROUP_12
+PROD-P2,Sản phẩm truyền động B,Drivetrain,pcs,572,KHACH_Y,True,A,GROUP_12
+PROD-P3,Sản phẩm phụ trợ C,Auxiliary,pcs,400,KHACH_Z,True,B,GROUP_34
+PROD-P4,Sản phẩm phụ trợ D,Auxiliary,pcs,300,KHACH_W,True,B,GROUP_34

@@ -1,0 +1,17 @@
+{
+  "case_id": "F01",
+  "expected_result": {
+    "jt_late": [
+      "JT-0231"
+    ],
+    "shortfall_qty": 100,
+    "P_late": 0.995,
+    "affected_lots": [
+      "LOT-0147",
+      "LOT-0148"
+    ],
+    "fmea_code": "FMEA-M2-001",
+    "rpn": 96,
+    "recommended_action": "resequencing + OT2"
+  }
+}
