@@ -12,7 +12,7 @@ HOURS_PER_SHIFT = 8
 # TARGET VOLUMES (±10%)
 # ============================================================
 TARGET_LOTS = 410
-TARGET_EVENTS = 5000
+TARGET_EVENTS = 3000
 TARGET_QC = 950
 TARGET_INCIDENTS = 20
 TARGET_JT_ORDERS = 45
