@@ -1,0 +1,22 @@
+{
+  "case_id": "R08",
+  "case_group": "BACKWARD",
+  "expected_result": {
+    "top_cause": "SUPPLIER_MAT",
+    "cause_type": "MATERIAL",
+    "fmea_code": "FMEA-SUP-002",
+    "rpn": 108,
+    "confidence": 0.93,
+    "isolate_lots": [
+      "LOT-0235"
+    ],
+    "evidence_chain": [
+      "SHP-1010-1",
+      "JT-0235",
+      "LOT-0235",
+      "customer_feedback"
+    ],
+    "shipment_id": "SHP-1010-1",
+    "detected_after_delivery": true
+  }
+}

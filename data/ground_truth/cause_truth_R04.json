@@ -1,0 +1,19 @@
+{
+  "case_id": "R04",
+  "case_group": "BACKWARD",
+  "expected_result": {
+    "top_cause": "STN-AS2",
+    "cause_type": "HUMAN",
+    "fmea_code": "FMEA-AS2-001",
+    "rpn": 30,
+    "confidence": 0.65,
+    "isolate_lots": [
+      "LOT-0240"
+    ],
+    "evidence_chain": [
+      "STN-AS2",
+      "shift_change",
+      "LOT-0240"
+    ]
+  }
+}

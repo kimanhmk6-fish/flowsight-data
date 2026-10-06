@@ -1,0 +1,23 @@
+{
+  "case_id": "F05",
+  "case_group": "FORWARD",
+  "expected_result": {
+    "jt_late": [
+      "JT-0235"
+    ],
+    "shortfall_qty": 150,
+    "P_late": 0.97,
+    "affected_lots": [
+      "LOT-0401",
+      "LOT-0402",
+      "LOT-0403",
+      "LOT-0404",
+      "LOT-0405"
+    ],
+    "fmea_code": "FMEA-HT-001",
+    "rpn": 135,
+    "recommended_action": "quarantine batch + review furnace",
+    "station_id": "STN-HT",
+    "duration_h": 8.0
+  }
+}

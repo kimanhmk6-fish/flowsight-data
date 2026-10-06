@@ -1,0 +1,19 @@
+{
+  "case_id": "F11",
+  "case_group": "FORWARD",
+  "expected_result": {
+    "jt_late": [
+      "JT-0231"
+    ],
+    "shortfall_qty": 60,
+    "P_late": 0.75,
+    "affected_lots": [
+      "LOT-0231"
+    ],
+    "fmea_code": "FMEA-COMB-001",
+    "rpn": 48,
+    "recommended_action": "multivariate analysis",
+    "station_id": "STN-M2",
+    "duration_h": 4.0
+  }
+}

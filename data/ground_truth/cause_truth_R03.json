@@ -1,0 +1,24 @@
+{
+  "case_id": "R03",
+  "case_group": "BACKWARD",
+  "expected_result": {
+    "top_cause": "STN-HT",
+    "cause_type": "PROCESS",
+    "fmea_code": "FMEA-HT-001",
+    "rpn": 135,
+    "confidence": 0.95,
+    "isolate_lots": [
+      "LOT-0401",
+      "LOT-0402",
+      "LOT-0403",
+      "LOT-0404",
+      "LOT-0405"
+    ],
+    "evidence_chain": [
+      "STN-LAB",
+      "BATCH-HT-B07",
+      "STN-HT",
+      "temp_deviation"
+    ]
+  }
+}

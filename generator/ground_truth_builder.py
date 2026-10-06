@@ -95,6 +95,17 @@ def build_jt_orders() -> pd.DataFrame:
             "due_ts": (start_d + timedelta(days=d_day, hours=10)).strftime("%Y-%m-%dT%H:%M:%S"),
             "priority": "URGENT" if i == 12 else "NORMAL", "customer": "KHACH_X", "status": "OPEN"
         })
+        special_jts = [
+        ("JT-0231", "PROD-P1", "A", 900, "D1",  "2026-09-30T10:00:00", "URGENT", "KHACH_X", "OPEN"),
+        ("JT-0235", "PROD-P2", "A", 600, "D10", "2026-10-09T10:00:00", "NORMAL", "KHACH_Y", "OPEN"),
+        ]
+        for jt_id, p_id, line, qty, due_day, due_ts, prio, cust, status in special_jts:
+            rows.append({
+                "jt_id": jt_id, "product_id": p_id, "line_id": line,
+                "qty": qty, "due_day": due_day, "due_ts": due_ts,
+                "priority": prio, "customer": cust, "status": status
+            })
+
     df = pd.DataFrame(rows)
     df.to_csv(Path(GT_DIR) / "jt_order_truth.csv", index=False)
     return df
@@ -161,11 +172,12 @@ def build_incident_truth() -> pd.DataFrame:
         ("INC-0013", "STN-AS2", "2026-09-30T16:00:00", "2026-09-30T16:30:00", 0.5, "FMEA-SUP-001", 96, "HIGH", "MATERIAL", "LOT-0403,LOT-0404", "R01"),
         ("INC-0014", "STN-M1", "2026-10-06T14:00:00", "2026-10-06T14:30:00", 0.5, "FMEA-M1-001", 54, "MEDIUM", "MACHINE", "", "R02"),
         ("INC-0015", "STN-HT", "2026-09-30T18:00:00", "2026-09-30T18:30:00", 0.5, "FMEA-HT-001", 135, "CRITICAL", "PROCESS", "LOT-0401,LOT-0402,LOT-0403,LOT-0404,LOT-0405", "R03"),
-        ("INC-0016", "STN-AS2", "2026-10-06T14:00:00", "2026-10-06T14:15:00", 0.25, "FMEA-AS2-001", 30, "LOW", "HUMAN", "LOT-1050", "R04"),
+        ("INC-0016", "STN-AS2", "2026-10-06T14:00:00", "2026-10-06T14:15:00", 0.25, "FMEA-AS2-001", 30,  "LOW",      "HUMAN",        "LOT-0240", "R04"),
         ("INC-0017", "STN-HT", "2026-09-30T10:00:00", "2026-09-30T10:30:00", 0.5, "FMEA-DATA-001", 42, "MEDIUM", "DATA_QUALITY", "LOT-0403,LOT-0404", "R05"),
-        ("INC-0018", "STN-AS2", "2026-10-07T10:00:00", "2026-10-07T10:30:00", 0.5, "FMEA-COMB-001", 48, "MEDIUM", "COMBINED", "LOT-1060", "R06"),
-        ("INC-0019", "STN-LAB", "2026-10-08T14:00:00", "2026-10-08T14:30:00", 0.5, "FMEA-UNKNOWN", 0, "UNKNOWN", "UNKNOWN", "LOT-1070", "R07"),
-        ("INC-0020", "STN-SHP", "2026-10-10T10:00:00", "2026-10-10T10:30:00", 0.5, "FMEA-SUP-002", 108, "CRITICAL", "MATERIAL", "LOT-1080", "R08")
+        ("INC-0018", "STN-AS2", "2026-10-07T10:00:00", "2026-10-07T10:30:00", 0.5,  "FMEA-COMB-001", 48, "MEDIUM",   "COMBINED",     "LOT-0232", "R06"),
+        ("INC-0019", "STN-LAB", "2026-10-08T14:00:00", "2026-10-08T14:30:00", 0.5,  "FMEA-UNKNOWN", 0,   "UNKNOWN",  "UNKNOWN",      "LOT-0300", "R07"),
+        ("INC-0020", "STN-SHP", "2026-10-10T10:00:00", "2026-10-10T10:30:00", 0.5,  "FMEA-SUP-002", 108, "CRITICAL", "MATERIAL",     "LOT-0235", "R08"),
+
     ]
     cols = ["incident_id", "station_id", "start_time", "end_time", "duration_h", "fmea_code", "rpn", "severity_level", "root_cause_type", "affected_lots", "test_case_link"]
     df = pd.DataFrame(incidents, columns=cols)
@@ -187,43 +199,210 @@ def build_entity_mapping(factory) -> pd.DataFrame:
     return df
 
 def build_24_test_case_answers():
-    f01 = {
-        "case_id": "F01",
-        "expected_result": {
-            "jt_late": ["JT-0231"],
-            "shortfall_qty": 100,
-            "P_late": 0.995,
+    
+    ###Sinh đủ 24 test case JSON, chỉ dùng lot/JT hợp lệ với ground truth hiện có:
+    ###LOT: chỉ LOT-0001..LOT-0410
+    ###JT-0231/JT-0235: giữ (đã có trong shipment + allocation — special case F01)
+    ###R04-R08: map lot ảo cũ (1050/1060/1070/1080) → lot thật cùng ngữ cảnh
+    
+    impact_cases = {
+        "F01": {
+            "jt_late": ["JT-0231"], "shortfall_qty": 100, "P_late": 0.995,
             "affected_lots": ["LOT-0147", "LOT-0148"],
-            "fmea_code": "FMEA-M2-001",
-            "rpn": 96,
-            "recommended_action": "resequencing + OT2"
-        }
+            "fmea_code": "FMEA-M2-001", "rpn": 96,
+            "recommended_action": "resequencing + OT2",
+            "station_id": "STN-M2", "duration_h": 8.0,
+        },
+        "F02": {
+            "jt_late": ["JT-0231"], "shortfall_qty": 50, "P_late": 0.92,
+            "affected_lots": ["LOT-0147"],
+            "fmea_code": "FMEA-M2-001", "rpn": 64,
+            "recommended_action": "monitor + buffer",
+            "station_id": "STN-M2", "duration_h": 4.0,
+        },
+        "F03": {
+            "jt_late": ["JT-0231", "JT-0235"], "shortfall_qty": 200, "P_late": 0.998,
+            "affected_lots": ["LOT-0231", "LOT-0235"],
+            "fmea_code": "FMEA-M2-001", "rpn": 128,
+            "recommended_action": "expedite + OT3",
+            "station_id": "STN-M2", "duration_h": 12.0,
+        },
+        "F04": {
+            "jt_late": [], "shortfall_qty": 0, "P_late": 0.15,
+            "affected_lots": [],
+            "fmea_code": "FMEA-M1-002", "rpn": 54,
+            "recommended_action": "routine maintenance",
+            "station_id": "STN-M1", "duration_h": 8.0,
+        },
+        "F05": {
+            "jt_late": ["JT-0235"], "shortfall_qty": 150, "P_late": 0.97,
+            "affected_lots": ["LOT-0401", "LOT-0402", "LOT-0403", "LOT-0404", "LOT-0405"],
+            "fmea_code": "FMEA-HT-001", "rpn": 135,
+            "recommended_action": "quarantine batch + review furnace",
+            "station_id": "STN-HT", "duration_h": 8.0,
+        },
+        "F06": {
+            "jt_late": [], "shortfall_qty": 0, "P_late": 0.20,
+            "affected_lots": ["LOT-0240"],
+            "fmea_code": "FMEA-AS2-001", "rpn": 30,
+            "recommended_action": "retrain operator",
+            "station_id": "STN-AS2", "duration_h": 8.0,
+        },
+        "F07": {
+            "jt_late": [], "shortfall_qty": 0, "P_late": 0.10,
+            "affected_lots": [],
+            "fmea_code": "FMEA-T1-001", "rpn": 42,
+            "recommended_action": "stabilize power supply",
+            "station_id": "STN-T1", "duration_h": 8.0,
+        },
+        "F08": {
+            "jt_late": ["JT-0231"], "shortfall_qty": 80, "P_late": 0.88,
+            "affected_lots": ["LOT-0232"],
+            "fmea_code": "FMEA-M2-001", "rpn": 96,
+            "recommended_action": "loadcell calibration",
+            "station_id": "STN-M2", "duration_h": 8.0,
+        },
+        "F09": {
+            "jt_late": ["JT-0231"], "shortfall_qty": 180, "P_late": 0.96,
+            "affected_lots": ["LOT-0231", "LOT-0232"],
+            "fmea_code": "FMEA-M2-001", "rpn": 96,
+            "recommended_action": "combined resequencing",
+            "station_id": "STN-M2", "duration_h": 8.0,
+        },
+        "F10": {
+            "jt_late": ["JT-0231"], "shortfall_qty": 120, "P_late": 0.94,
+            "affected_lots": ["LOT-0231"],
+            "fmea_code": "FMEA-M2-001", "rpn": 96,
+            "recommended_action": "tool replacement",
+            "station_id": "STN-M2", "duration_h": 8.0,
+        },
+        "F11": {
+            "jt_late": ["JT-0231"], "shortfall_qty": 60, "P_late": 0.75,
+            "affected_lots": ["LOT-0231"],
+            "fmea_code": "FMEA-COMB-001", "rpn": 48,
+            "recommended_action": "multivariate analysis",
+            "station_id": "STN-M2", "duration_h": 4.0,
+        },
+        "F12": {
+            "jt_late": ["JT-0231", "JT-0235"], "shortfall_qty": 220, "P_late": 0.99,
+            "affected_lots": ["LOT-0231", "LOT-0235"],
+            "fmea_code": "FMEA-M2-001", "rpn": 96,
+            "recommended_action": "emergency maintenance + OT4",
+            "station_id": "STN-M2", "duration_h": 8.0,
+        },
     }
-    with open(Path(GT_DIR) / "impact_truth_F01.json", "w", encoding="utf-8") as f:
-        json.dump(f01, f, indent=2)
 
-    r01 = {
-        "case_id": "R01",
-        "expected_result": {
-            "top_cause": "MAT-C3-0917-02",
-            "cause_type": "MATERIAL",
-            "fmea_code": "FMEA-SUP-001",
-            "rpn": 96,
-            "confidence": 0.92,
-            "isolate_lots": ["LOT-0403", "LOT-0404"]
-        }
+    cause_cases = {
+        "R01": {
+            "top_cause": "MAT-C3-0917-02", "cause_type": "MATERIAL",
+            "fmea_code": "FMEA-SUP-001", "rpn": 96, "confidence": 0.92,
+            "isolate_lots": ["LOT-0403", "LOT-0404"],
+            "evidence_chain": ["PK-2207", "STN-AS2", "LOT-0403", "BATCH-HT-B07", "MAT-C3-0917-02"],
+        },
+        "R02": {
+            "top_cause": "STN-M1", "cause_type": "MACHINE",
+            "fmea_code": "FMEA-M1-001", "rpn": 54, "confidence": 0.78,
+            "isolate_lots": [],
+            "evidence_chain": ["STN-M1", "Cpk_drift"],
+        },
+        "R03": {
+            "top_cause": "STN-HT", "cause_type": "PROCESS",
+            "fmea_code": "FMEA-HT-001", "rpn": 135, "confidence": 0.95,
+            "isolate_lots": ["LOT-0401", "LOT-0402", "LOT-0403", "LOT-0404", "LOT-0405"],
+            "evidence_chain": ["STN-LAB", "BATCH-HT-B07", "STN-HT", "temp_deviation"],
+        },
+        "R04": {
+            "top_cause": "STN-AS2", "cause_type": "HUMAN",
+            "fmea_code": "FMEA-AS2-001", "rpn": 30, "confidence": 0.65,
+            "isolate_lots": ["LOT-0240"],
+            "evidence_chain": ["STN-AS2", "shift_change", "LOT-0240"],
+        },
+        "R05": {
+            "top_cause": "LABEL_DUPLICATION", "cause_type": "DATA_QUALITY",
+            "fmea_code": "FMEA-DATA-001", "rpn": 42, "confidence": 0.88,
+            "isolate_lots": ["LOT-0403", "LOT-0404"],
+            "evidence_chain": ["SRC-03", "duplicate_qr", "LOT-0403", "LOT-0404"],
+        },
+        "R06": {
+            "top_cause": "COMBINED", "cause_type": "COMBINED",
+            "fmea_code": "FMEA-COMB-001", "rpn": 48, "confidence": 0.72,
+            "isolate_lots": ["LOT-0232"],
+            "evidence_chain": ["STN-AS2", "STN-M2", "LOT-0232"],
+        },
+        "R07": {
+            "top_cause": "UNKNOWN", "cause_type": "UNKNOWN",
+            "fmea_code": "FMEA-UNKNOWN", "rpn": 0, "confidence": 0.30,
+            "isolate_lots": ["LOT-0300"],
+            "evidence_chain": ["STN-LAB", "LOT-0300"],
+        },
+        "R08": {
+            "top_cause": "SUPPLIER_MAT", "cause_type": "MATERIAL",
+            "fmea_code": "FMEA-SUP-002", "rpn": 108, "confidence": 0.93,
+            "isolate_lots": ["LOT-0235"],
+            "evidence_chain": ["SHP-1010-1", "JT-0235", "LOT-0235", "customer_feedback"],
+            "shipment_id": "SHP-1010-1",
+            "detected_after_delivery": True,
+        },
     }
-    with open(Path(GT_DIR) / "cause_truth_R01.json", "w", encoding="utf-8") as f:
-        json.dump(r01, f, indent=2)
 
-    dh = {
-        "D01": {"detected_offset_min": -4.0, "tolerance_sec": 15},
-        "D02": {"missing_scans_detected": 100, "entity_restoration_rate": 0.95},
-        "D03": {"duplicates_detected": 4, "duplicate_rate": 0.01},
-        "D04": {"schema_drift_detected": True, "mapped_columns": {"Mã lô": "lot_id", "Giá trị": "value"}}
+    data_health_cases = {
+        "D01": {
+            "description": "Clock offset & drift detection",
+            "detected_offset_min": -4.0,
+            "tolerance_sec": 15,
+            "affected_stations": ["STN-M2", "STN-AS2"],
+            "drift_per_day_sec": {"STN-M2": 2.0, "STN-AS2": -1.5},
+        },
+        "D02": {
+            "description": "Missing scan restoration",
+            "missing_scans_detected": 100,
+            "entity_restoration_rate": 0.95,
+            "affected_stations": ["STN-HT", "STN-AS1", "STN-AS2", "STN-T1"],
+            "critical_lots_with_gaps": ["LOT-0147", "LOT-0148", "LOT-0403", "LOT-0404"],
+        },
+        "D03": {
+            "description": "Duplicate lot label detection",
+            "duplicates_detected": 4,
+            "duplicate_rate": 0.01,
+            "affected_lots": ["LOT-0403", "LOT-0404"],
+        },
+        "D04": {
+            "description": "Schema drift detection in Excel",
+            "schema_drift_detected": True,
+            "drift_day": 9,
+            "sheet_name": "Day_9",
+            "mapped_columns": {
+                "Mã lô": "lot_id",
+                "Giá trị": "value",
+                "Đặc tính": "characteristic",
+                "Ngày đo": "measured_date",
+                "Mã trạm": "station_id",
+                "Người kiểm tra": "inspector",
+            },
+        },
     }
-    with open(Path(GT_DIR) / "data_health_truth.json", "w", encoding="utf-8") as f:
-        json.dump(dh, f, indent=2)
+
+    for case_id, expected in impact_cases.items():
+        payload = {"case_id": case_id, "case_group": "FORWARD", "expected_result": expected}
+        with open(Path(GT_DIR) / f"impact_truth_{case_id}.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+
+    for case_id, expected in cause_cases.items():
+        payload = {"case_id": case_id, "case_group": "BACKWARD", "expected_result": expected}
+        with open(Path(GT_DIR) / f"cause_truth_{case_id}.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+
+    for case_id, expected in data_health_cases.items():
+        payload = {"case_id": case_id, "case_group": "DATA", "expected_result": expected}
+        with open(Path(GT_DIR) / f"data_health_truth_{case_id}.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+
+    old = Path(GT_DIR) / "data_health_truth.json"
+    if old.exists():
+        old.unlink()
+
+    print("  ✓ Đã sinh 24 test case JSON: 12 F + 8 R + 4 D")
+
 
 def main(factory):
     print("=" * 60)

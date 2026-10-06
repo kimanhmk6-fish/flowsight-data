@@ -1,0 +1,21 @@
+{
+  "case_id": "D02",
+  "case_group": "DATA",
+  "expected_result": {
+    "description": "Missing scan restoration",
+    "missing_scans_detected": 100,
+    "entity_restoration_rate": 0.95,
+    "affected_stations": [
+      "STN-HT",
+      "STN-AS1",
+      "STN-AS2",
+      "STN-T1"
+    ],
+    "critical_lots_with_gaps": [
+      "LOT-0147",
+      "LOT-0148",
+      "LOT-0403",
+      "LOT-0404"
+    ]
+  }
+}

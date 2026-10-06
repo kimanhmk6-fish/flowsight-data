@@ -1,0 +1,18 @@
+{
+  "case_id": "R07",
+  "case_group": "BACKWARD",
+  "expected_result": {
+    "top_cause": "UNKNOWN",
+    "cause_type": "UNKNOWN",
+    "fmea_code": "FMEA-UNKNOWN",
+    "rpn": 0,
+    "confidence": 0.3,
+    "isolate_lots": [
+      "LOT-0300"
+    ],
+    "evidence_chain": [
+      "STN-LAB",
+      "LOT-0300"
+    ]
+  }
+}

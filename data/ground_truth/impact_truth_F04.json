@@ -1,0 +1,15 @@
+{
+  "case_id": "F04",
+  "case_group": "FORWARD",
+  "expected_result": {
+    "jt_late": [],
+    "shortfall_qty": 0,
+    "P_late": 0.15,
+    "affected_lots": [],
+    "fmea_code": "FMEA-M1-002",
+    "rpn": 54,
+    "recommended_action": "routine maintenance",
+    "station_id": "STN-M1",
+    "duration_h": 8.0
+  }
+}

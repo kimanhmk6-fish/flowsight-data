@@ -1,0 +1,19 @@
+{
+  "case_id": "R06",
+  "case_group": "BACKWARD",
+  "expected_result": {
+    "top_cause": "COMBINED",
+    "cause_type": "COMBINED",
+    "fmea_code": "FMEA-COMB-001",
+    "rpn": 48,
+    "confidence": 0.72,
+    "isolate_lots": [
+      "LOT-0232"
+    ],
+    "evidence_chain": [
+      "STN-AS2",
+      "STN-M2",
+      "LOT-0232"
+    ]
+  }
+}

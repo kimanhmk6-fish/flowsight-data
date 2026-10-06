@@ -1,0 +1,16 @@
+{
+  "case_id": "R02",
+  "case_group": "BACKWARD",
+  "expected_result": {
+    "top_cause": "STN-M1",
+    "cause_type": "MACHINE",
+    "fmea_code": "FMEA-M1-001",
+    "rpn": 54,
+    "confidence": 0.78,
+    "isolate_lots": [],
+    "evidence_chain": [
+      "STN-M1",
+      "Cpk_drift"
+    ]
+  }
+}

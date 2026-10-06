@@ -1,5 +1,6 @@
 {
   "case_id": "R01",
+  "case_group": "BACKWARD",
   "expected_result": {
     "top_cause": "MAT-C3-0917-02",
     "cause_type": "MATERIAL",
@@ -9,6 +10,13 @@
     "isolate_lots": [
       "LOT-0403",
       "LOT-0404"
+    ],
+    "evidence_chain": [
+      "PK-2207",
+      "STN-AS2",
+      "LOT-0403",
+      "BATCH-HT-B07",
+      "MAT-C3-0917-02"
     ]
   }
 }

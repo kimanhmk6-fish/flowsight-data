@@ -1,19 +1,20 @@
 {
-  "case_id": "F01",
+  "case_id": "F12",
   "case_group": "FORWARD",
   "expected_result": {
     "jt_late": [
-      "JT-0231"
+      "JT-0231",
+      "JT-0235"
     ],
-    "shortfall_qty": 100,
-    "P_late": 0.995,
+    "shortfall_qty": 220,
+    "P_late": 0.99,
     "affected_lots": [
-      "LOT-0147",
-      "LOT-0148"
+      "LOT-0231",
+      "LOT-0235"
     ],
     "fmea_code": "FMEA-M2-001",
     "rpn": 96,
-    "recommended_action": "resequencing + OT2",
+    "recommended_action": "emergency maintenance + OT4",
     "station_id": "STN-M2",
     "duration_h": 8.0
   }

@@ -1,0 +1,21 @@
+{
+  "case_id": "R05",
+  "case_group": "BACKWARD",
+  "expected_result": {
+    "top_cause": "LABEL_DUPLICATION",
+    "cause_type": "DATA_QUALITY",
+    "fmea_code": "FMEA-DATA-001",
+    "rpn": 42,
+    "confidence": 0.88,
+    "isolate_lots": [
+      "LOT-0403",
+      "LOT-0404"
+    ],
+    "evidence_chain": [
+      "SRC-03",
+      "duplicate_qr",
+      "LOT-0403",
+      "LOT-0404"
+    ]
+  }
+}

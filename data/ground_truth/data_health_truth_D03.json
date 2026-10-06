@@ -1,0 +1,13 @@
+{
+  "case_id": "D03",
+  "case_group": "DATA",
+  "expected_result": {
+    "description": "Duplicate lot label detection",
+    "duplicates_detected": 4,
+    "duplicate_rate": 0.01,
+    "affected_lots": [
+      "LOT-0403",
+      "LOT-0404"
+    ]
+  }
+}

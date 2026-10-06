@@ -1,0 +1,17 @@
+{
+  "case_id": "D01",
+  "case_group": "DATA",
+  "expected_result": {
+    "description": "Clock offset & drift detection",
+    "detected_offset_min": -4.0,
+    "tolerance_sec": 15,
+    "affected_stations": [
+      "STN-M2",
+      "STN-AS2"
+    ],
+    "drift_per_day_sec": {
+      "STN-M2": 2.0,
+      "STN-AS2": -1.5
+    }
+  }
+}

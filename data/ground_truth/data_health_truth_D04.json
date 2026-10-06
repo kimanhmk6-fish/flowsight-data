@@ -1,0 +1,18 @@
+{
+  "case_id": "D04",
+  "case_group": "DATA",
+  "expected_result": {
+    "description": "Schema drift detection in Excel",
+    "schema_drift_detected": true,
+    "drift_day": 9,
+    "sheet_name": "Day_9",
+    "mapped_columns": {
+      "Mã lô": "lot_id",
+      "Giá trị": "value",
+      "Đặc tính": "characteristic",
+      "Ngày đo": "measured_date",
+      "Mã trạm": "station_id",
+      "Người kiểm tra": "inspector"
+    }
+  }
+}
