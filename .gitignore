@@ -27,3 +27,8 @@ env/
 .DS_Store
 Thumbs.db
 desktop.ini
+# Data output (sinh ra bởi pipeline — không commit)
+data/staged/
+data/curated/
+data/mart/
+data/audit/
