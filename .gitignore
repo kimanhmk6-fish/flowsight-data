@@ -1,34 +1,5 @@
-# Python
+﻿.venv/
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-dist/
-*.egg-info/
-.eggs/
-# Virtual environment
-.venv/
-venv/
-ENV/
-env/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Jupyter
-.ipynb_checkpoints/
-
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
-# Data output (sinh ra bởi pipeline — không commit)
+*.pyc
 data/staged/
-data/curated/
-data/mart/
 data/audit/
