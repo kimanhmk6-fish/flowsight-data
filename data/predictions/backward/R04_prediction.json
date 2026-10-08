@@ -1,0 +1,15 @@
+{
+  "case_id": "R04",
+  "incident_id": "INC-0016",
+  "lot_id_ng": "LOT-1050",
+  "qc_station": "STN-AS2",
+  "qc_characteristic": "Lực ép",
+  "steps": {
+    "step1_candidates": []
+  },
+  "status": "INSUFFICIENT_EVIDENCE",
+  "n_candidates": 0,
+  "message": "Không tìm thấy candidate nào",
+  "expected_cause": "STN-AS2",
+  "expected_type": "MACHINE"
+}

@@ -1,0 +1,15 @@
+{
+  "case_id": "R08",
+  "incident_id": "INC-0020",
+  "lot_id_ng": "LOT-1080",
+  "qc_station": "STN-SHP",
+  "qc_characteristic": "Lực ép",
+  "steps": {
+    "step1_candidates": []
+  },
+  "status": "INSUFFICIENT_EVIDENCE",
+  "n_candidates": 0,
+  "message": "Không tìm thấy candidate nào",
+  "expected_cause": "MATERIAL_BATCH_ISSUE",
+  "expected_type": "MATERIAL"
+}

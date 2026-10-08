@@ -1,0 +1,15 @@
+{
+  "case_id": "R07",
+  "incident_id": "INC-0019",
+  "lot_id_ng": "LOT-1070",
+  "qc_station": "STN-LAB",
+  "qc_characteristic": "Lực ép",
+  "steps": {
+    "step1_candidates": []
+  },
+  "status": "INSUFFICIENT_EVIDENCE",
+  "n_candidates": 0,
+  "message": "Không tìm thấy candidate nào",
+  "expected_cause": "INSUFFICIENT_EVIDENCE",
+  "expected_type": "UNKNOWN"
+}

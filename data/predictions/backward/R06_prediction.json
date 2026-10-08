@@ -1,0 +1,15 @@
+{
+  "case_id": "R06",
+  "incident_id": "INC-0018",
+  "lot_id_ng": "LOT-1060",
+  "qc_station": "STN-AS2",
+  "qc_characteristic": "Lực ép",
+  "steps": {
+    "step1_candidates": []
+  },
+  "status": "INSUFFICIENT_EVIDENCE",
+  "n_candidates": 0,
+  "message": "Không tìm thấy candidate nào",
+  "expected_cause": "COMBINED",
+  "expected_type": "COMBINED"
+}
