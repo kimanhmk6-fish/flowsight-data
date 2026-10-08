@@ -1,0 +1,2678 @@
+{
+  "step": "12A_forward_engine",
+  "run_at": "2026-10-08T15:08:00.001009Z",
+  "elapsed_sec": 0.45,
+  "n_cases": 12,
+  "n_with_jt_late": 12,
+  "results": [
+    {
+      "case_id": "F01",
+      "incident_id": "INC-0001",
+      "station_id": "STN-M2",
+      "duration_h": 8.0,
+      "start_ts": "2026-09-29T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-09-29 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-09-29 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0231"
+        ],
+        "shortfall_qty": 100
+      }
+    },
+    {
+      "case_id": "F02",
+      "incident_id": "INC-0002",
+      "station_id": "STN-M2",
+      "duration_h": 4.0,
+      "start_ts": "2026-09-30T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 4.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 368.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -68.0,
+            -318.0,
+            -1168.0,
+            -718.0,
+            -668.0,
+            -218.0,
+            232.0,
+            682.0,
+            1132.0,
+            1582.0,
+            2032.0,
+            2482.0,
+            2932.0,
+            3382.0
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3158.0,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3158.0,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 6328.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3173.8,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 12644.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1582.2,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3164.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3158.0,
+            "expected_shortage": 3421.3,
+            "std_shortage": 492.4,
+            "p50_shortage": 3373.5,
+            "p90_shortage": 4122.4,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-09-30 08:00:00",
+            "incident_duration_h": 4.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-09-30 12:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 368.0,
+        "total_shortage": 3158,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3421
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [],
+        "shortfall_qty": 0
+      }
+    },
+    {
+      "case_id": "F03",
+      "incident_id": "INC-0003",
+      "station_id": "STN-M2",
+      "duration_h": 12.0,
+      "start_ts": "2026-10-01T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 12.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 1104.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-01 08:00:00",
+            "incident_duration_h": 12.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-01 20:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 1104.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0231",
+          "JT-0235"
+        ],
+        "shortfall_qty": 350
+      }
+    },
+    {
+      "case_id": "F04",
+      "incident_id": "INC-0004",
+      "station_id": "STN-M1",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-02T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-02 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-02 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [],
+        "shortfall_qty": 0
+      }
+    },
+    {
+      "case_id": "F05",
+      "incident_id": "INC-0005",
+      "station_id": "STN-HT",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-03T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P3",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C4",
+              "qty_per_unit": 0.2,
+              "required": 737.3,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 2.0,
+              "required": 7307.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-03 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-03 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0231"
+        ],
+        "shortfall_qty": 100
+      }
+    },
+    {
+      "case_id": "F06",
+      "incident_id": "INC-0006",
+      "station_id": "STN-AS2",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-04T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P3",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C4",
+              "qty_per_unit": 0.2,
+              "required": 737.3,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 2.0,
+              "required": 7307.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-04 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-04 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [],
+        "shortfall_qty": 0
+      }
+    },
+    {
+      "case_id": "F07",
+      "incident_id": "INC-0007",
+      "station_id": "STN-T1",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-05T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-05 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-05 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [],
+        "shortfall_qty": 0
+      }
+    },
+    {
+      "case_id": "F08",
+      "incident_id": "INC-0008",
+      "station_id": "STN-M2",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-05T16:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-05 16:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-06 00:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0232"
+        ],
+        "shortfall_qty": 150
+      }
+    },
+    {
+      "case_id": "F09",
+      "incident_id": "INC-0009",
+      "station_id": "STN-M2",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-06T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-06 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-06 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0231",
+          "JT-0232"
+        ],
+        "shortfall_qty": 180
+      }
+    },
+    {
+      "case_id": "F10",
+      "incident_id": "INC-0010",
+      "station_id": "STN-M2",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-07T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-07 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-07 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0231"
+        ],
+        "shortfall_qty": 120
+      }
+    },
+    {
+      "case_id": "F11",
+      "incident_id": "INC-0011",
+      "station_id": "STN-M2",
+      "duration_h": 4.0,
+      "start_ts": "2026-10-08T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 4.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 368.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -68.0,
+            -318.0,
+            -1168.0,
+            -718.0,
+            -668.0,
+            -218.0,
+            232.0,
+            682.0,
+            1132.0,
+            1582.0,
+            2032.0,
+            2482.0,
+            2932.0,
+            3382.0
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3158.0,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3158.0,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 6328.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3173.8,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 12644.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1582.2,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3164.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3158.0,
+            "expected_shortage": 3421.3,
+            "std_shortage": 492.4,
+            "p50_shortage": 3373.5,
+            "p90_shortage": 4122.4,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-08 08:00:00",
+            "incident_duration_h": 4.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-08 12:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 368.0,
+        "total_shortage": 3158,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3421
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0231"
+        ],
+        "shortfall_qty": 60
+      }
+    },
+    {
+      "case_id": "F12",
+      "incident_id": "INC-0012",
+      "station_id": "STN-M2",
+      "duration_h": 8.0,
+      "start_ts": "2026-10-09T08:00:00",
+      "steps": {
+        "step1_qty_loss": {
+          "downtime_h": 8.0,
+          "rate_effective": 92.0,
+          "rate_source": "historical_median",
+          "qty_lost": 736.0,
+          "formula": "ΔQ = downtime_h × r_eff"
+        },
+        "step2_time_to_starve": {
+          "wip_buffer_qty": 80,
+          "downstream_rate": 85,
+          "time_to_starve_h": 0.94,
+          "note": "WIP từ buffer tại bottleneck",
+          "formula": "T_starve = WIP / throughput (Little's Law)"
+        },
+        "step3_netting": {
+          "opening_inventory": 450,
+          "baseline_trajectory": [
+            450,
+            300,
+            50,
+            -800,
+            -350,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300,
+            3750
+          ],
+          "incident_trajectory": [
+            450,
+            -150,
+            -400,
+            -1250,
+            -800,
+            -750,
+            -300,
+            150,
+            600,
+            1050,
+            1500,
+            1950,
+            2400,
+            2850,
+            3300
+          ],
+          "first_shortage_day": 1,
+          "total_shortage": 3650,
+          "formula": "I(t) = I(t-1) + P(t) - S(t)"
+        },
+        "step4_material_check": {
+          "product_id": "PROD-P1",
+          "required_qty": 3650,
+          "materials": [
+            {
+              "component_id": "COMP-C1",
+              "qty_per_unit": 2.0,
+              "required": 7314.6,
+              "available": "164000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C3",
+              "qty_per_unit": 1.0,
+              "required": 3668.2,
+              "available": "82000",
+              "sufficient": "True"
+            },
+            {
+              "component_id": "COMP-C5",
+              "qty_per_unit": 4.0,
+              "required": 14614.6,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C6",
+              "qty_per_unit": 0.5,
+              "required": 1828.7,
+              "available": "0",
+              "sufficient": "False"
+            },
+            {
+              "component_id": "COMP-C2",
+              "qty_per_unit": 1.0,
+              "required": 3657.3,
+              "available": "0",
+              "sufficient": "False"
+            }
+          ],
+          "all_sufficient": false,
+          "status": "shortage"
+        },
+        "step5_monte_carlo": [
+          {
+            "n_simulations": 20000,
+            "base_shortfall": 3650,
+            "expected_shortage": 3954.3,
+            "std_shortage": 569.1,
+            "p50_shortage": 3899.0,
+            "p90_shortage": 4764.7,
+            "p_late": 1.0,
+            "distribution": "triangular",
+            "dist_params": [
+              0.75,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "step6_cutoff": [
+          {
+            "jt_id": "JT-0001",
+            "incident_start": "2026-10-09 08:00:00",
+            "incident_duration_h": 8.0,
+            "recovery_time_h": 0.94,
+            "completion_time": "2026-10-09 16:56:24",
+            "cutoff_time": "2026-01-10 09:00:00",
+            "truck_time": "2026-01-10 10:00:00",
+            "kips": false,
+            "status": "LATE"
+          },
+          {
+            "jt_id": "JT-0005",
+            "status": "no_shipment_for_jt"
+          },
+          {
+            "jt_id": "JT-0009",
+            "status": "no_shipment_for_jt"
+          }
+        ]
+      },
+      "summary": {
+        "qty_lost": 736.0,
+        "total_shortage": 3650,
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "affected_lot_ids": [],
+        "recommended_action": "resequencing + OT2"
+      },
+      "expected": {
+        "jt_late": [
+          "JT-0231",
+          "JT-0235"
+        ],
+        "shortfall_qty": 220
+      }
+    }
+  ],
+  "evidence_cards": [
+    {
+      "claim_id": "CLAIM-F01",
+      "item": "Impact of INC-0001",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0001 tại STN-M2 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.813474Z"
+    },
+    {
+      "claim_id": "CLAIM-F02",
+      "item": "Impact of INC-0002",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 4.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 368.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0002 tại STN-M2 dừng 4.0h → mất 368 sp. Netting cho thấy tổng thiếu hụt 3158 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3421
+          }
+        ],
+        "total_shortage": 3158,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 368.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.838970Z"
+    },
+    {
+      "claim_id": "CLAIM-F03",
+      "item": "Impact of INC-0003",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 12.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 1104.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0003 tại STN-M2 dừng 12.0h → mất 1104 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 1104.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.851286Z"
+    },
+    {
+      "claim_id": "CLAIM-F04",
+      "item": "Impact of INC-0004",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0004 tại STN-M1 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.868576Z"
+    },
+    {
+      "claim_id": "CLAIM-F05",
+      "item": "Impact of INC-0005",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0005 tại STN-HT dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.889073Z"
+    },
+    {
+      "claim_id": "CLAIM-F06",
+      "item": "Impact of INC-0006",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0006 tại STN-AS2 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.899965Z"
+    },
+    {
+      "claim_id": "CLAIM-F07",
+      "item": "Impact of INC-0007",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0007 tại STN-T1 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.922728Z"
+    },
+    {
+      "claim_id": "CLAIM-F08",
+      "item": "Impact of INC-0008",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0008 tại STN-M2 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.937488Z"
+    },
+    {
+      "claim_id": "CLAIM-F09",
+      "item": "Impact of INC-0009",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0009 tại STN-M2 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.948271Z"
+    },
+    {
+      "claim_id": "CLAIM-F10",
+      "item": "Impact of INC-0010",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0010 tại STN-M2 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.966982Z"
+    },
+    {
+      "claim_id": "CLAIM-F11",
+      "item": "Impact of INC-0011",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 4.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 368.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0011 tại STN-M2 dừng 4.0h → mất 368 sp. Netting cho thấy tổng thiếu hụt 3158 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3421
+          }
+        ],
+        "total_shortage": 3158,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 368.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.986513Z"
+    },
+    {
+      "claim_id": "CLAIM-F12",
+      "item": "Impact of INC-0012",
+      "formula_used": [
+        "ΔQ = downtime_h × r_eff",
+        "T_starve = WIP / throughput",
+        "I(t) = I(t-1) + P(t) - S(t)",
+        "Shortfall ~ Triangular(a, m, b) × base"
+      ],
+      "inputs": [
+        {
+          "name": "downtime_h",
+          "value": 8.0,
+          "unit": "hours"
+        },
+        {
+          "name": "rate_effective",
+          "value": 92.0,
+          "unit": "sp/h",
+          "source": "historical_median"
+        },
+        {
+          "name": "qty_lost",
+          "value": 736.0,
+          "unit": "sp"
+        },
+        {
+          "name": "opening_inventory",
+          "value": 450,
+          "unit": "sp"
+        }
+      ],
+      "conclusion": {
+        "text": "Incident INC-0012 tại STN-M2 dừng 8.0h → mất 736 sp. Netting cho thấy tổng thiếu hụt 3650 sp. Monte Carlo: P(late) = 100.0%.",
+        "jts_late": [
+          {
+            "jt_id": "JT-0001",
+            "p_late": 1.0,
+            "shortfall_qty": 3954
+          }
+        ],
+        "total_shortage": 3650,
+        "p_late": 1.0
+      },
+      "confidence": 0.86,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "step1_qty_loss",
+          "value": 736.0
+        },
+        {
+          "type": "step3_netting",
+          "first_shortage_day": 1
+        },
+        {
+          "type": "step5_monte_carlo",
+          "p_late": 1.0
+        }
+      ],
+      "generated_at": "2026-10-08T15:07:59.999023Z"
+    }
+  ]
+}
