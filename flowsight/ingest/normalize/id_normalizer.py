@@ -15,10 +15,11 @@ from typing import Optional
 #   "QR260929A147"   → QR scan
 #   "A147"           → Output
 #   "LOT-0147-A"     → QC Auto/Sampling
+# Trong file flowsight/ingest/normalize/id_normalizer.py
 LOT_PATTERNS = [
     (re.compile(r"^QR(\d{6})([A-Z])(\d{3,4})$"), "qr"),
-    (re.compile(r"^L-([A-Z])-(\d{3,4})$"), "ipc"),
-    (re.compile(r"^([A-Z])(\d{3,4})$"), "output"),
+    (re.compile(r"^L[-_]([A-Z])[-_](\d{3,4})$"), "ipc"),  # Đã hỗ trợ cả '-' và '_'
+    (re.compile(r"^([A-Z])\s*(\d{3,4})$"), "output"),
     (re.compile(r"^LOT-(\d{3,4})-([A-Z])$"), "qc"),
     (re.compile(r"^LOT-(\d{3,4})$"), "canonical"),
     (re.compile(r"^QR-(.+)$"), "qr_special"),
