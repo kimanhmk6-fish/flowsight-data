@@ -1,0 +1,46 @@
+ # ============================================================
+# CẤU HÌNH CHI PHÍ — Có thể edit bởi user
+# Đây là mock data. DENSO có thể thay số thật.
+# ============================================================
+
+
+# Chi phí giờ công (VND/giờ)
+labor:
+  operator_hourly_rate: 80000       # CN vận hành
+  engineer_hourly_rate: 250000      # Kỹ sư
+  maintenance_hourly_rate: 150000   # Bảo trì
+
+
+# Chi phí tăng ca (OT)
+overtime:
+  hourly_multiplier: 1.5            # Lương OT = 1.5x lương thường
+  energy_cost_per_hour: 500000      # Điện + khấu hao
+
+
+# Chi phí đổi khuôn / setup
+changeover:
+  fixed_cost: 1500000               # Mỗi lần đổi khuôn
+  average_duration_min: 30
+
+
+# Chi phí vận chuyển
+shipping:
+  normal_cost_per_truck: 5000000
+  expedite_multiplier: 3.0
+  late_penalty_per_hour: 2000000
+
+
+# Chi phí đặc biệt
+special:
+  alternative_line_setup_cost: 5000000
+  recall_cost_per_lot: 10000000
+
+
+# Ngưỡng
+thresholds:
+  default_p_late_max: 0.05          # 5% P(late) tối đa
+  expedite_threshold_hours: 4
+
+
+# Đơn vị
+currency: VND

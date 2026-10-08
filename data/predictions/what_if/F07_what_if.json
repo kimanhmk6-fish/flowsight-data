@@ -1,0 +1,354 @@
+{
+  "case_id": "F07",
+  "incident_id": "INC-0007",
+  "p_late_max": 0.05,
+  "base_context": {
+    "incident_duration_h": 8.0,
+    "base_shortfall_qty": 3954,
+    "base_p_late": 1.0
+  },
+  "options": [
+    {
+      "option_id": "A",
+      "name": "Do nothing",
+      "description": "Để yên, chấp nhận rủi ro",
+      "ot_hours": 0,
+      "n_changeovers": 0,
+      "expedite": false,
+      "use_alternative": false,
+      "priority_reorder": false
+    },
+    {
+      "option_id": "B",
+      "name": "OT2 — Tăng ca 2h",
+      "description": "Tăng ca 2h ngày hôm sau để bù sản lượng",
+      "ot_hours": 2,
+      "n_changeovers": 0,
+      "expedite": false,
+      "use_alternative": false,
+      "priority_reorder": false
+    },
+    {
+      "option_id": "C",
+      "name": "OT4 — Tăng ca 4h",
+      "description": "Tăng ca 4h để bù hoàn toàn sản lượng",
+      "ot_hours": 4,
+      "n_changeovers": 0,
+      "expedite": false,
+      "use_alternative": false,
+      "priority_reorder": false
+    },
+    {
+      "option_id": "D",
+      "name": "Resequencing",
+      "description": "Đổi thứ tự sản xuất để ưu tiên JT gấp",
+      "ot_hours": 0,
+      "n_changeovers": 1,
+      "expedite": false,
+      "use_alternative": false,
+      "priority_reorder": true
+    },
+    {
+      "option_id": "E",
+      "name": "Resequencing + OT2",
+      "description": "Đổi thứ tự + tăng ca 2h. Kết hợp tối ưu.",
+      "ot_hours": 2,
+      "n_changeovers": 1,
+      "expedite": false,
+      "use_alternative": false,
+      "priority_reorder": true
+    },
+    {
+      "option_id": "F",
+      "name": "Alternative Line",
+      "description": "Chuyển tải sang line dự phòng",
+      "ot_hours": 0,
+      "n_changeovers": 0,
+      "expedite": false,
+      "use_alternative": true,
+      "priority_reorder": false
+    },
+    {
+      "option_id": "G",
+      "name": "Expedite shipping",
+      "description": "Giao hàng hỏa tốc (nhưng vẫn trễ)",
+      "ot_hours": 0,
+      "n_changeovers": 0,
+      "expedite": true,
+      "use_alternative": false,
+      "priority_reorder": false
+    }
+  ],
+  "simulations": [
+    {
+      "option_id": "A",
+      "option_name": "Do nothing",
+      "expected_shortfall": 4284.1,
+      "p_late": 1.0,
+      "expected_delay_hours": 46.57,
+      "completion_time_hours": 8.0,
+      "n_simulations": 20000
+    },
+    {
+      "option_id": "B",
+      "option_name": "OT2 — Tăng ca 2h",
+      "expected_shortfall": 4117.4,
+      "p_late": 1.0,
+      "expected_delay_hours": 44.75,
+      "completion_time_hours": 9.8,
+      "n_simulations": 20000
+    },
+    {
+      "option_id": "C",
+      "option_name": "OT4 — Tăng ca 4h",
+      "expected_shortfall": 3956.4,
+      "p_late": 1.0,
+      "expected_delay_hours": 43.0,
+      "completion_time_hours": 11.6,
+      "n_simulations": 20000
+    },
+    {
+      "option_id": "D",
+      "option_name": "Resequencing",
+      "expected_shortfall": 3695.5,
+      "p_late": 1.0,
+      "expected_delay_hours": 40.17,
+      "completion_time_hours": 14.45,
+      "n_simulations": 20000
+    },
+    {
+      "option_id": "E",
+      "option_name": "Resequencing + OT2",
+      "expected_shortfall": 3521.2,
+      "p_late": 1.0,
+      "expected_delay_hours": 38.27,
+      "completion_time_hours": 16.25,
+      "n_simulations": 20000
+    },
+    {
+      "option_id": "F",
+      "option_name": "Alternative Line",
+      "expected_shortfall": 3097.9,
+      "p_late": 1.0,
+      "expected_delay_hours": 33.67,
+      "completion_time_hours": 20.89,
+      "n_simulations": 20000
+    },
+    {
+      "option_id": "G",
+      "option_name": "Expedite shipping",
+      "expected_shortfall": 4283.7,
+      "p_late": 1.0,
+      "expected_delay_hours": 46.56,
+      "completion_time_hours": 8.0,
+      "n_simulations": 20000
+    }
+  ],
+  "scored": [
+    {
+      "option_id": "A",
+      "option_name": "Do nothing",
+      "p_late": 1.0,
+      "expected_shortfall": 4284.1,
+      "expected_delay_hours": 46.57,
+      "total_cost": 93140000.0,
+      "cost_breakdown": {
+        "overtime": 0.0,
+        "changeover": 0.0,
+        "shipping": 0.0,
+        "penalty": 93140000.0
+      },
+      "satisfies_constraint": false,
+      "is_recommended": true,
+      "rationale": "Không có phương án nào thỏa P(late) ≤ 5%. Chọn phương án có P(late) thấp nhất (100.0%)"
+    },
+    {
+      "option_id": "B",
+      "option_name": "OT2 — Tăng ca 2h",
+      "p_late": 1.0,
+      "expected_shortfall": 4117.4,
+      "expected_delay_hours": 44.75,
+      "total_cost": 91700000.0,
+      "cost_breakdown": {
+        "overtime": 2200000.0,
+        "changeover": 0.0,
+        "shipping": 0.0,
+        "penalty": 89500000.0
+      },
+      "satisfies_constraint": false,
+      "is_recommended": false,
+      "rationale": ""
+    },
+    {
+      "option_id": "C",
+      "option_name": "OT4 — Tăng ca 4h",
+      "p_late": 1.0,
+      "expected_shortfall": 3956.4,
+      "expected_delay_hours": 43.0,
+      "total_cost": 90400000.0,
+      "cost_breakdown": {
+        "overtime": 4400000.0,
+        "changeover": 0.0,
+        "shipping": 0.0,
+        "penalty": 86000000.0
+      },
+      "satisfies_constraint": false,
+      "is_recommended": false,
+      "rationale": ""
+    },
+    {
+      "option_id": "D",
+      "option_name": "Resequencing",
+      "p_late": 1.0,
+      "expected_shortfall": 3695.5,
+      "expected_delay_hours": 40.17,
+      "total_cost": 81840000.0,
+      "cost_breakdown": {
+        "overtime": 0.0,
+        "changeover": 1500000,
+        "shipping": 0.0,
+        "penalty": 80340000.0
+      },
+      "satisfies_constraint": false,
+      "is_recommended": false,
+      "rationale": ""
+    },
+    {
+      "option_id": "E",
+      "option_name": "Resequencing + OT2",
+      "p_late": 1.0,
+      "expected_shortfall": 3521.2,
+      "expected_delay_hours": 38.27,
+      "total_cost": 80240000.0,
+      "cost_breakdown": {
+        "overtime": 2200000.0,
+        "changeover": 1500000,
+        "shipping": 0.0,
+        "penalty": 76540000.0
+      },
+      "satisfies_constraint": false,
+      "is_recommended": false,
+      "rationale": ""
+    },
+    {
+      "option_id": "F",
+      "option_name": "Alternative Line",
+      "p_late": 1.0,
+      "expected_shortfall": 3097.9,
+      "expected_delay_hours": 33.67,
+      "total_cost": 67340000.0,
+      "cost_breakdown": {
+        "overtime": 0.0,
+        "changeover": 0.0,
+        "shipping": 0.0,
+        "penalty": 67340000.0
+      },
+      "satisfies_constraint": false,
+      "is_recommended": false,
+      "rationale": ""
+    },
+    {
+      "option_id": "G",
+      "option_name": "Expedite shipping",
+      "p_late": 1.0,
+      "expected_shortfall": 4283.7,
+      "expected_delay_hours": 46.56,
+      "total_cost": 108120000.0,
+      "cost_breakdown": {
+        "overtime": 0.0,
+        "changeover": 0.0,
+        "shipping": 15000000.0,
+        "penalty": 93120000.0
+      },
+      "satisfies_constraint": false,
+      "is_recommended": false,
+      "rationale": ""
+    }
+  ],
+  "optimal": {
+    "option_id": "A",
+    "option_name": "Do nothing",
+    "p_late": 1.0,
+    "expected_shortfall": 4284.1,
+    "expected_delay_hours": 46.57,
+    "total_cost": 93140000.0,
+    "cost_breakdown": {
+      "overtime": 0.0,
+      "changeover": 0.0,
+      "shipping": 0.0,
+      "penalty": 93140000.0
+    },
+    "satisfies_constraint": false,
+    "is_recommended": true,
+    "rationale": "Không có phương án nào thỏa P(late) ≤ 5%. Chọn phương án có P(late) thấp nhất (100.0%)"
+  },
+  "sensitivity": {
+    "threshold": {
+      "parameter": "p_late_threshold",
+      "variations": [
+        {
+          "threshold": 0.01,
+          "optimal_option_id": "A",
+          "optimal_option_name": "Do nothing",
+          "cost": 93140000.0,
+          "p_late": 1.0
+        },
+        {
+          "threshold": 0.05,
+          "optimal_option_id": "A",
+          "optimal_option_name": "Do nothing",
+          "cost": 93140000.0,
+          "p_late": 1.0
+        },
+        {
+          "threshold": 0.1,
+          "optimal_option_id": "A",
+          "optimal_option_name": "Do nothing",
+          "cost": 93140000.0,
+          "p_late": 1.0
+        },
+        {
+          "threshold": 0.2,
+          "optimal_option_id": "A",
+          "optimal_option_name": "Do nothing",
+          "cost": 93140000.0,
+          "p_late": 1.0
+        }
+      ],
+      "is_robust": true,
+      "note": "Recommendation ổn định: option A"
+    },
+    "cost": {
+      "parameter": "overtime",
+      "variations": [
+        {
+          "pct_change": -0.2,
+          "optimal_option_id": "A",
+          "cost": 93140000.0
+        },
+        {
+          "pct_change": -0.1,
+          "optimal_option_id": "A",
+          "cost": 93140000.0
+        },
+        {
+          "pct_change": 0,
+          "optimal_option_id": "A",
+          "cost": 93140000.0
+        },
+        {
+          "pct_change": 0.1,
+          "optimal_option_id": "A",
+          "cost": 93140000.0
+        },
+        {
+          "pct_change": 0.2,
+          "optimal_option_id": "A",
+          "cost": 93140000.0
+        }
+      ],
+      "is_robust": true,
+      "note": "Robust: True"
+    }
+  }
+}
