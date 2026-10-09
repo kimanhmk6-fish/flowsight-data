@@ -48,7 +48,9 @@ def simulate_option(
     seed: int = MC_RANDOM_SEED,
 ) -> SimulationResult:
     """Mô phỏng 1 phương án."""
-    rng = np.random.default_rng(seed + hash(option["option_id"]) % 1000)
+    # seed ổn định theo option_id (hash() builtin của Python random theo process)
+    stable = sum(ord(c) * (i + 1) for i, c in enumerate(option["option_id"]))
+    rng = np.random.default_rng(seed + stable % 1000)
 
 
     # 1. Recovery amount: tỷ lệ bù đắp trên base shortfall
