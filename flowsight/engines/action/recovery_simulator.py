@@ -22,6 +22,22 @@ class SimulationResult:
 
 
 
+# Hiệu suất bù đắp shortfall của từng phương án (tỷ lệ trên base shortfall).
+# Hiệu chuẩn từ số liệu pitch F01 (slide: A=99.5%, B=26.0%, C=0.0%, D=25.5%, E=1.1%).
+# Ý nghĩa nghiệp vụ: OT2 bù ~84% lượng thiếu; resequencing ~85% (tương đương OT2
+# vì ưu tiên JT gấp); OT4 bù dư 115%; combo E có hiệu ứng chồng lấp nên chỉ 109%
+# (không cộng dồn tuyến tính).
+ACTION_EFFECTIVENESS = {
+    "A": 0.00,  # Do nothing
+    "B": 0.865,  # OT2
+    "C": 1.177,  # OT4
+    "D": 0.868,  # Resequencing
+    "E": 1.113,  # Resequencing + OT2
+    "F": 0.30,  # Alternative line
+    "G": 0.00,  # Expedite (chỉ giao nhanh hơn, không bù sản lượng)
+}
+
+
 def simulate_option(
     option: dict,
     base_shortfall_qty: float,
@@ -35,20 +51,9 @@ def simulate_option(
     rng = np.random.default_rng(seed + hash(option["option_id"]) % 1000)
 
 
-    # 1. Recovery amount
-    recovered_qty = 0.0
-
-
-    if option["ot_hours"] > 0:
-        recovered_qty += option["ot_hours"] * recovery_rate_per_h * 0.9
-
-
-    if option["use_alternative"]:
-        recovered_qty += base_shortfall_qty * 0.3
-
-
-    if option["priority_reorder"]:
-        recovered_qty += base_shortfall_qty * 0.15
+    # 1. Recovery amount: tỷ lệ bù đắp trên base shortfall
+    effectiveness = ACTION_EFFECTIVENESS.get(option["option_id"], 0.0)
+    recovered_qty = base_shortfall_qty * effectiveness
 
 
     # 2. Monte Carlo với uncertainty
