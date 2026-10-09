@@ -1,0 +1,335 @@
+{
+  "generated_at": "2026-10-09T18:57:40",
+  "coverage_note": "20 engine cases (12 forward + 8 backward). 4 DQ checks (D01–D04) nằm ở pipeline 11 (validator), cộng lại thành 24 case trên slide.",
+  "slide_targets": {
+    "f1_forward": 0.85,
+    "mape_shortfall": 0.1,
+    "brier_p_late": 0.15,
+    "top3_backward": 0.75
+  },
+  "targets_check": {
+    "f1_forward": {
+      "target": 0.85,
+      "actual": 0.25,
+      "meets": false
+    },
+    "mape_shortfall": {
+      "target": 0.1,
+      "actual": 5.895,
+      "meets": false
+    },
+    "brier_p_late": {
+      "target": 0.15,
+      "actual": 0.1667,
+      "meets": false
+    },
+    "top3_backward": {
+      "target": 0.75,
+      "actual": 0.375,
+      "meets": false
+    }
+  },
+  "forward": {
+    "n_cases": 12,
+    "jt_set_accuracy": 0.333,
+    "jt_hit_rate": 0.417,
+    "precision": 0.231,
+    "recall": 0.273,
+    "f1_micro": 0.25,
+    "mape_shortfall": 5.895,
+    "brier_p_late": 0.1667,
+    "per_case": [
+      {
+        "case_id": "F01",
+        "pred_jt_late": [
+          "JT-0231"
+        ],
+        "exp_jt_late": [
+          "JT-0231"
+        ],
+        "exact_match": true,
+        "hit": true,
+        "shortfall_pred": 29,
+        "shortfall_exp": 29,
+        "ape_shortfall": 0.0,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F02",
+        "pred_jt_late": [
+          "JT-0231"
+        ],
+        "exp_jt_late": [
+          "JT-0231"
+        ],
+        "exact_match": true,
+        "hit": true,
+        "shortfall_pred": 1189,
+        "shortfall_exp": 50,
+        "ape_shortfall": 22.78,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F03",
+        "pred_jt_late": [
+          "JT-0001",
+          "JT-0005",
+          "JT-0231"
+        ],
+        "exp_jt_late": [
+          "JT-0231",
+          "JT-0235"
+        ],
+        "exact_match": false,
+        "hit": true,
+        "shortfall_pred": 2350,
+        "shortfall_exp": 200,
+        "ape_shortfall": 10.75,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F04",
+        "pred_jt_late": [],
+        "exp_jt_late": [],
+        "exact_match": true,
+        "hit": true,
+        "shortfall_pred": 0,
+        "shortfall_exp": 0,
+        "ape_shortfall": null,
+        "p_late_pred": 0.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F05",
+        "pred_jt_late": [
+          "JT-0009",
+          "JT-0013"
+        ],
+        "exp_jt_late": [
+          "JT-0235"
+        ],
+        "exact_match": false,
+        "hit": false,
+        "shortfall_pred": 557,
+        "shortfall_exp": 150,
+        "ape_shortfall": 2.713,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F06",
+        "pred_jt_late": [],
+        "exp_jt_late": [],
+        "exact_match": true,
+        "hit": true,
+        "shortfall_pred": 0,
+        "shortfall_exp": 0,
+        "ape_shortfall": null,
+        "p_late_pred": 0.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F07",
+        "pred_jt_late": [
+          "JT-0017"
+        ],
+        "exp_jt_late": [],
+        "exact_match": false,
+        "hit": false,
+        "shortfall_pred": 450,
+        "shortfall_exp": 0,
+        "ape_shortfall": null,
+        "p_late_pred": 1.0,
+        "brier": 1.0
+      },
+      {
+        "case_id": "F08",
+        "pred_jt_late": [
+          "JT-0017"
+        ],
+        "exp_jt_late": [
+          "JT-0231"
+        ],
+        "exact_match": false,
+        "hit": false,
+        "shortfall_pred": 450,
+        "shortfall_exp": 80,
+        "ape_shortfall": 4.625,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F09",
+        "pred_jt_late": [],
+        "exp_jt_late": [
+          "JT-0231"
+        ],
+        "exact_match": false,
+        "hit": false,
+        "shortfall_pred": 0,
+        "shortfall_exp": 180,
+        "ape_shortfall": 1.0,
+        "p_late_pred": 0.0,
+        "brier": 1.0
+      },
+      {
+        "case_id": "F10",
+        "pred_jt_late": [
+          "JT-0021",
+          "JT-0025"
+        ],
+        "exp_jt_late": [
+          "JT-0231"
+        ],
+        "exact_match": false,
+        "hit": false,
+        "shortfall_pred": 557,
+        "shortfall_exp": 120,
+        "ape_shortfall": 3.642,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F11",
+        "pred_jt_late": [
+          "JT-0025"
+        ],
+        "exp_jt_late": [
+          "JT-0231"
+        ],
+        "exact_match": false,
+        "hit": false,
+        "shortfall_pred": 450,
+        "shortfall_exp": 60,
+        "ape_shortfall": 6.5,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      },
+      {
+        "case_id": "F12",
+        "pred_jt_late": [
+          "JT-0029"
+        ],
+        "exp_jt_late": [
+          "JT-0231",
+          "JT-0235"
+        ],
+        "exact_match": false,
+        "hit": false,
+        "shortfall_pred": 450,
+        "shortfall_exp": 220,
+        "ape_shortfall": 1.045,
+        "p_late_pred": 1.0,
+        "brier": 0.0
+      }
+    ]
+  },
+  "backward": {
+    "n_cases": 8,
+    "top1_accuracy": 0.25,
+    "top1_count": "2/8",
+    "top3_accuracy": 0.375,
+    "top3_count": "3/8",
+    "per_case": [
+      {
+        "case_id": "R01",
+        "top1_pred": "BATCH-HT-B07",
+        "expected": "BATCH-HT-B07",
+        "top1_match": true,
+        "top3_match": true,
+        "top3_list": [
+          "BATCH-HT-B07",
+          "STN-AS1",
+          "STN-HT"
+        ]
+      },
+      {
+        "case_id": "R02",
+        "top1_pred": "STN-AS1",
+        "expected": "STN-M1",
+        "top1_match": false,
+        "top3_match": false,
+        "top3_list": [
+          "STN-AS1",
+          "STN-HT",
+          "STN-INB"
+        ]
+      },
+      {
+        "case_id": "R03",
+        "top1_pred": "BATCH-HT-B07",
+        "expected": "STN-HT",
+        "top1_match": false,
+        "top3_match": true,
+        "top3_list": [
+          "BATCH-HT-B07",
+          "STN-AS1",
+          "STN-HT"
+        ]
+      },
+      {
+        "case_id": "R04",
+        "top1_pred": "STN-AS2",
+        "expected": "STN-AS2",
+        "top1_match": true,
+        "top3_match": true,
+        "top3_list": [
+          "STN-AS2",
+          "STN-HT",
+          "STN-INB"
+        ]
+      },
+      {
+        "case_id": "R05",
+        "top1_pred": "BATCH-HT-B07",
+        "expected": "LABEL_DUPLICATION",
+        "top1_match": false,
+        "top3_match": false,
+        "top3_list": [
+          "BATCH-HT-B07",
+          "STN-AS1",
+          "STN-HT"
+        ]
+      },
+      {
+        "case_id": "R06",
+        "top1_pred": "STN-AS2",
+        "expected": "COMBINED",
+        "top1_match": false,
+        "top3_match": false,
+        "top3_list": [
+          "STN-AS2",
+          "STN-HT",
+          "STN-INB"
+        ]
+      },
+      {
+        "case_id": "R07",
+        "top1_pred": "STN-AS2",
+        "expected": "INSUFFICIENT_EVIDENCE",
+        "top1_match": false,
+        "top3_match": false,
+        "top3_list": [
+          "STN-AS2",
+          "STN-HT",
+          "STN-INB"
+        ]
+      },
+      {
+        "case_id": "R08",
+        "top1_pred": "STN-AS2",
+        "expected": "SUPPLIER_MAT",
+        "top1_match": false,
+        "top3_match": false,
+        "top3_list": [
+          "STN-AS2",
+          "STN-HT",
+          "STN-INB"
+        ]
+      }
+    ]
+  }
+}

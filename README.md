@@ -45,6 +45,7 @@ python -m flowsight.orchestrator.step_11c
 python -m flowsight.engines.runner_12a   # Forward Impact Cascade (F01–F12)
 python -m flowsight.engines.runner_12b   # Backward Cause Ranking (R01–R08)
 python -m flowsight.engines.runner_12c   # Action Simulator / What-if
+python -m flowsight.engines.runner_12e   # Validation: F1/MAPE/Brier/Top-3 + báo cáo gộp
 ```
 
 ## Output chính
@@ -52,7 +53,8 @@ python -m flowsight.engines.runner_12c   # Action Simulator / What-if
 - `data/ground_truth/` — đáp án kiểm chứng (không sửa thủ công, tái sinh từ generator)
 - `data/canonical/*.parquet` — 8 bảng canonical engine đọc
 - `data/predictions/` — output từng case của engine
-- `reports/` — `forward_engine_report.json`, `backward_engine_report.json`, `action_engine_report.json`
+- `reports/` — `forward_engine_report.json`, `backward_engine_report.json`,
+  `action_engine_report.json`, `validation_24cases.json`, `benchmark_report.csv`
 
 ## Quy ước
 

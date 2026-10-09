@@ -1,0 +1,8 @@
+﻿metric,target,actual,meets_target
+f1_forward,0.85,0.25,NO
+mape_shortfall,0.1,5.895,NO
+brier_p_late,0.15,0.1667,NO
+top3_backward,0.75,0.375,NO
+jt_set_accuracy,,0.333,
+jt_hit_rate,,0.417,
+top1_backward,,0.25,
