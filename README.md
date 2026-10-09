@@ -64,6 +64,12 @@ python -m flowsight.engines.runner_12e   # Validation: F1/MAPE/Brier/Top-3 + bá
 - Trạng thái demo các case xem trong `reports/*_engine_report.json`
   (so sánh `top_cause`/`jts_late` thực tế với `expected_*`).
 
+## Demo trực tiếp (1 lệnh)
+```bash
+python -m flowsight.engines.demo            # chạy mới F01 → R01 → what-if
+python -m flowsight.engines.demo --cached   # đọc predictions đã lưu
+```
+
 ## Case demo cốt lõi (đã kiểm chứng)
 
 - **F01**: incident M2 dừng 8h (D0) → JT-0231 trễ, shortfall 29 sp, đề xuất `resequencing + OT2`.
