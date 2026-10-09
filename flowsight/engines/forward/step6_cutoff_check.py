@@ -28,6 +28,20 @@ def check_cutoff(
     cutoff_time = pd.to_datetime(row["cutoff_time"])
 
     incident_start = pd.Timestamp(incident_start_ts)
+    # Incident xảy ra sau khi xe đã chạy -> không thể ảnh hưởng chuyến này
+    if incident_start > truck_time:
+        return {
+            "jt_id": jt_id,
+            "incident_start": str(incident_start),
+            "incident_duration_h": incident_duration_h,
+            "recovery_time_h": round(recovery_time_h, 2),
+            "completion_time": str(incident_start),
+            "cutoff_time": str(cutoff_time),
+            "truck_time": str(truck_time),
+            "kips": True,
+            "status": "PASS",
+            "note": "incident_after_truck",
+        }
     completion_time = incident_start + pd.Timedelta(hours=incident_duration_h + recovery_time_h)
 
     kips = completion_time <= truck_time

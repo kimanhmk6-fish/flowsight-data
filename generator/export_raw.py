@@ -61,7 +61,7 @@ def export_all():
         src01_rows.append({
             "record_id": f"REC_{len(src01_rows)+1:06d}",
             "local_lot_label": to_alias(r["lot_id"], "SRC_01", meta["line_id"], meta["created_day"]),
-            "model_code": "P1",
+            "model_code": str(meta.get("product_id", "PROD-P1")).replace("PROD-", ""),
             "line_code": meta["line_id"],
             "qty_ok": r["qty_out"],
             "qty_ng": r["qty_ng"],
@@ -134,7 +134,7 @@ def export_all():
         src04_rows.append({
             "qc_record_id": f"QC_AUTO_{len(src04_rows)+1:06d}",
             "local_lot_ref": to_alias(r["lot_id"], "SRC_04", meta["line_id"], meta["created_day"]),
-            "model_code": "P1",
+            "model_code": str(meta.get("product_id", "PROD-P1")).replace("PROD-", ""),
             "station_code": "T1",
             "characteristic": r["characteristic"],
             "value_raw": str(r["value"]),

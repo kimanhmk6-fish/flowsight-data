@@ -8,7 +8,7 @@
     "shortfall_qty": 50,
     "P_late": 0.92,
     "affected_lots": [
-      "LOT-0147"
+      "LOT-0013"
     ],
     "fmea_code": "FMEA-M2-001",
     "rpn": 64,

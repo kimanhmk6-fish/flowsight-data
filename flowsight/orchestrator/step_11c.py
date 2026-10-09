@@ -2,7 +2,7 @@ import time
 import json
 import pandas as pd
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 
 from flowsight.reconstruct.lot_builder import build_canonical_lots
 from flowsight.reconstruct.genealogy_builder import (
@@ -164,7 +164,7 @@ def run_step_11c():
 
     report = {
         "step": "11C",
-        "run_at": datetime.now(time.timezone.utc).isoformat(),
+        "run_at": datetime.now(timezone.utc).isoformat(),
         "elapsed_sec": round(elapsed, 2),
         "tables_built": {
             "lot": len(lots),

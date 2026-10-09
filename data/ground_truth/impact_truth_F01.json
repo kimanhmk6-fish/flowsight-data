@@ -5,11 +5,11 @@
     "jt_late": [
       "JT-0231"
     ],
-    "shortfall_qty": 100,
-    "P_late": 0.995,
+    "shortfall_qty": 29,
+    "P_late": 1.0,
     "affected_lots": [
-      "LOT-0147",
-      "LOT-0148"
+      "LOT-0005",
+      "LOT-0009"
     ],
     "fmea_code": "FMEA-M2-001",
     "rpn": 96,

@@ -36,8 +36,8 @@ class ErrorInjector:
         df = df_scans.copy()
         transition_stns = ["HT", "AS1", "AS2", "T1"]
         
-        # Mandatory drop: LOT-0147, 0148, 0403, 0404 tại trạm chuyển tiếp
-        mandatory_mask = df["qr_code"].str.contains("0147|0148|0403|0404", na=False) & df["station_code"].isin(transition_stns)
+        # Mandatory drop: LOT-0005, 0009, 0403, 0404 tại trạm chuyển tiếp (lot F01/R01)
+        mandatory_mask = df["qr_code"].str.contains("0005|0009|0403|0404", na=False) & df["station_code"].isin(transition_stns)
         mandatory_indices = df[mandatory_mask].index.tolist()
         
         n_drop_total = int(len(df) * drop_rate)

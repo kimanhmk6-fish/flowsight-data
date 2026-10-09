@@ -85,9 +85,13 @@ def build_jt_orders() -> pd.DataFrame:
     rows = []
     start_d = datetime.strptime(START_DATE_STR, "%Y-%m-%d")
     for i in range(1, 46):
-        qty = 1300 if i == 1 else (600 if i % 2 == 0 else 900)
+        # JT-0001 khớp shipment SHP-1001-1 (600 sp, D2)
+        if i == 1:
+            qty, d_day = 600, 2
+        else:
+            qty = 600 if i % 2 == 0 else 900
+            d_day = min(13, (i // 3) + 1)
         p_id = f"PROD-P{((i-1)%4)+1}"
-        d_day = min(13, (i // 3) + 1)
         rows.append({
             "jt_id": f"JT-{i:04d}", "product_id": p_id,
             "line_id": "A" if p_id in ["PROD-P1", "PROD-P2"] else "B",
@@ -95,16 +99,18 @@ def build_jt_orders() -> pd.DataFrame:
             "due_ts": (start_d + timedelta(days=d_day, hours=10)).strftime("%Y-%m-%dT%H:%M:%S"),
             "priority": "URGENT" if i == 12 else "NORMAL", "customer": "KHACH_X", "status": "OPEN"
         })
-        special_jts = [
-        ("JT-0231", "PROD-P1", "A", 900, "D1",  "2026-09-30T10:00:00", "URGENT", "KHACH_X", "OPEN"),
+    # Special cases F01 (ngoài vòng lặp để tránh trùng lặp):
+    # JT-0231 khớp shipment SHP-1002-1 (1300/1200, D2) và đáp án F01 (shortfall 100)
+    special_jts = [
+        ("JT-0231", "PROD-P1", "A", 1300, "D2",  "2026-10-01T10:00:00", "URGENT", "KHACH_X", "OPEN"),
         ("JT-0235", "PROD-P2", "A", 600, "D10", "2026-10-09T10:00:00", "NORMAL", "KHACH_Y", "OPEN"),
-        ]
-        for jt_id, p_id, line, qty, due_day, due_ts, prio, cust, status in special_jts:
-            rows.append({
-                "jt_id": jt_id, "product_id": p_id, "line_id": line,
-                "qty": qty, "due_day": due_day, "due_ts": due_ts,
-                "priority": prio, "customer": cust, "status": status
-            })
+    ]
+    for jt_id, p_id, line, qty, due_day, due_ts, prio, cust, status in special_jts:
+        rows.append({
+            "jt_id": jt_id, "product_id": p_id, "line_id": line,
+            "qty": qty, "due_day": due_day, "due_ts": due_ts,
+            "priority": prio, "customer": cust, "status": status
+        })
 
     df = pd.DataFrame(rows)
     df.to_csv(Path(GT_DIR) / "jt_order_truth.csv", index=False)
@@ -114,8 +120,8 @@ def build_jt_allocation(factory) -> pd.DataFrame:
     allocs = []
     start_d = datetime.strptime(START_DATE_STR, "%Y-%m-%d")
     allocs.append({"allocation_id": "ALLOC-00001", "jt_id": "JT-0001", "lot_id": "LOT-0001", "qty_allocated": 200, "allocation_time": "2026-09-29T09:00:00"})
-    allocs.append({"allocation_id": "ALLOC-00050", "jt_id": "JT-0231", "lot_id": "LOT-0147", "qty_allocated": 200, "allocation_time": "2026-10-01T09:00:00"})
-    allocs.append({"allocation_id": "ALLOC-00051", "jt_id": "JT-0231", "lot_id": "LOT-0148", "qty_allocated": 200, "allocation_time": "2026-10-01T09:00:00"})
+    allocs.append({"allocation_id": "ALLOC-00050", "jt_id": "JT-0231", "lot_id": "LOT-0005", "qty_allocated": 200, "allocation_time": "2026-10-01T09:00:00"})
+    allocs.append({"allocation_id": "ALLOC-00051", "jt_id": "JT-0231", "lot_id": "LOT-0009", "qty_allocated": 200, "allocation_time": "2026-10-01T09:00:00"})
     df = pd.DataFrame(allocs)
     df.to_csv(Path(GT_DIR) / "jt_allocation_truth.csv", index=False)
     return df
@@ -132,7 +138,7 @@ def build_inventory_truth() -> pd.DataFrame:
                     "snapshot_id": f"INV-{idx:05d}", "snapshot_time": snap_time.strftime("%Y-%m-%dT%H:%M:%S"),
                     "item_type": "FG", "item_id": f"PROD-P{p}",
                     "location": "Kho FG - Line A" if p <= 2 else "Kho FG - Line B",
-                    "qty": 450, "capture_method": "AUTO" if s_idx == 0 else "MANUAL"
+                    "qty": 600 if p == 2 else 450, "capture_method": "AUTO" if s_idx == 0 else "MANUAL"
                 })
                 idx += 1
             rows.append({
@@ -148,7 +154,7 @@ def build_inventory_truth() -> pd.DataFrame:
 def build_shipment_truth() -> pd.DataFrame:
     ships = [
         ("SHP-1001-1", "2026-10-01T10:00:00", "2026-10-01T09:00:00", "JT-0001", 600, 600, "DEPARTED", ""),
-        ("SHP-1002-1", "2026-10-02T10:00:00", "2026-10-02T09:00:00", "JT-0231", 1300, 1200, "PARTIAL", "FMEA-M2-001"),
+        ("SHP-1002-1", "2026-10-01T10:00:00", "2026-10-01T09:00:00", "JT-0231", 1300, 1200, "PARTIAL", "FMEA-M2-001"),
         ("SHP-1010-1", "2026-10-10T10:00:00", "2026-10-10T09:00:00", "JT-0235", 600, 600, "DEPARTED", "")
     ]
     df = pd.DataFrame(ships, columns=["shipment_id", "truck_time", "cutoff_time", "jt_id", "qty_planned", "qty_actual", "status", "fmea_related_incident"])
@@ -157,8 +163,8 @@ def build_shipment_truth() -> pd.DataFrame:
 
 def build_incident_truth() -> pd.DataFrame:
     incidents = [
-        ("INC-0001", "STN-M2", "2026-09-29T08:00:00", "2026-09-29T16:00:00", 8.0, "FMEA-M2-001", 96, "HIGH", "MACHINE", "LOT-0147,LOT-0148", "F01"),
-        ("INC-0002", "STN-M2", "2026-09-30T08:00:00", "2026-09-30T12:00:00", 4.0, "FMEA-M2-001", 64, "MEDIUM", "MACHINE", "LOT-0147", "F02"),
+        ("INC-0001", "STN-M2", "2026-09-29T08:00:00", "2026-09-29T16:00:00", 8.0, "FMEA-M2-001", 96, "HIGH", "MACHINE", "LOT-0005,LOT-0009", "F01"),
+        ("INC-0002", "STN-M2", "2026-09-30T08:00:00", "2026-09-30T12:00:00", 4.0, "FMEA-M2-001", 64, "MEDIUM", "MACHINE", "LOT-0013", "F02"),
         ("INC-0003", "STN-M2", "2026-10-01T08:00:00", "2026-10-01T20:00:00", 12.0, "FMEA-M2-001", 128, "CRITICAL", "MACHINE", "LOT-0231,LOT-0235", "F03"),
         ("INC-0004", "STN-M1", "2026-10-02T08:00:00", "2026-10-02T16:00:00", 8.0, "FMEA-M1-002", 54, "MEDIUM", "MACHINE", "", "F04"),
         ("INC-0005", "STN-HT", "2026-10-03T08:00:00", "2026-10-03T16:00:00", 8.0, "FMEA-HT-001", 135, "CRITICAL", "PROCESS", "LOT-0401,LOT-0402,LOT-0403,LOT-0404,LOT-0405", "F05"),
@@ -207,15 +213,17 @@ def build_24_test_case_answers():
     
     impact_cases = {
         "F01": {
-            "jt_late": ["JT-0231"], "shortfall_qty": 100, "P_late": 0.995,
-            "affected_lots": ["LOT-0147", "LOT-0148"],
+            # shortfall_qty/P_late hiệu chuẩn từ Forward Engine chạy trên dữ liệu
+            # canonical (ATP per-JT: opening 450 + SX D0/D1 - các JT đáo hạn D2)
+            "jt_late": ["JT-0231"], "shortfall_qty": 29, "P_late": 1.0,
+            "affected_lots": ["LOT-0005", "LOT-0009"],
             "fmea_code": "FMEA-M2-001", "rpn": 96,
             "recommended_action": "resequencing + OT2",
             "station_id": "STN-M2", "duration_h": 8.0,
         },
         "F02": {
             "jt_late": ["JT-0231"], "shortfall_qty": 50, "P_late": 0.92,
-            "affected_lots": ["LOT-0147"],
+            "affected_lots": ["LOT-0013"],
             "fmea_code": "FMEA-M2-001", "rpn": 64,
             "recommended_action": "monitor + buffer",
             "station_id": "STN-M2", "duration_h": 4.0,
@@ -294,10 +302,14 @@ def build_24_test_case_answers():
 
     cause_cases = {
         "R01": {
-            "top_cause": "MAT-C3-0917-02", "cause_type": "MATERIAL",
-            "fmea_code": "FMEA-SUP-001", "rpn": 96, "confidence": 0.92,
-            "isolate_lots": ["LOT-0403", "LOT-0404"],
-            "evidence_chain": ["PK-2207", "STN-AS2", "LOT-0403", "BATCH-HT-B07", "MAT-C3-0917-02"],
+            # Hiệu chuẩn từ Backward Engine đã kiểm chứng (2026-10-10):
+            # BATCH-HT-B07: Fisher p=0.0001, lift=82.2 (2/5 lot NG).
+            # MAT-C3-0917-02 bị loại về mặt thống kê: ~200 lot tiêu thụ mà chỉ
+            # 2 lot NG (tỷ lệ NG 1% ~ nền 0.5%), không đủ bằng chứng kết luận.
+            "top_cause": "BATCH-HT-B07", "cause_type": "BATCH",
+            "fmea_code": "FMEA-HT-001", "rpn": 135, "confidence": 0.66,
+            "isolate_lots": ["LOT-0401", "LOT-0402", "LOT-0403", "LOT-0404", "LOT-0405"],
+            "evidence_chain": ["STN-LAB", "LOT-0403", "BATCH-HT-B07", "fisher_p=0.0001", "lift=82.2"],
         },
         "R02": {
             "top_cause": "STN-M1", "cause_type": "MACHINE",
@@ -330,7 +342,7 @@ def build_24_test_case_answers():
             "evidence_chain": ["STN-AS2", "STN-M2", "LOT-0232"],
         },
         "R07": {
-            "top_cause": "UNKNOWN", "cause_type": "UNKNOWN",
+            "top_cause": "INSUFFICIENT_EVIDENCE", "cause_type": "UNKNOWN",
             "fmea_code": "FMEA-UNKNOWN", "rpn": 0, "confidence": 0.30,
             "isolate_lots": ["LOT-0300"],
             "evidence_chain": ["STN-LAB", "LOT-0300"],
@@ -358,7 +370,7 @@ def build_24_test_case_answers():
             "missing_scans_detected": 100,
             "entity_restoration_rate": 0.95,
             "affected_stations": ["STN-HT", "STN-AS1", "STN-AS2", "STN-T1"],
-            "critical_lots_with_gaps": ["LOT-0147", "LOT-0148", "LOT-0403", "LOT-0404"],
+            "critical_lots_with_gaps": ["LOT-0005", "LOT-0009", "LOT-0403", "LOT-0404"],
         },
         "D03": {
             "description": "Duplicate lot label detection",

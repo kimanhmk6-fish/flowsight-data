@@ -20,67 +20,102 @@
       "formula": "T_starve = WIP / throughput (Little's Law)"
     },
     "step3_netting": {
-      "opening_inventory": 450,
+      "opening_inventory": 450.0,
       "baseline_trajectory": [
-        450,
-        300,
-        50,
-        -800,
-        -350,
-        -300,
-        150,
-        600,
-        1050,
-        1500,
-        1950,
-        2400,
-        2850,
-        3300,
-        3750
+        450.0,
+        1078.6,
+        1707.1999999999998,
+        2335.7999999999997,
+        3864.3999999999996,
+        4493.0,
+        5121.6,
+        5750.200000000001,
+        7278.800000000001,
+        7907.4000000000015,
+        6736.000000000002,
+        8264.600000000002,
+        9793.200000000003,
+        11321.800000000003,
+        12850.400000000003
       ],
       "incident_trajectory": [
-        450,
-        -150,
-        -400,
-        -1250,
-        -800,
-        -750,
-        -300,
-        150,
-        600,
-        1050,
-        1500,
-        1950,
-        2400,
-        2850,
-        3300
+        450.0,
+        342.5999999999999,
+        971.1999999999998,
+        1599.7999999999997,
+        3128.3999999999996,
+        3757.0,
+        4385.6,
+        5014.200000000001,
+        6542.800000000001,
+        7171.4000000000015,
+        6000.000000000002,
+        7528.600000000002,
+        9057.200000000003,
+        10585.800000000003,
+        12114.400000000003
       ],
-      "first_shortage_day": 1,
-      "total_shortage": 3650,
-      "formula": "I(t) = I(t-1) + P(t) - S(t)"
+      "first_shortage_day": null,
+      "total_shortage": 0,
+      "formula": "I(t) = I(t-1) + P(t) - S(t)",
+      "inputs": {
+        "product_id": "PROD-P1",
+        "opening_inventory": 450.0,
+        "daily_production": 1528.6,
+        "shipment_schedule": [
+          900.0,
+          900.0,
+          900.0,
+          0.0,
+          900.0,
+          900.0,
+          900.0,
+          0.0,
+          900.0,
+          2700.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
     },
     "step4_material_check": {
-      "product_id": "PROD-P3",
-      "required_qty": 3650,
+      "product_id": "PROD-P1",
+      "required_qty": 736.0,
       "materials": [
         {
-          "component_id": "COMP-C2",
-          "qty_per_unit": 1.0,
-          "required": 3657.3,
-          "available": "0",
-          "sufficient": "False"
+          "component_id": "COMP-C1",
+          "qty_per_unit": 2.0,
+          "required": 1474.9,
+          "available": "74300",
+          "sufficient": "True"
         },
         {
-          "component_id": "COMP-C4",
-          "qty_per_unit": 0.2,
-          "required": 737.3,
-          "available": "0",
-          "sufficient": "False"
+          "component_id": "COMP-C3",
+          "qty_per_unit": 1.0,
+          "required": 739.7,
+          "available": "31900",
+          "sufficient": "True"
         },
         {
           "component_id": "COMP-C5",
-          "qty_per_unit": 2.0,
-          "required": 7307.3,
+          "qty_per_unit": 4.0,
+          "required": 2946.9,
+          "available": "0",
+          "sufficient": "False"
+        },
+        {
+          "component_id": "COMP-C6",
+          "qty_per_unit": 0.5,
+          "required": 368.7,
+          "available": "0",
+          "sufficient": "False"
+        },
+        {
+          "component_id": "COMP-C2",
+          "qty_per_unit": 1.0,
+          "required": 737.5,
           "available": "0",
           "sufficient": "False"
         }
@@ -91,11 +126,11 @@
     "step5_monte_carlo": [
       {
         "n_simulations": 20000,
-        "base_shortfall": 3650,
-        "expected_shortage": 3954.3,
-        "std_shortage": 569.1,
-        "p50_shortage": 3899.0,
-        "p90_shortage": 4764.7,
+        "base_shortfall": 557.4000000000001,
+        "expected_shortage": 603.9,
+        "std_shortage": 86.9,
+        "p50_shortage": 595.4,
+        "p90_shortage": 727.6,
         "p_late": 1.0,
         "distribution": "triangular",
         "dist_params": [
@@ -107,43 +142,81 @@
     ],
     "step6_cutoff": [
       {
-        "jt_id": "JT-0001",
-        "incident_start": "2026-10-03 08:00:00",
-        "incident_duration_h": 8.0,
-        "recovery_time_h": 0.94,
-        "completion_time": "2026-10-03 16:56:24",
-        "cutoff_time": "2026-01-10 09:00:00",
-        "truck_time": "2026-01-10 10:00:00",
-        "kips": false,
-        "status": "LATE"
-      },
-      {
         "jt_id": "JT-0005",
         "status": "no_shipment_for_jt"
       },
       {
+        "jt_id": "JT-0231",
+        "incident_start": "2026-10-03 08:00:00",
+        "incident_duration_h": 8.0,
+        "recovery_time_h": 0.94,
+        "completion_time": "2026-10-03 08:00:00",
+        "cutoff_time": "2026-10-01 09:00:00",
+        "truck_time": "2026-10-01 10:00:00",
+        "kips": true,
+        "status": "PASS",
+        "note": "incident_after_truck"
+      },
+      {
+        "jt_id": "JT-0001",
+        "incident_start": "2026-10-03 08:00:00",
+        "incident_duration_h": 8.0,
+        "recovery_time_h": 0.94,
+        "completion_time": "2026-10-03 08:00:00",
+        "cutoff_time": "2026-10-01 09:00:00",
+        "truck_time": "2026-10-01 10:00:00",
+        "kips": true,
+        "status": "PASS",
+        "note": "incident_after_truck"
+      },
+      {
         "jt_id": "JT-0009",
+        "status": "no_shipment_for_jt"
+      },
+      {
+        "jt_id": "JT-0013",
         "status": "no_shipment_for_jt"
       }
     ]
   },
   "summary": {
     "qty_lost": 736.0,
-    "total_shortage": 3650,
+    "total_shortage": 557,
     "jts_late": [
       {
-        "jt_id": "JT-0001",
+        "jt_id": "JT-0009",
         "p_late": 1.0,
-        "shortfall_qty": 3954
+        "shortfall_qty": 603,
+        "late_by": "qty",
+        "due_ts": "2026-10-03 00:00:00"
+      },
+      {
+        "jt_id": "JT-0013",
+        "p_late": 1.0,
+        "shortfall_qty": 603,
+        "late_by": "qty",
+        "due_ts": "2026-10-04 00:00:00"
       }
     ],
-    "affected_lot_ids": [],
+    "affected_lot_ids": [
+      "LOT-0118",
+      "LOT-0121",
+      "LOT-0123",
+      "LOT-0126",
+      "LOT-0129",
+      "LOT-0131",
+      "LOT-0134",
+      "LOT-0137",
+      "LOT-0139",
+      "LOT-0142",
+      "LOT-0145"
+    ],
     "recommended_action": "resequencing + OT2"
   },
   "expected": {
     "jt_late": [
-      "JT-0231"
+      "JT-0235"
     ],
-    "shortfall_qty": 100
+    "shortfall_qty": 150
   }
 }

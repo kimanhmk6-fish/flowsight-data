@@ -1,2978 +1,2979 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d9" for="edge" attr.name="evidence" attr.type="string" />
-  <key id="d8" for="edge" attr.name="confidence" attr.type="double" />
-  <key id="d7" for="edge" attr.name="qty" attr.type="long" />
-  <key id="d6" for="edge" attr.name="edge_type" attr.type="string" />
-  <key id="d5" for="edge" attr.name="edge_id" attr.type="string" />
-  <key id="d4" for="node" attr.name="node_type" attr.type="string" />
-  <key id="d3" for="node" attr.name="line_id" attr.type="string" />
-  <key id="d2" for="node" attr.name="created_ts" attr.type="string" />
-  <key id="d1" for="node" attr.name="qty" attr.type="long" />
-  <key id="d0" for="node" attr.name="product_id" attr.type="string" />
-  <graph edgedefault="directed">
-    <node id="LOT-0001">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0002">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0003">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0004">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0005">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0006">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0007">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0008">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0009">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0010">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0011">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0012">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0013">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0014">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0015">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0016">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0017">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0018">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0019">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0020">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0021">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0022">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0023">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0024">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0025">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0026">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0027">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0028">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0029">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-29 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0030">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0031">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0032">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0033">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0034">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0035">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0036">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0037">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0038">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0039">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0040">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0041">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0042">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0043">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0044">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0045">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0046">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0047">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0048">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0049">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0050">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0051">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0052">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0053">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0054">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0055">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0056">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0057">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0058">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0401">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 10:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0402">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 10:30:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0403">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 10:35:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0404">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 10:40:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0405">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-30 10:45:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0059">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0060">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0061">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0062">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0063">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0064">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0065">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0066">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0067">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0068">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0069">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0070">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0071">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0072">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0073">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0074">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0075">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0076">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0077">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0078">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0079">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0080">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0081">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0082">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0083">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0084">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0085">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0086">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0087">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-01-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0088">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0089">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0090">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0091">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0092">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0093">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0094">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0095">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0096">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0097">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0098">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0099">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0100">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0101">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0102">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0103">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0104">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0105">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0106">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0107">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0108">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0109">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0110">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0111">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0112">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0113">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0114">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0115">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0116">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0406">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 10:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0407">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 10:30:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0408">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 10:35:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0409">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 10:40:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0410">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-02-10 10:45:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0117">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0118">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0119">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0120">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0121">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0122">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0123">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0124">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0125">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0126">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0127">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0128">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0129">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0130">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0131">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0132">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0133">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0134">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0135">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0136">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0137">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0138">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0139">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0140">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0141">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0142">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0143">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0144">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0145">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-03-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0146">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0147">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0148">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0149">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0150">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0151">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0152">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0153">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0154">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0155">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0156">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0157">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0158">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0159">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0160">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0161">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0162">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0163">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0164">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0165">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0166">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0167">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0168">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0169">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0170">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0171">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0172">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0173">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0174">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-04-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0175">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0176">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0177">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0178">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0179">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0180">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0181">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0182">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0183">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0184">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0185">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0186">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0187">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0188">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0189">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0190">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0191">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0192">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0193">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0194">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0195">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0196">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 18:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0197">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0198">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 20:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0199">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0200">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 15:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0201">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0202">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 16:49:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0203">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-05-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0204">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0205">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0206">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0207">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0208">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0209">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0210">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0211">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0212">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0213">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0214">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0215">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0216">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0217">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0218">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0219">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0220">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0221">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0222">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0223">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0224">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0225">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0226">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 11:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0227">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0228">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 06:22:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0229">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0230">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 08:01:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0231">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0232">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-06-10 09:34:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0233">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0234">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0235">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0236">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0237">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0238">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0239">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0240">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0241">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0242">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0243">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0244">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0245">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0246">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0247">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0248">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0249">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0250">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0251">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0252">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0253">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0254">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0255">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0256">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0257">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0258">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0259">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0260">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-07-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0261">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0262">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0263">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0264">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0265">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0266">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0267">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0268">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0269">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0270">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0271">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0272">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0273">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0274">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0275">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0276">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0277">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0278">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0279">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0280">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0281">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0282">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0283">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0284">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0285">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0286">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0287">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0288">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-08-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0289">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0290">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0291">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0292">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0293">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0294">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0295">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0296">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0297">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0298">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0299">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0300">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0301">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0302">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0303">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0304">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0305">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0306">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0307">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0308">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0309">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0310">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0311">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0312">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0313">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0314">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0315">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0316">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-09-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0317">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0318">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0319">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0320">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0321">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0322">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0323">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0324">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0325">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0326">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0327">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0328">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0329">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0330">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0331">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0332">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0333">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0334">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0335">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0336">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0337">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0338">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0339">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0340">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0341">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0342">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0343">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0344">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-10-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0345">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0346">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0347">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0348">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0349">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0350">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0351">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0352">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0353">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0354">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0355">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0356">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0357">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0358">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0359">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0360">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0361">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0362">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0363">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0364">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0365">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0366">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0367">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0368">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0369">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0370">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0371">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0372">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-11-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0373">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0374">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0375">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0376">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0377">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0378">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0379">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0380">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0381">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0382">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0383">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0384">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0385">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0386">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0387">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0388">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0389">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0390">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0391">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0392">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0393">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 09:37:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0394">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 18:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0395">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 11:10:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0396">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 19:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0397">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 06:25:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0398">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 15:13:00</data>
-      <data key="d3">A</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0399">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 07:58:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="LOT-0400">
-      <data key="d0">PROD-P1</data>
-      <data key="d1">200</data>
-      <data key="d2">2026-12-10 16:46:00</data>
-      <data key="d3">B</data>
-      <data key="d4">LOT</data>
-    </node>
-    <node id="BATCH-HT-B07">
-      <data key="d4">BATCH</data>
-    </node>
-    <node id="LOT-2207">
-      <data key="d4">LOT</data>
-    </node>
-    <node id="BATCH-HT-B08">
-      <data key="d4">BATCH</data>
-    </node>
-    <edge source="LOT-0403" target="LOT-2207">
-      <data key="d5">EDGE-00006</data>
-      <data key="d6">MERGE</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="LOT-0404" target="LOT-2207">
-      <data key="d5">EDGE-00007</data>
-      <data key="d6">MERGE</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B07" target="LOT-0401">
-      <data key="d5">EDGE-00001</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B07" target="LOT-0402">
-      <data key="d5">EDGE-00002</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B07" target="LOT-0403">
-      <data key="d5">EDGE-00003</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B07" target="LOT-0404">
-      <data key="d5">EDGE-00004</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B07" target="LOT-0405">
-      <data key="d5">EDGE-00005</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B08" target="LOT-0406">
-      <data key="d5">EDGE-00008</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B08" target="LOT-0407">
-      <data key="d5">EDGE-00009</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B08" target="LOT-0408">
-      <data key="d5">EDGE-00010</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B08" target="LOT-0409">
-      <data key="d5">EDGE-00011</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-    <edge source="BATCH-HT-B08" target="LOT-0410">
-      <data key="d5">EDGE-00012</data>
-      <data key="d6">SPLIT</data>
-      <data key="d7">200</data>
-      <data key="d8">1.0</data>
-      <data key="d9">from_truth</data>
-    </edge>
-  </graph>
-</graphml>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d9" for="edge" attr.name="evidence" attr.type="string"/>
+<key id="d8" for="edge" attr.name="confidence" attr.type="double"/>
+<key id="d7" for="edge" attr.name="qty" attr.type="long"/>
+<key id="d6" for="edge" attr.name="edge_type" attr.type="string"/>
+<key id="d5" for="edge" attr.name="edge_id" attr.type="string"/>
+<key id="d4" for="node" attr.name="node_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="line_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="created_ts" attr.type="string"/>
+<key id="d1" for="node" attr.name="qty" attr.type="long"/>
+<key id="d0" for="node" attr.name="product_id" attr.type="string"/>
+<graph edgedefault="directed"><node id="LOT-0001">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0002">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0003">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0004">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0005">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0006">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0007">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0008">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0009">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0010">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0011">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0012">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0013">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0014">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0015">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0016">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0017">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0018">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0019">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0020">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0021">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0022">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0023">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0024">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0025">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0026">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0027">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0028">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0029">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-29 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0030">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0031">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0032">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0033">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0034">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0035">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0036">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0037">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0038">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0039">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0040">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0041">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0042">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0043">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0044">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0045">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0046">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0047">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0048">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0049">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0050">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0051">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0052">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0053">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0054">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0055">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0056">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0057">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0058">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0401">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 10:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0402">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 10:30:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0403">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 10:35:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0404">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 10:40:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0405">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-09-30 10:45:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0059">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0060">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0061">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0062">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0063">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0064">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0065">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0066">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0067">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0068">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0069">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0070">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0071">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0072">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0073">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0074">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0075">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0076">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0077">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0078">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0079">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0080">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0081">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0082">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0083">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0084">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0085">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0086">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0087">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-01 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0088">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0089">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0090">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0091">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0092">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0093">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0094">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0095">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0096">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0097">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0098">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0099">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0100">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0101">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0102">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0103">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0104">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0105">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0106">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0107">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0108">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0109">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0110">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0111">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0112">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0113">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0114">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0115">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0116">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0406">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 10:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0407">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 10:30:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0408">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 10:35:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0409">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 10:40:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0410">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-02 10:45:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0117">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0118">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0119">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0120">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0121">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0122">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0123">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0124">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0125">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0126">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0127">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0128">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0129">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0130">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0131">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0132">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0133">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0134">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0135">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0136">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0137">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0138">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0139">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0140">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0141">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0142">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0143">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0144">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0145">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-03 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0146">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0147">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0148">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0149">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0150">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0151">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0152">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0153">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0154">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0155">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0156">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0157">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0158">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0159">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0160">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0161">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0162">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0163">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0164">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0165">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0166">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0167">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0168">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0169">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0170">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0171">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0172">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0173">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0174">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-04 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0175">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0176">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0177">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0178">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0179">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0180">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0181">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0182">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0183">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0184">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0185">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0186">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0187">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0188">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0189">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0190">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0191">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0192">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0193">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0194">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0195">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0196">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 18:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0197">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0198">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 20:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0199">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0200">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 15:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0201">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0202">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 16:49:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0203">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-05 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0204">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0205">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0206">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0207">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0208">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0209">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0210">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0211">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0212">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0213">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0214">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0215">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0216">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0217">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0218">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0219">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0220">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0221">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0222">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0223">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0224">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0225">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0226">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 11:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0227">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0228">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 06:22:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0229">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0230">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 08:01:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0231">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0232">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-06 09:34:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0233">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0234">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0235">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0236">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0237">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0238">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0239">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0240">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0241">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0242">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0243">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0244">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0245">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0246">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0247">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0248">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0249">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0250">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0251">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0252">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0253">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0254">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0255">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0256">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0257">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0258">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0259">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0260">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-07 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0261">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0262">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0263">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0264">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0265">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0266">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0267">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0268">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0269">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0270">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0271">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0272">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0273">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0274">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0275">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0276">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0277">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0278">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0279">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0280">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0281">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0282">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0283">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0284">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0285">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0286">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0287">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0288">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-08 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0289">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0290">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0291">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0292">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0293">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0294">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0295">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0296">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0297">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0298">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0299">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0300">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0301">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0302">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0303">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0304">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0305">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0306">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0307">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0308">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0309">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0310">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0311">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0312">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0313">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0314">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0315">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0316">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-09 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0317">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0318">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0319">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0320">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0321">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0322">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0323">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0324">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0325">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0326">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0327">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0328">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0329">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0330">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0331">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0332">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0333">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0334">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0335">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0336">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0337">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0338">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0339">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0340">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0341">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0342">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0343">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0344">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-10 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0345">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0346">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0347">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0348">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0349">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0350">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0351">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0352">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0353">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0354">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0355">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0356">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0357">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0358">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0359">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0360">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0361">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0362">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0363">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0364">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0365">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0366">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0367">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0368">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0369">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0370">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0371">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0372">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-11 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0373">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0374">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0375">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0376">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0377">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0378">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0379">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0380">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0381">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0382">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0383">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0384">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0385">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0386">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0387">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0388">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0389">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0390">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0391">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0392">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0393">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 09:37:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0394">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 18:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0395">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 11:10:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0396">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 19:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0397">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 06:25:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0398">
+  <data key="d0">PROD-P2</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 15:13:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0399">
+  <data key="d0">PROD-P3</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 07:58:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-0400">
+  <data key="d0">PROD-P4</data>
+  <data key="d1">200</data>
+  <data key="d2">2026-10-12 16:46:00</data>
+  <data key="d3">B</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="LOT-2207">
+  <data key="d0">PROD-P1</data>
+  <data key="d1">400</data>
+  <data key="d2">2026-09-30 14:00:00</data>
+  <data key="d3">A</data>
+  <data key="d4">LOT</data>
+</node>
+<node id="BATCH-HT-B07">
+  <data key="d4">BATCH</data>
+</node>
+<node id="BATCH-HT-B08">
+  <data key="d4">BATCH</data>
+</node>
+<edge source="LOT-0403" target="LOT-2207">
+  <data key="d5">EDGE-00006</data>
+  <data key="d6">MERGE</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="LOT-0404" target="LOT-2207">
+  <data key="d5">EDGE-00007</data>
+  <data key="d6">MERGE</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B07" target="LOT-0401">
+  <data key="d5">EDGE-00001</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B07" target="LOT-0402">
+  <data key="d5">EDGE-00002</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B07" target="LOT-0403">
+  <data key="d5">EDGE-00003</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B07" target="LOT-0404">
+  <data key="d5">EDGE-00004</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B07" target="LOT-0405">
+  <data key="d5">EDGE-00005</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B08" target="LOT-0406">
+  <data key="d5">EDGE-00008</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B08" target="LOT-0407">
+  <data key="d5">EDGE-00009</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B08" target="LOT-0408">
+  <data key="d5">EDGE-00010</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B08" target="LOT-0409">
+  <data key="d5">EDGE-00011</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+<edge source="BATCH-HT-B08" target="LOT-0410">
+  <data key="d5">EDGE-00012</data>
+  <data key="d6">SPLIT</data>
+  <data key="d7">200</data>
+  <data key="d8">1.0</data>
+  <data key="d9">from_truth</data>
+</edge>
+</graph></graphml>

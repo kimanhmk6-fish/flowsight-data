@@ -86,18 +86,19 @@ def normalize_timestamp(raw: Any, fmt: str = "auto") -> Optional[pd.Timestamp]:
 
     s = str(raw).strip()
 
-    # Thử ISO 8601
-    try:
-        return pd.Timestamp(s)
-    except (ValueError, TypeError):
-        pass
-
-    # Thử dd/mm/yyyy
+    # Ưu tiên dd/mm/yyyy (dữ liệu Việt Nam) TRƯỚC khi thử parse tự động,
+    # vì pd.Timestamp("01/10/2026") sẽ hiểu nhầm thành MM/DD/YYYY.
     for fmt_str in ["%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"]:
         try:
             return pd.to_datetime(s, format=fmt_str)
         except (ValueError, TypeError):
             continue
+
+    # Thử ISO 8601 và các format khác
+    try:
+        return pd.Timestamp(s)
+    except (ValueError, TypeError):
+        pass
 
     return None
 

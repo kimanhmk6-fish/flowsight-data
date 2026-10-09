@@ -1,10 +1,10 @@
 {
   "step": "12B_backward_engine",
-  "run_at": "2026-10-08T15:41:32.344906Z",
-  "elapsed_sec": 0.37,
+  "run_at": "2026-10-09T18:35:31.189006Z",
+  "elapsed_sec": 0.49,
   "n_cases": 8,
-  "top1_accuracy": 0.125,
-  "top3_accuracy": 0.125,
+  "top1_accuracy": 0.25,
+  "top3_accuracy": 0.375,
   "results": [
     {
       "case_id": "R01",
@@ -18,7 +18,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-AS1",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -28,7 +28,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-HT",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -38,7 +38,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-INB",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -48,7 +48,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-M1",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -58,7 +58,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-M2",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -68,7 +68,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-PK",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -78,7 +78,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-SHP",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -88,7 +88,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-T1",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -98,7 +98,7 @@
             "candidate_type": "MATERIAL",
             "candidate_id": "MAT-C1-0917-01",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -108,7 +108,7 @@
             "candidate_type": "MATERIAL",
             "candidate_id": "MAT-C3-0917-02",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -118,7 +118,7 @@
             "candidate_type": "BATCH",
             "candidate_id": "BATCH-HT-B07",
             "n_related_lots": 5,
-            "n_ng_lots": 0,
+            "n_ng_lots": 2,
             "related_lot_ids": [
               "LOT-0401",
               "LOT-0402",
@@ -134,601 +134,586 @@
             "candidate_id": "STN-AS1",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-HT",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-INB",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-M1",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-M2",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-PK",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-SHP",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-T1",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "MAT-C1-0917-01",
             "candidate_type": "MATERIAL",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "MAT-C3-0917-02",
             "candidate_type": "MATERIAL",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "BATCH-HT-B07",
             "candidate_type": "BATCH",
             "contingency_table": {
-              "a": 0,
-              "b": 5,
-              "c": 13,
-              "d": 392
+              "a": 2,
+              "b": 3,
+              "c": 0,
+              "d": 406
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0001186873182600439,
+            "n_total": 411,
             "n_sufficient": true
           }
         ],
         "step3_lift": [
           {
             "candidate_id": "STN-AS1",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-HT",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-INB",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-M1",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-M2",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-PK",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-SHP",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-T1",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "MAT-C1-0917-01",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "MAT-C3-0917-02",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "BATCH-HT-B07",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 0.4,
+            "p_ng": 0.0049,
+            "lift": 82.2,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=82.20)"
           }
         ],
         "step4_spc": [],
         "step5_scored": [
           {
-            "candidate_id": "STN-AS1",
-            "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "candidate_id": "BATCH-HT-B07",
+            "candidate_type": "BATCH",
+            "score": 0.6,
+            "p_value": 0.0001,
+            "lift": 82.2,
             "signal_strength": 0.0,
-            "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_related_lots": 5,
+            "n_ng_lots": 2,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0001,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 2,
+                  "b": 3,
+                  "c": 0,
+                  "d": 406
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 82.2,
+                "p_ng_given_f": 0.4,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-AS1",
+            "candidate_type": "MACHINE",
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 1,
+            "is_significant": true,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 0.0049,
+                "contingency": {
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-HT",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-INB",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-M1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-M2",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-PK",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-SHP",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-T1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "MAT-C1-0917-01",
             "candidate_type": "MATERIAL",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "MAT-C3-0917-02",
             "candidate_type": "MATERIAL",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
-              }
-            ]
-          },
-          {
-            "candidate_id": "BATCH-HT-B07",
-            "candidate_type": "BATCH",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
-            "signal_strength": 0.0,
-            "n_related_lots": 5,
-            "n_ng_lots": 0,
-            "is_significant": false,
-            "evidence_chain": [
-              {
-                "type": "fisher_exact",
-                "p_value": 1.0,
-                "contingency": {
-                  "a": 0,
-                  "b": 5,
-                  "c": 13,
-                  "d": 392
-                }
-              },
-              {
-                "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           }
         ],
         "step6_containment": {
-          "candidate_id": "STN-AS1",
-          "candidate_type": "MACHINE",
+          "candidate_id": "BATCH-HT-B07",
+          "candidate_type": "BATCH",
           "isolate_lot_ids": [
-            "LOT-0030",
-            "LOT-0033",
-            "LOT-0034",
-            "LOT-0037",
-            "LOT-0038",
-            "LOT-0041",
-            "LOT-0042",
-            "LOT-0045",
-            "LOT-0046",
-            "LOT-0049",
-            "LOT-0050",
-            "LOT-0053",
-            "LOT-0054",
-            "LOT-0057",
-            "LOT-0058",
             "LOT-0401",
             "LOT-0402",
             "LOT-0403",
             "LOT-0404",
             "LOT-0405"
           ],
-          "n_isolated": 20,
+          "n_isolated": 5,
           "n_baseline": 34,
-          "reduction_pct": 0.4118,
+          "reduction_pct": 0.8529,
           "baseline_method": "all_lots_in_day",
           "rationale": [
             "Lô NG gốc: LOT-0403",
-            "Lots cùng machine STN-AS1 trong ±12h: 19"
+            "Lots con của batch BATCH-HT-B07: 5"
           ]
         }
       },
@@ -737,78 +722,63 @@
       "top_causes": [
         {
           "rank": 1,
-          "candidate_id": "STN-AS1",
-          "candidate_type": "MACHINE",
-          "score": 0.5,
-          "p_value": 1.0,
-          "lift": 0.0,
-          "is_significant": false
+          "candidate_id": "BATCH-HT-B07",
+          "candidate_type": "BATCH",
+          "score": 0.6,
+          "p_value": 0.0001,
+          "lift": 82.2,
+          "is_significant": true
         },
         {
           "rank": 2,
-          "candidate_id": "STN-HT",
+          "candidate_id": "STN-AS1",
           "candidate_type": "MACHINE",
-          "score": 0.5,
-          "p_value": 1.0,
-          "lift": 0.0,
-          "is_significant": false
+          "score": 0.4,
+          "p_value": 0.0049,
+          "lift": 205.5,
+          "is_significant": true
         },
         {
           "rank": 3,
-          "candidate_id": "STN-INB",
+          "candidate_id": "STN-HT",
           "candidate_type": "MACHINE",
-          "score": 0.5,
-          "p_value": 1.0,
-          "lift": 0.0,
-          "is_significant": false
+          "score": 0.4,
+          "p_value": 0.0049,
+          "lift": 205.5,
+          "is_significant": true
         }
       ],
-      "top_cause": "STN-AS1",
-      "top_cause_type": "MACHINE",
-      "confidence": 0.55,
+      "top_cause": "BATCH-HT-B07",
+      "top_cause_type": "BATCH",
+      "confidence": 0.66,
       "isolate_lots": [
-        "LOT-0030",
-        "LOT-0033",
-        "LOT-0034",
-        "LOT-0037",
-        "LOT-0038",
-        "LOT-0041",
-        "LOT-0042",
-        "LOT-0045",
-        "LOT-0046",
-        "LOT-0049",
-        "LOT-0050",
-        "LOT-0053",
-        "LOT-0054",
-        "LOT-0057",
-        "LOT-0058",
         "LOT-0401",
         "LOT-0402",
         "LOT-0403",
         "LOT-0404",
         "LOT-0405"
       ],
-      "containment_reduction": 0.4118,
+      "containment_reduction": 0.8529,
       "evidence_chain": [
         {
           "type": "fisher_exact",
-          "p_value": 1.0,
+          "p_value": 0.0001,
           "contingency": {
-            "a": 0,
-            "b": 1,
-            "c": 13,
-            "d": 396
+            "a": 2,
+            "b": 3,
+            "c": 0,
+            "d": 406
           }
         },
         {
           "type": "risk_lift",
-          "lift": 0.0,
-          "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "lift": 82.2,
+          "p_ng_given_f": 0.4,
+          "p_ng": 0.0049
         }
       ],
-      "expected_cause": "MAT-C3-0917-02",
-      "expected_type": "MATERIAL"
+      "expected_cause": "BATCH-HT-B07",
+      "expected_type": "BATCH"
     },
     {
       "case_id": "R02",
@@ -926,12 +896,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -940,12 +910,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -954,12 +924,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -968,12 +938,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -982,12 +952,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -996,12 +966,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1010,12 +980,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1024,12 +994,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1038,12 +1008,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1052,12 +1022,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           }
         ],
@@ -1065,7 +1035,7 @@
           {
             "candidate_id": "STN-AS1",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1073,7 +1043,7 @@
           {
             "candidate_id": "STN-HT",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1081,7 +1051,7 @@
           {
             "candidate_id": "STN-INB",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1089,7 +1059,7 @@
           {
             "candidate_id": "STN-M1",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1097,7 +1067,7 @@
           {
             "candidate_id": "STN-M2",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1105,7 +1075,7 @@
           {
             "candidate_id": "STN-PK",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1113,7 +1083,7 @@
           {
             "candidate_id": "STN-SHP",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1121,7 +1091,7 @@
           {
             "candidate_id": "STN-T1",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1129,7 +1099,7 @@
           {
             "candidate_id": "MAT-C1-0917-01",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1137,7 +1107,7 @@
           {
             "candidate_id": "MAT-C3-0917-02",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1162,15 +1132,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1191,15 +1161,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1220,15 +1190,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1249,15 +1219,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1278,15 +1248,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1307,15 +1277,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1336,15 +1306,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1365,15 +1335,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1394,15 +1364,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
@@ -1423,15 +1393,15 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           }
@@ -1525,15 +1495,15 @@
           "contingency": {
             "a": 0,
             "b": 1,
-            "c": 13,
-            "d": 396
+            "c": 2,
+            "d": 408
           }
         },
         {
           "type": "risk_lift",
           "lift": 0.0,
           "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "p_ng": 0.0049
         }
       ],
       "expected_cause": "STN-M1",
@@ -1651,7 +1621,7 @@
             "candidate_type": "BATCH",
             "candidate_id": "BATCH-HT-B07",
             "n_related_lots": 5,
-            "n_ng_lots": 0,
+            "n_ng_lots": 2,
             "related_lot_ids": [
               "LOT-0401",
               "LOT-0402",
@@ -1669,12 +1639,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1683,12 +1653,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1697,12 +1667,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1711,12 +1681,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1725,12 +1695,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1739,12 +1709,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1753,12 +1723,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1767,12 +1737,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1781,12 +1751,12 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
@@ -1795,26 +1765,26 @@
             "contingency_table": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             },
             "odds_ratio": 0.0,
             "p_value": 1.0,
-            "n_total": 410,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "BATCH-HT-B07",
             "candidate_type": "BATCH",
             "contingency_table": {
-              "a": 0,
-              "b": 5,
-              "c": 13,
-              "d": 392
+              "a": 2,
+              "b": 3,
+              "c": 0,
+              "d": 406
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0001186873182600439,
+            "n_total": 411,
             "n_sufficient": true
           }
         ],
@@ -1822,7 +1792,7 @@
           {
             "candidate_id": "STN-AS1",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1830,7 +1800,7 @@
           {
             "candidate_id": "STN-HT",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1838,7 +1808,7 @@
           {
             "candidate_id": "STN-INB",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1846,7 +1816,7 @@
           {
             "candidate_id": "STN-M1",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1854,7 +1824,7 @@
           {
             "candidate_id": "STN-M2",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1862,7 +1832,7 @@
           {
             "candidate_id": "STN-PK",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1870,7 +1840,7 @@
           {
             "candidate_id": "STN-SHP",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1878,7 +1848,7 @@
           {
             "candidate_id": "STN-T1",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1886,7 +1856,7 @@
           {
             "candidate_id": "MAT-C1-0917-01",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -1894,26 +1864,55 @@
           {
             "candidate_id": "MAT-C3-0917-02",
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
+            "p_ng": 0.0049,
             "lift": 0.0,
             "is_significant": false,
             "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
           },
           {
             "candidate_id": "BATCH-HT-B07",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 0.4,
+            "p_ng": 0.0049,
+            "lift": 82.2,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=82.20)"
           }
         ],
         "step4_spc": [],
         "step5_scored": [
           {
+            "candidate_id": "BATCH-HT-B07",
+            "candidate_type": "BATCH",
+            "score": 0.9,
+            "p_value": 0.0001,
+            "lift": 82.2,
+            "signal_strength": 0.0,
+            "n_related_lots": 5,
+            "n_ng_lots": 2,
+            "is_significant": true,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 0.0001,
+                "contingency": {
+                  "a": 2,
+                  "b": 3,
+                  "c": 0,
+                  "d": 406
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 82.2,
+                "p_ng_given_f": 0.4,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
             "candidate_id": "STN-AS1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -1927,22 +1926,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-HT",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -1956,22 +1955,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-INB",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -1985,22 +1984,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-M1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -2014,22 +2013,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-M2",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -2043,22 +2042,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-PK",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -2072,22 +2071,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-SHP",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -2101,22 +2100,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-T1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -2130,22 +2129,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "MAT-C1-0917-01",
             "candidate_type": "MATERIAL",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -2159,22 +2158,22 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "MAT-C3-0917-02",
             "candidate_type": "MATERIAL",
-            "score": 0.5,
+            "score": 0.1,
             "p_value": 1.0,
             "lift": 0.0,
             "signal_strength": 0.0,
@@ -2188,80 +2187,36 @@
                 "contingency": {
                   "a": 0,
                   "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "c": 2,
+                  "d": 408
                 }
               },
               {
                 "type": "risk_lift",
                 "lift": 0.0,
                 "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
-              }
-            ]
-          },
-          {
-            "candidate_id": "BATCH-HT-B07",
-            "candidate_type": "BATCH",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
-            "signal_strength": 0.0,
-            "n_related_lots": 5,
-            "n_ng_lots": 0,
-            "is_significant": false,
-            "evidence_chain": [
-              {
-                "type": "fisher_exact",
-                "p_value": 1.0,
-                "contingency": {
-                  "a": 0,
-                  "b": 5,
-                  "c": 13,
-                  "d": 392
-                }
-              },
-              {
-                "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "p_ng": 0.0049
               }
             ]
           }
         ],
         "step6_containment": {
-          "candidate_id": "STN-AS1",
-          "candidate_type": "MACHINE",
+          "candidate_id": "BATCH-HT-B07",
+          "candidate_type": "BATCH",
           "isolate_lot_ids": [
-            "LOT-0030",
-            "LOT-0033",
-            "LOT-0034",
-            "LOT-0037",
-            "LOT-0038",
-            "LOT-0041",
-            "LOT-0042",
-            "LOT-0045",
-            "LOT-0046",
-            "LOT-0049",
-            "LOT-0050",
-            "LOT-0053",
-            "LOT-0054",
-            "LOT-0057",
-            "LOT-0058",
             "LOT-0401",
             "LOT-0402",
             "LOT-0403",
             "LOT-0404",
             "LOT-0405"
           ],
-          "n_isolated": 20,
+          "n_isolated": 5,
           "n_baseline": 34,
-          "reduction_pct": 0.4118,
+          "reduction_pct": 0.8529,
           "baseline_method": "all_lots_in_day",
           "rationale": [
             "Lô NG gốc: LOT-0401",
-            "Lots cùng machine STN-AS1 trong ±12h: 19"
+            "Lots con của batch BATCH-HT-B07: 5"
           ]
         }
       },
@@ -2270,7 +2225,603 @@
       "top_causes": [
         {
           "rank": 1,
+          "candidate_id": "BATCH-HT-B07",
+          "candidate_type": "BATCH",
+          "score": 0.9,
+          "p_value": 0.0001,
+          "lift": 82.2,
+          "is_significant": true
+        },
+        {
+          "rank": 2,
           "candidate_id": "STN-AS1",
+          "candidate_type": "MACHINE",
+          "score": 0.1,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        },
+        {
+          "rank": 3,
+          "candidate_id": "STN-HT",
+          "candidate_type": "MACHINE",
+          "score": 0.1,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        }
+      ],
+      "top_cause": "BATCH-HT-B07",
+      "top_cause_type": "BATCH",
+      "confidence": 0.99,
+      "isolate_lots": [
+        "LOT-0401",
+        "LOT-0402",
+        "LOT-0403",
+        "LOT-0404",
+        "LOT-0405"
+      ],
+      "containment_reduction": 0.8529,
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 0.0001,
+          "contingency": {
+            "a": 2,
+            "b": 3,
+            "c": 0,
+            "d": 406
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 82.2,
+          "p_ng_given_f": 0.4,
+          "p_ng": 0.0049
+        }
+      ],
+      "expected_cause": "STN-HT",
+      "expected_type": "PROCESS"
+    },
+    {
+      "case_id": "R04",
+      "incident_id": "INC-0016",
+      "lot_id_ng": "LOT-0240",
+      "qc_station": "STN-AS2",
+      "qc_characteristic": "Lực ép",
+      "steps": {
+        "step1_candidates": [
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-AS2",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-HT",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-INB",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-M1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-PK",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-SHP",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-T1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MATERIAL",
+            "candidate_id": "MAT-C4-0917-01",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0240"
+            ],
+            "evidence_source": "material_consumption"
+          }
+        ],
+        "step2_fisher": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          }
+        ],
+        "step3_lift": [
+          {
+            "candidate_id": "STN-AS2",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-HT",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-INB",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-M1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-PK",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-T1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          }
+        ],
+        "step4_spc": [],
+        "step5_scored": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          }
+        ],
+        "step6_containment": {
+          "candidate_id": "STN-AS2",
+          "candidate_type": "MACHINE",
+          "isolate_lot_ids": [
+            "LOT-0235",
+            "LOT-0236",
+            "LOT-0239",
+            "LOT-0240",
+            "LOT-0243",
+            "LOT-0244",
+            "LOT-0247",
+            "LOT-0248",
+            "LOT-0251",
+            "LOT-0252",
+            "LOT-0255",
+            "LOT-0256",
+            "LOT-0259",
+            "LOT-0260"
+          ],
+          "n_isolated": 14,
+          "n_baseline": 28,
+          "reduction_pct": 0.5,
+          "baseline_method": "all_lots_in_day",
+          "rationale": [
+            "Lô NG gốc: LOT-0240",
+            "Lots cùng machine STN-AS2 trong ±12h: 13"
+          ]
+        }
+      },
+      "status": "RESOLVED",
+      "n_candidates": 8,
+      "top_causes": [
+        {
+          "rank": 1,
+          "candidate_id": "STN-AS2",
           "candidate_type": "MACHINE",
           "score": 0.5,
           "p_value": 1.0,
@@ -2296,32 +2847,26 @@
           "is_significant": false
         }
       ],
-      "top_cause": "STN-AS1",
+      "top_cause": "STN-AS2",
       "top_cause_type": "MACHINE",
       "confidence": 0.55,
       "isolate_lots": [
-        "LOT-0030",
-        "LOT-0033",
-        "LOT-0034",
-        "LOT-0037",
-        "LOT-0038",
-        "LOT-0041",
-        "LOT-0042",
-        "LOT-0045",
-        "LOT-0046",
-        "LOT-0049",
-        "LOT-0050",
-        "LOT-0053",
-        "LOT-0054",
-        "LOT-0057",
-        "LOT-0058",
-        "LOT-0401",
-        "LOT-0402",
-        "LOT-0403",
-        "LOT-0404",
-        "LOT-0405"
+        "LOT-0235",
+        "LOT-0236",
+        "LOT-0239",
+        "LOT-0240",
+        "LOT-0243",
+        "LOT-0244",
+        "LOT-0247",
+        "LOT-0248",
+        "LOT-0251",
+        "LOT-0252",
+        "LOT-0255",
+        "LOT-0256",
+        "LOT-0259",
+        "LOT-0260"
       ],
-      "containment_reduction": 0.4118,
+      "containment_reduction": 0.5,
       "evidence_chain": [
         {
           "type": "fisher_exact",
@@ -2329,34 +2874,19 @@
           "contingency": {
             "a": 0,
             "b": 1,
-            "c": 13,
-            "d": 396
+            "c": 2,
+            "d": 408
           }
         },
         {
           "type": "risk_lift",
           "lift": 0.0,
           "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "p_ng": 0.0049
         }
       ],
-      "expected_cause": "BATCH-HT-B07",
-      "expected_type": "BATCH"
-    },
-    {
-      "case_id": "R04",
-      "incident_id": "INC-0016",
-      "lot_id_ng": "LOT-1050",
-      "qc_station": "STN-AS2",
-      "qc_characteristic": "Lực ép",
-      "steps": {
-        "step1_candidates": []
-      },
-      "status": "INSUFFICIENT_EVIDENCE",
-      "n_candidates": 0,
-      "message": "Không tìm thấy candidate nào",
       "expected_cause": "STN-AS2",
-      "expected_type": "MACHINE"
+      "expected_type": "HUMAN"
     },
     {
       "case_id": "R05",
@@ -2370,7 +2900,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-AS1",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2380,7 +2910,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-HT",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2390,7 +2920,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-INB",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2400,7 +2930,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-M1",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2410,7 +2940,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-M2",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2420,7 +2950,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-PK",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2430,7 +2960,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-SHP",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2440,7 +2970,7 @@
             "candidate_type": "MACHINE",
             "candidate_id": "STN-T1",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2450,7 +2980,7 @@
             "candidate_type": "MATERIAL",
             "candidate_id": "MAT-C1-0917-01",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2460,7 +2990,7 @@
             "candidate_type": "MATERIAL",
             "candidate_id": "MAT-C3-0917-02",
             "n_related_lots": 1,
-            "n_ng_lots": 0,
+            "n_ng_lots": 1,
             "related_lot_ids": [
               "LOT-0403"
             ],
@@ -2470,7 +3000,7 @@
             "candidate_type": "BATCH",
             "candidate_id": "BATCH-HT-B07",
             "n_related_lots": 5,
-            "n_ng_lots": 0,
+            "n_ng_lots": 2,
             "related_lot_ids": [
               "LOT-0401",
               "LOT-0402",
@@ -2486,601 +3016,586 @@
             "candidate_id": "STN-AS1",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-HT",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-INB",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-M1",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-M2",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-PK",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-SHP",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "STN-T1",
             "candidate_type": "MACHINE",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "MAT-C1-0917-01",
             "candidate_type": "MATERIAL",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "MAT-C3-0917-02",
             "candidate_type": "MATERIAL",
             "contingency_table": {
-              "a": 0,
-              "b": 1,
-              "c": 13,
-              "d": 396
+              "a": 1,
+              "b": 0,
+              "c": 1,
+              "d": 409
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0048661800486618,
+            "n_total": 411,
             "n_sufficient": true
           },
           {
             "candidate_id": "BATCH-HT-B07",
             "candidate_type": "BATCH",
             "contingency_table": {
-              "a": 0,
-              "b": 5,
-              "c": 13,
-              "d": 392
+              "a": 2,
+              "b": 3,
+              "c": 0,
+              "d": 406
             },
-            "odds_ratio": 0.0,
-            "p_value": 1.0,
-            "n_total": 410,
+            "odds_ratio": Infinity,
+            "p_value": 0.0001186873182600439,
+            "n_total": 411,
             "n_sufficient": true
           }
         ],
         "step3_lift": [
           {
             "candidate_id": "STN-AS1",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-HT",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-INB",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-M1",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-M2",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-PK",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-SHP",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "STN-T1",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "MAT-C1-0917-01",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "MAT-C3-0917-02",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 1.0,
+            "p_ng": 0.0049,
+            "lift": 205.5,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=205.50)"
           },
           {
             "candidate_id": "BATCH-HT-B07",
-            "p_ng_given_f": 0.0,
-            "p_ng": 0.0317,
-            "lift": 0.0,
-            "is_significant": false,
-            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+            "p_ng_given_f": 0.4,
+            "p_ng": 0.0049,
+            "lift": 82.2,
+            "is_significant": true,
+            "interpretation": "Rất mạnh (lift=82.20)"
           }
         ],
         "step4_spc": [],
         "step5_scored": [
           {
-            "candidate_id": "STN-AS1",
-            "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "candidate_id": "BATCH-HT-B07",
+            "candidate_type": "BATCH",
+            "score": 0.6,
+            "p_value": 0.0001,
+            "lift": 82.2,
             "signal_strength": 0.0,
-            "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_related_lots": 5,
+            "n_ng_lots": 2,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0001,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 2,
+                  "b": 3,
+                  "c": 0,
+                  "d": 406
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 82.2,
+                "p_ng_given_f": 0.4,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-AS1",
+            "candidate_type": "MACHINE",
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 1,
+            "is_significant": true,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 0.0049,
+                "contingency": {
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-HT",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-INB",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-M1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-M2",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-PK",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-SHP",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "STN-T1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "MAT-C1-0917-01",
             "candidate_type": "MATERIAL",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           },
           {
             "candidate_id": "MAT-C3-0917-02",
             "candidate_type": "MATERIAL",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
             "signal_strength": 0.0,
             "n_related_lots": 1,
-            "n_ng_lots": 0,
-            "is_significant": false,
+            "n_ng_lots": 1,
+            "is_significant": true,
             "evidence_chain": [
               {
                 "type": "fisher_exact",
-                "p_value": 1.0,
+                "p_value": 0.0049,
                 "contingency": {
-                  "a": 0,
-                  "b": 1,
-                  "c": 13,
-                  "d": 396
+                  "a": 1,
+                  "b": 0,
+                  "c": 1,
+                  "d": 409
                 }
               },
               {
                 "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
-              }
-            ]
-          },
-          {
-            "candidate_id": "BATCH-HT-B07",
-            "candidate_type": "BATCH",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
-            "signal_strength": 0.0,
-            "n_related_lots": 5,
-            "n_ng_lots": 0,
-            "is_significant": false,
-            "evidence_chain": [
-              {
-                "type": "fisher_exact",
-                "p_value": 1.0,
-                "contingency": {
-                  "a": 0,
-                  "b": 5,
-                  "c": 13,
-                  "d": 392
-                }
-              },
-              {
-                "type": "risk_lift",
-                "lift": 0.0,
-                "p_ng_given_f": 0.0,
-                "p_ng": 0.0317
+                "lift": 205.5,
+                "p_ng_given_f": 1.0,
+                "p_ng": 0.0049
               }
             ]
           }
         ],
         "step6_containment": {
-          "candidate_id": "STN-AS1",
-          "candidate_type": "MACHINE",
+          "candidate_id": "BATCH-HT-B07",
+          "candidate_type": "BATCH",
           "isolate_lot_ids": [
-            "LOT-0030",
-            "LOT-0033",
-            "LOT-0034",
-            "LOT-0037",
-            "LOT-0038",
-            "LOT-0041",
-            "LOT-0042",
-            "LOT-0045",
-            "LOT-0046",
-            "LOT-0049",
-            "LOT-0050",
-            "LOT-0053",
-            "LOT-0054",
-            "LOT-0057",
-            "LOT-0058",
             "LOT-0401",
             "LOT-0402",
             "LOT-0403",
             "LOT-0404",
             "LOT-0405"
           ],
-          "n_isolated": 20,
+          "n_isolated": 5,
           "n_baseline": 34,
-          "reduction_pct": 0.4118,
+          "reduction_pct": 0.8529,
           "baseline_method": "all_lots_in_day",
           "rationale": [
             "Lô NG gốc: LOT-0403",
-            "Lots cùng machine STN-AS1 trong ±12h: 19"
+            "Lots con của batch BATCH-HT-B07: 5"
           ]
         }
       },
@@ -3089,7 +3604,604 @@
       "top_causes": [
         {
           "rank": 1,
+          "candidate_id": "BATCH-HT-B07",
+          "candidate_type": "BATCH",
+          "score": 0.6,
+          "p_value": 0.0001,
+          "lift": 82.2,
+          "is_significant": true
+        },
+        {
+          "rank": 2,
           "candidate_id": "STN-AS1",
+          "candidate_type": "MACHINE",
+          "score": 0.4,
+          "p_value": 0.0049,
+          "lift": 205.5,
+          "is_significant": true
+        },
+        {
+          "rank": 3,
+          "candidate_id": "STN-HT",
+          "candidate_type": "MACHINE",
+          "score": 0.4,
+          "p_value": 0.0049,
+          "lift": 205.5,
+          "is_significant": true
+        }
+      ],
+      "top_cause": "BATCH-HT-B07",
+      "top_cause_type": "BATCH",
+      "confidence": 0.66,
+      "isolate_lots": [
+        "LOT-0401",
+        "LOT-0402",
+        "LOT-0403",
+        "LOT-0404",
+        "LOT-0405"
+      ],
+      "containment_reduction": 0.8529,
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 0.0001,
+          "contingency": {
+            "a": 2,
+            "b": 3,
+            "c": 0,
+            "d": 406
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 82.2,
+          "p_ng_given_f": 0.4,
+          "p_ng": 0.0049
+        }
+      ],
+      "expected_cause": "LABEL_DUPLICATION",
+      "expected_type": "DATA_QUALITY"
+    },
+    {
+      "case_id": "R06",
+      "incident_id": "INC-0018",
+      "lot_id_ng": "LOT-0232",
+      "qc_station": "STN-AS2",
+      "qc_characteristic": "Lực ép",
+      "steps": {
+        "step1_candidates": [
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-AS2",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-HT",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-INB",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-M1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-PK",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-SHP",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-T1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MATERIAL",
+            "candidate_id": "MAT-C4-0917-01",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0232"
+            ],
+            "evidence_source": "material_consumption"
+          }
+        ],
+        "step2_fisher": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          }
+        ],
+        "step3_lift": [
+          {
+            "candidate_id": "STN-AS2",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-HT",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-INB",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-M1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-PK",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-T1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          }
+        ],
+        "step4_spc": [],
+        "step5_scored": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          }
+        ],
+        "step6_containment": {
+          "candidate_id": "STN-AS2",
+          "candidate_type": "MACHINE",
+          "isolate_lot_ids": [
+            "LOT-0204",
+            "LOT-0207",
+            "LOT-0208",
+            "LOT-0211",
+            "LOT-0212",
+            "LOT-0215",
+            "LOT-0216",
+            "LOT-0219",
+            "LOT-0220",
+            "LOT-0223",
+            "LOT-0224",
+            "LOT-0227",
+            "LOT-0228",
+            "LOT-0231",
+            "LOT-0232"
+          ],
+          "n_isolated": 15,
+          "n_baseline": 29,
+          "reduction_pct": 0.4828,
+          "baseline_method": "all_lots_in_day",
+          "rationale": [
+            "Lô NG gốc: LOT-0232",
+            "Lots cùng machine STN-AS2 trong ±12h: 14"
+          ]
+        }
+      },
+      "status": "RESOLVED",
+      "n_candidates": 8,
+      "top_causes": [
+        {
+          "rank": 1,
+          "candidate_id": "STN-AS2",
           "candidate_type": "MACHINE",
           "score": 0.5,
           "p_value": 1.0,
@@ -3115,32 +4227,27 @@
           "is_significant": false
         }
       ],
-      "top_cause": "STN-AS1",
+      "top_cause": "STN-AS2",
       "top_cause_type": "MACHINE",
       "confidence": 0.55,
       "isolate_lots": [
-        "LOT-0030",
-        "LOT-0033",
-        "LOT-0034",
-        "LOT-0037",
-        "LOT-0038",
-        "LOT-0041",
-        "LOT-0042",
-        "LOT-0045",
-        "LOT-0046",
-        "LOT-0049",
-        "LOT-0050",
-        "LOT-0053",
-        "LOT-0054",
-        "LOT-0057",
-        "LOT-0058",
-        "LOT-0401",
-        "LOT-0402",
-        "LOT-0403",
-        "LOT-0404",
-        "LOT-0405"
+        "LOT-0204",
+        "LOT-0207",
+        "LOT-0208",
+        "LOT-0211",
+        "LOT-0212",
+        "LOT-0215",
+        "LOT-0216",
+        "LOT-0219",
+        "LOT-0220",
+        "LOT-0223",
+        "LOT-0224",
+        "LOT-0227",
+        "LOT-0228",
+        "LOT-0231",
+        "LOT-0232"
       ],
-      "containment_reduction": 0.4118,
+      "containment_reduction": 0.4828,
       "evidence_chain": [
         {
           "type": "fisher_exact",
@@ -3148,63 +4255,1228 @@
           "contingency": {
             "a": 0,
             "b": 1,
-            "c": 13,
-            "d": 396
+            "c": 2,
+            "d": 408
           }
         },
         {
           "type": "risk_lift",
           "lift": 0.0,
           "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "p_ng": 0.0049
         }
       ],
-      "expected_cause": "LOT_LABEL_DUPLICATION",
-      "expected_type": "DATA_QUALITY"
-    },
-    {
-      "case_id": "R06",
-      "incident_id": "INC-0018",
-      "lot_id_ng": "LOT-1060",
-      "qc_station": "STN-AS2",
-      "qc_characteristic": "Lực ép",
-      "steps": {
-        "step1_candidates": []
-      },
-      "status": "INSUFFICIENT_EVIDENCE",
-      "n_candidates": 0,
-      "message": "Không tìm thấy candidate nào",
       "expected_cause": "COMBINED",
       "expected_type": "COMBINED"
     },
     {
       "case_id": "R07",
       "incident_id": "INC-0019",
-      "lot_id_ng": "LOT-1070",
+      "lot_id_ng": "LOT-0300",
       "qc_station": "STN-LAB",
       "qc_characteristic": "Lực ép",
       "steps": {
-        "step1_candidates": []
+        "step1_candidates": [
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-AS2",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-HT",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-INB",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-M1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-PK",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-SHP",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-T1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MATERIAL",
+            "candidate_id": "MAT-C4-0917-01",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0300"
+            ],
+            "evidence_source": "material_consumption"
+          }
+        ],
+        "step2_fisher": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          }
+        ],
+        "step3_lift": [
+          {
+            "candidate_id": "STN-AS2",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-HT",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-INB",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-M1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-PK",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-T1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          }
+        ],
+        "step4_spc": [],
+        "step5_scored": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          }
+        ],
+        "step6_containment": {
+          "candidate_id": "STN-AS2",
+          "candidate_type": "MACHINE",
+          "isolate_lot_ids": [
+            "LOT-0291",
+            "LOT-0292",
+            "LOT-0295",
+            "LOT-0296",
+            "LOT-0299",
+            "LOT-0300",
+            "LOT-0303",
+            "LOT-0304",
+            "LOT-0307",
+            "LOT-0308",
+            "LOT-0311",
+            "LOT-0312",
+            "LOT-0315",
+            "LOT-0316"
+          ],
+          "n_isolated": 14,
+          "n_baseline": 28,
+          "reduction_pct": 0.5,
+          "baseline_method": "all_lots_in_day",
+          "rationale": [
+            "Lô NG gốc: LOT-0300",
+            "Lots cùng machine STN-AS2 trong ±12h: 13"
+          ]
+        }
       },
-      "status": "INSUFFICIENT_EVIDENCE",
-      "n_candidates": 0,
-      "message": "Không tìm thấy candidate nào",
+      "status": "RESOLVED",
+      "n_candidates": 8,
+      "top_causes": [
+        {
+          "rank": 1,
+          "candidate_id": "STN-AS2",
+          "candidate_type": "MACHINE",
+          "score": 0.5,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        },
+        {
+          "rank": 2,
+          "candidate_id": "STN-HT",
+          "candidate_type": "MACHINE",
+          "score": 0.5,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        },
+        {
+          "rank": 3,
+          "candidate_id": "STN-INB",
+          "candidate_type": "MACHINE",
+          "score": 0.5,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        }
+      ],
+      "top_cause": "STN-AS2",
+      "top_cause_type": "MACHINE",
+      "confidence": 0.55,
+      "isolate_lots": [
+        "LOT-0291",
+        "LOT-0292",
+        "LOT-0295",
+        "LOT-0296",
+        "LOT-0299",
+        "LOT-0300",
+        "LOT-0303",
+        "LOT-0304",
+        "LOT-0307",
+        "LOT-0308",
+        "LOT-0311",
+        "LOT-0312",
+        "LOT-0315",
+        "LOT-0316"
+      ],
+      "containment_reduction": 0.5,
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 1.0,
+          "contingency": {
+            "a": 0,
+            "b": 1,
+            "c": 2,
+            "d": 408
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 0.0,
+          "p_ng_given_f": 0.0,
+          "p_ng": 0.0049
+        }
+      ],
       "expected_cause": "INSUFFICIENT_EVIDENCE",
       "expected_type": "UNKNOWN"
     },
     {
       "case_id": "R08",
       "incident_id": "INC-0020",
-      "lot_id_ng": "LOT-1080",
+      "lot_id_ng": "LOT-0235",
       "qc_station": "STN-SHP",
       "qc_characteristic": "Lực ép",
       "steps": {
-        "step1_candidates": []
+        "step1_candidates": [
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-AS2",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-HT",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-INB",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-M1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-PK",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-SHP",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MACHINE",
+            "candidate_id": "STN-T1",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "lot_event"
+          },
+          {
+            "candidate_type": "MATERIAL",
+            "candidate_id": "MAT-C4-0917-01",
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "related_lot_ids": [
+              "LOT-0235"
+            ],
+            "evidence_source": "material_consumption"
+          }
+        ],
+        "step2_fisher": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "contingency_table": {
+              "a": 0,
+              "b": 1,
+              "c": 2,
+              "d": 408
+            },
+            "odds_ratio": 0.0,
+            "p_value": 1.0,
+            "n_total": 411,
+            "n_sufficient": true
+          }
+        ],
+        "step3_lift": [
+          {
+            "candidate_id": "STN-AS2",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-HT",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-INB",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-M1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-PK",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "STN-T1",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "p_ng_given_f": 0.0,
+            "p_ng": 0.0049,
+            "lift": 0.0,
+            "is_significant": false,
+            "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
+          }
+        ],
+        "step4_spc": [],
+        "step5_scored": [
+          {
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-M1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-PK",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-SHP",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "STN-T1",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          },
+          {
+            "candidate_id": "MAT-C4-0917-01",
+            "candidate_type": "MATERIAL",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "signal_strength": 0.0,
+            "n_related_lots": 1,
+            "n_ng_lots": 0,
+            "is_significant": false,
+            "evidence_chain": [
+              {
+                "type": "fisher_exact",
+                "p_value": 1.0,
+                "contingency": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 2,
+                  "d": 408
+                }
+              },
+              {
+                "type": "risk_lift",
+                "lift": 0.0,
+                "p_ng_given_f": 0.0,
+                "p_ng": 0.0049
+              }
+            ]
+          }
+        ],
+        "step6_containment": {
+          "candidate_id": "STN-AS2",
+          "candidate_type": "MACHINE",
+          "isolate_lot_ids": [
+            "LOT-0211",
+            "LOT-0219",
+            "LOT-0227",
+            "LOT-0235",
+            "LOT-0236",
+            "LOT-0239",
+            "LOT-0243",
+            "LOT-0244",
+            "LOT-0247",
+            "LOT-0251",
+            "LOT-0252",
+            "LOT-0255",
+            "LOT-0259",
+            "LOT-0260"
+          ],
+          "n_isolated": 14,
+          "n_baseline": 28,
+          "reduction_pct": 0.5,
+          "baseline_method": "all_lots_in_day",
+          "rationale": [
+            "Lô NG gốc: LOT-0235",
+            "Lots cùng machine STN-AS2 trong ±12h: 13"
+          ]
+        }
       },
-      "status": "INSUFFICIENT_EVIDENCE",
-      "n_candidates": 0,
-      "message": "Không tìm thấy candidate nào",
-      "expected_cause": "MATERIAL_BATCH_ISSUE",
+      "status": "RESOLVED",
+      "n_candidates": 8,
+      "top_causes": [
+        {
+          "rank": 1,
+          "candidate_id": "STN-AS2",
+          "candidate_type": "MACHINE",
+          "score": 0.5,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        },
+        {
+          "rank": 2,
+          "candidate_id": "STN-HT",
+          "candidate_type": "MACHINE",
+          "score": 0.5,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        },
+        {
+          "rank": 3,
+          "candidate_id": "STN-INB",
+          "candidate_type": "MACHINE",
+          "score": 0.5,
+          "p_value": 1.0,
+          "lift": 0.0,
+          "is_significant": false
+        }
+      ],
+      "top_cause": "STN-AS2",
+      "top_cause_type": "MACHINE",
+      "confidence": 0.55,
+      "isolate_lots": [
+        "LOT-0211",
+        "LOT-0219",
+        "LOT-0227",
+        "LOT-0235",
+        "LOT-0236",
+        "LOT-0239",
+        "LOT-0243",
+        "LOT-0244",
+        "LOT-0247",
+        "LOT-0251",
+        "LOT-0252",
+        "LOT-0255",
+        "LOT-0259",
+        "LOT-0260"
+      ],
+      "containment_reduction": 0.5,
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 1.0,
+          "contingency": {
+            "a": 0,
+            "b": 1,
+            "c": 2,
+            "d": 408
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 0.0,
+          "p_ng_given_f": 0.0,
+          "p_ng": 0.0049
+        }
+      ],
+      "expected_cause": "SUPPLIER_MAT",
       "expected_type": "MATERIAL"
     }
   ],
@@ -3225,60 +5497,60 @@
         "n_candidates": 11
       },
       "conclusion": {
-        "text": "Nguyên nhân hàng đầu: STN-AS1 (MACHINE) với lift=0.00, p=1.0000. Cần cách ly 20 lots (giảm 41% so với baseline).",
+        "text": "Nguyên nhân hàng đầu: BATCH-HT-B07 (BATCH) với lift=82.20, p=0.0001. Cần cách ly 5 lots (giảm 85% so với baseline).",
         "top_causes": [
           {
             "rank": 1,
-            "candidate_id": "STN-AS1",
-            "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
-            "is_significant": false
+            "candidate_id": "BATCH-HT-B07",
+            "candidate_type": "BATCH",
+            "score": 0.6,
+            "p_value": 0.0001,
+            "lift": 82.2,
+            "is_significant": true
           },
           {
             "rank": 2,
-            "candidate_id": "STN-HT",
+            "candidate_id": "STN-AS1",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
-            "is_significant": false
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
+            "is_significant": true
           },
           {
             "rank": 3,
-            "candidate_id": "STN-INB",
+            "candidate_id": "STN-HT",
             "candidate_type": "MACHINE",
-            "score": 0.5,
-            "p_value": 1.0,
-            "lift": 0.0,
-            "is_significant": false
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
+            "is_significant": true
           }
         ],
-        "isolate_count": 20,
-        "reduction_pct": 0.4118
+        "isolate_count": 5,
+        "reduction_pct": 0.8529
       },
-      "confidence": 0.55,
+      "confidence": 0.66,
       "grade": "B",
       "evidence_chain": [
         {
           "type": "fisher_exact",
-          "p_value": 1.0,
+          "p_value": 0.0001,
           "contingency": {
-            "a": 0,
-            "b": 1,
-            "c": 13,
-            "d": 396
+            "a": 2,
+            "b": 3,
+            "c": 0,
+            "d": 406
           }
         },
         {
           "type": "risk_lift",
-          "lift": 0.0,
-          "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "lift": 82.2,
+          "p_ng_given_f": 0.4,
+          "p_ng": 0.0049
         }
       ],
-      "generated_at": "2026-10-08T15:41:32.108031Z"
+      "generated_at": "2026-10-09T18:35:30.891073Z"
     },
     {
       "claim_id": "CLAIM-R02",
@@ -3338,18 +5610,18 @@
           "contingency": {
             "a": 0,
             "b": 1,
-            "c": 13,
-            "d": 396
+            "c": 2,
+            "d": 408
           }
         },
         {
           "type": "risk_lift",
           "lift": 0.0,
           "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "p_ng": 0.0049
         }
       ],
-      "generated_at": "2026-10-08T15:41:32.171507Z"
+      "generated_at": "2026-10-09T18:35:30.943926Z"
     },
     {
       "claim_id": "CLAIM-R03",
@@ -3367,11 +5639,82 @@
         "n_candidates": 11
       },
       "conclusion": {
-        "text": "Nguyên nhân hàng đầu: STN-AS1 (MACHINE) với lift=0.00, p=1.0000. Cần cách ly 20 lots (giảm 41% so với baseline).",
+        "text": "Nguyên nhân hàng đầu: BATCH-HT-B07 (BATCH) với lift=82.20, p=0.0001. Cần cách ly 5 lots (giảm 85% so với baseline).",
         "top_causes": [
           {
             "rank": 1,
+            "candidate_id": "BATCH-HT-B07",
+            "candidate_type": "BATCH",
+            "score": 0.9,
+            "p_value": 0.0001,
+            "lift": 82.2,
+            "is_significant": true
+          },
+          {
+            "rank": 2,
             "candidate_id": "STN-AS1",
+            "candidate_type": "MACHINE",
+            "score": 0.1,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          },
+          {
+            "rank": 3,
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.1,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          }
+        ],
+        "isolate_count": 5,
+        "reduction_pct": 0.8529
+      },
+      "confidence": 0.99,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 0.0001,
+          "contingency": {
+            "a": 2,
+            "b": 3,
+            "c": 0,
+            "d": 406
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 82.2,
+          "p_ng_given_f": 0.4,
+          "p_ng": 0.0049
+        }
+      ],
+      "generated_at": "2026-10-09T18:35:30.983874Z"
+    },
+    {
+      "claim_id": "CLAIM-R04",
+      "item": "Root cause of LOT-0240",
+      "formula_used": [
+        "Reverse BFS on genealogy",
+        "Fisher Exact Test (2×2 contingency)",
+        "Risk Lift = P(NG|F) / P(NG)",
+        "Score = w1·norm(-log p) + w2·norm(lift) + w3·signal"
+      ],
+      "inputs": {
+        "lot_id_ng": "LOT-0240",
+        "qc_station": "STN-AS2",
+        "qc_characteristic": "Lực ép",
+        "n_candidates": 8
+      },
+      "conclusion": {
+        "text": "Nguyên nhân hàng đầu: STN-AS2 (MACHINE) với lift=0.00, p=1.0000. Cần cách ly 14 lots (giảm 50% so với baseline).",
+        "top_causes": [
+          {
+            "rank": 1,
+            "candidate_id": "STN-AS2",
             "candidate_type": "MACHINE",
             "score": 0.5,
             "p_value": 1.0,
@@ -3397,8 +5740,8 @@
             "is_significant": false
           }
         ],
-        "isolate_count": 20,
-        "reduction_pct": 0.4118
+        "isolate_count": 14,
+        "reduction_pct": 0.5
       },
       "confidence": 0.55,
       "grade": "B",
@@ -3409,36 +5752,18 @@
           "contingency": {
             "a": 0,
             "b": 1,
-            "c": 13,
-            "d": 396
+            "c": 2,
+            "d": 408
           }
         },
         {
           "type": "risk_lift",
           "lift": 0.0,
           "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "p_ng": 0.0049
         }
       ],
-      "generated_at": "2026-10-08T15:41:32.232816Z"
-    },
-    {
-      "claim_id": "CLAIM-R04",
-      "item": "Root cause of LOT-1050",
-      "formula_used": [
-        "Reverse BFS on genealogy",
-        "Fisher Exact Test",
-        "Risk Lift = P(NG|F) / P(NG)",
-        "Score = w1·norm(-log p) + w2·norm(lift) + w3·signal"
-      ],
-      "conclusion": {
-        "text": "Không tìm thấy candidate nào",
-        "top_causes": []
-      },
-      "confidence": 0.0,
-      "grade": "N/A",
-      "status": "INSUFFICIENT_EVIDENCE",
-      "generated_at": "2026-10-08T15:41:32.241015Z"
+      "generated_at": "2026-10-09T18:35:31.020897Z"
     },
     {
       "claim_id": "CLAIM-R05",
@@ -3456,11 +5781,82 @@
         "n_candidates": 11
       },
       "conclusion": {
-        "text": "Nguyên nhân hàng đầu: STN-AS1 (MACHINE) với lift=0.00, p=1.0000. Cần cách ly 20 lots (giảm 41% so với baseline).",
+        "text": "Nguyên nhân hàng đầu: BATCH-HT-B07 (BATCH) với lift=82.20, p=0.0001. Cần cách ly 5 lots (giảm 85% so với baseline).",
         "top_causes": [
           {
             "rank": 1,
+            "candidate_id": "BATCH-HT-B07",
+            "candidate_type": "BATCH",
+            "score": 0.6,
+            "p_value": 0.0001,
+            "lift": 82.2,
+            "is_significant": true
+          },
+          {
+            "rank": 2,
             "candidate_id": "STN-AS1",
+            "candidate_type": "MACHINE",
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
+            "is_significant": true
+          },
+          {
+            "rank": 3,
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.4,
+            "p_value": 0.0049,
+            "lift": 205.5,
+            "is_significant": true
+          }
+        ],
+        "isolate_count": 5,
+        "reduction_pct": 0.8529
+      },
+      "confidence": 0.66,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 0.0001,
+          "contingency": {
+            "a": 2,
+            "b": 3,
+            "c": 0,
+            "d": 406
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 82.2,
+          "p_ng_given_f": 0.4,
+          "p_ng": 0.0049
+        }
+      ],
+      "generated_at": "2026-10-09T18:35:31.063281Z"
+    },
+    {
+      "claim_id": "CLAIM-R06",
+      "item": "Root cause of LOT-0232",
+      "formula_used": [
+        "Reverse BFS on genealogy",
+        "Fisher Exact Test (2×2 contingency)",
+        "Risk Lift = P(NG|F) / P(NG)",
+        "Score = w1·norm(-log p) + w2·norm(lift) + w3·signal"
+      ],
+      "inputs": {
+        "lot_id_ng": "LOT-0232",
+        "qc_station": "STN-AS2",
+        "qc_characteristic": "Lực ép",
+        "n_candidates": 8
+      },
+      "conclusion": {
+        "text": "Nguyên nhân hàng đầu: STN-AS2 (MACHINE) với lift=0.00, p=1.0000. Cần cách ly 15 lots (giảm 48% so với baseline).",
+        "top_causes": [
+          {
+            "rank": 1,
+            "candidate_id": "STN-AS2",
             "candidate_type": "MACHINE",
             "score": 0.5,
             "p_value": 1.0,
@@ -3486,8 +5882,8 @@
             "is_significant": false
           }
         ],
-        "isolate_count": 20,
-        "reduction_pct": 0.4118
+        "isolate_count": 15,
+        "reduction_pct": 0.4828
       },
       "confidence": 0.55,
       "grade": "B",
@@ -3498,72 +5894,160 @@
           "contingency": {
             "a": 0,
             "b": 1,
-            "c": 13,
-            "d": 396
+            "c": 2,
+            "d": 408
           }
         },
         {
           "type": "risk_lift",
           "lift": 0.0,
           "p_ng_given_f": 0.0,
-          "p_ng": 0.0317
+          "p_ng": 0.0049
         }
       ],
-      "generated_at": "2026-10-08T15:41:32.321233Z"
-    },
-    {
-      "claim_id": "CLAIM-R06",
-      "item": "Root cause of LOT-1060",
-      "formula_used": [
-        "Reverse BFS on genealogy",
-        "Fisher Exact Test",
-        "Risk Lift = P(NG|F) / P(NG)",
-        "Score = w1·norm(-log p) + w2·norm(lift) + w3·signal"
-      ],
-      "conclusion": {
-        "text": "Không tìm thấy candidate nào",
-        "top_causes": []
-      },
-      "confidence": 0.0,
-      "grade": "N/A",
-      "status": "INSUFFICIENT_EVIDENCE",
-      "generated_at": "2026-10-08T15:41:32.325261Z"
+      "generated_at": "2026-10-09T18:35:31.099291Z"
     },
     {
       "claim_id": "CLAIM-R07",
-      "item": "Root cause of LOT-1070",
+      "item": "Root cause of LOT-0300",
       "formula_used": [
         "Reverse BFS on genealogy",
-        "Fisher Exact Test",
+        "Fisher Exact Test (2×2 contingency)",
         "Risk Lift = P(NG|F) / P(NG)",
         "Score = w1·norm(-log p) + w2·norm(lift) + w3·signal"
       ],
-      "conclusion": {
-        "text": "Không tìm thấy candidate nào",
-        "top_causes": []
+      "inputs": {
+        "lot_id_ng": "LOT-0300",
+        "qc_station": "STN-LAB",
+        "qc_characteristic": "Lực ép",
+        "n_candidates": 8
       },
-      "confidence": 0.0,
-      "grade": "N/A",
-      "status": "INSUFFICIENT_EVIDENCE",
-      "generated_at": "2026-10-08T15:41:32.331309Z"
+      "conclusion": {
+        "text": "Nguyên nhân hàng đầu: STN-AS2 (MACHINE) với lift=0.00, p=1.0000. Cần cách ly 14 lots (giảm 50% so với baseline).",
+        "top_causes": [
+          {
+            "rank": 1,
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          },
+          {
+            "rank": 2,
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          },
+          {
+            "rank": 3,
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          }
+        ],
+        "isolate_count": 14,
+        "reduction_pct": 0.5
+      },
+      "confidence": 0.55,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 1.0,
+          "contingency": {
+            "a": 0,
+            "b": 1,
+            "c": 2,
+            "d": 408
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 0.0,
+          "p_ng_given_f": 0.0,
+          "p_ng": 0.0049
+        }
+      ],
+      "generated_at": "2026-10-09T18:35:31.134913Z"
     },
     {
       "claim_id": "CLAIM-R08",
-      "item": "Root cause of LOT-1080",
+      "item": "Root cause of LOT-0235",
       "formula_used": [
         "Reverse BFS on genealogy",
-        "Fisher Exact Test",
+        "Fisher Exact Test (2×2 contingency)",
         "Risk Lift = P(NG|F) / P(NG)",
         "Score = w1·norm(-log p) + w2·norm(lift) + w3·signal"
       ],
-      "conclusion": {
-        "text": "Không tìm thấy candidate nào",
-        "top_causes": []
+      "inputs": {
+        "lot_id_ng": "LOT-0235",
+        "qc_station": "STN-SHP",
+        "qc_characteristic": "Lực ép",
+        "n_candidates": 8
       },
-      "confidence": 0.0,
-      "grade": "N/A",
-      "status": "INSUFFICIENT_EVIDENCE",
-      "generated_at": "2026-10-08T15:41:32.340782Z"
+      "conclusion": {
+        "text": "Nguyên nhân hàng đầu: STN-AS2 (MACHINE) với lift=0.00, p=1.0000. Cần cách ly 14 lots (giảm 50% so với baseline).",
+        "top_causes": [
+          {
+            "rank": 1,
+            "candidate_id": "STN-AS2",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          },
+          {
+            "rank": 2,
+            "candidate_id": "STN-HT",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          },
+          {
+            "rank": 3,
+            "candidate_id": "STN-INB",
+            "candidate_type": "MACHINE",
+            "score": 0.5,
+            "p_value": 1.0,
+            "lift": 0.0,
+            "is_significant": false
+          }
+        ],
+        "isolate_count": 14,
+        "reduction_pct": 0.5
+      },
+      "confidence": 0.55,
+      "grade": "B",
+      "evidence_chain": [
+        {
+          "type": "fisher_exact",
+          "p_value": 1.0,
+          "contingency": {
+            "a": 0,
+            "b": 1,
+            "c": 2,
+            "d": 408
+          }
+        },
+        {
+          "type": "risk_lift",
+          "lift": 0.0,
+          "p_ng_given_f": 0.0,
+          "p_ng": 0.0049
+        }
+      ],
+      "generated_at": "2026-10-09T18:35:31.186895Z"
     }
   ]
 }

@@ -103,6 +103,13 @@ class FactorySim:
                     "qty": 200,
                     "true_time": (batch_ts + timedelta(hours=4)).strftime("%Y-%m-%dT%H:%M:%S")
                 })
+            # Tạo LOT-2207 như lot thật để genealogy không bị cạnh treo
+            merged_lot = self.create_lot(
+                product_id="PROD-P1", qty=400, parent_batch="MERGE:BATCH-HT-B07",
+                created_ts=batch_ts + timedelta(hours=4), shift="CA2",
+                custom_lot_id="LOT-2207"
+            )
+            self.route_lot(merged_lot)
 
     def consume_materials(self, lot: dict):
         bom_map = {

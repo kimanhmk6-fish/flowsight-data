@@ -25,14 +25,14 @@ class BackwardCauseEngine:
         self.qc_result = tables.get("qc_result", pd.DataFrame())
         self.G = G_genealogy
 
-        # Ensure is_ng
-        if len(self.lots) > 0 and "is_ng" not in self.lots.columns:
-            if "qty_ng" in self.lots.columns:
-                self.lots = self.lots.copy()
-                self.lots["is_ng"] = (self.lots["qty_ng"] > 0).astype(int)
-            else:
-                self.lots = self.lots.copy()
-                self.lots["is_ng"] = 0
+        # Ensure is_ng: lấy từ kết quả QC (NG/FAIL), không phải qty_ng sản xuất
+        # (qty_ng là anomaly vật lý ngẫu nhiên, khác với NG do lỗi hệ thống)
+        self.lots = self.lots.copy()
+        ng_lots = set()
+        if len(self.qc_result) > 0 and "result" in self.qc_result.columns:
+            ng_mask = self.qc_result["result"].astype(str).str.upper().isin(["NG", "FAIL", "NOT OK"])
+            ng_lots = set(self.qc_result[ng_mask]["lot_id"].unique().tolist())
+        self.lots["is_ng"] = self.lots["lot_id"].isin(ng_lots).astype(int)
 
     def diagnose(self, case: dict) -> dict:
         """

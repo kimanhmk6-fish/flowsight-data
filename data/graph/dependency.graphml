@@ -1,148 +1,145 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d7" for="edge" attr.name="products" attr.type="string" />
-  <key id="d6" for="edge" attr.name="product_count" attr.type="long" />
-  <key id="d5" for="edge" attr.name="dependency_type" attr.type="string" />
-  <key id="d4" for="node" attr.name="cycle_time_s" attr.type="double" />
-  <key id="d3" for="node" attr.name="station_type" attr.type="string" />
-  <key id="d2" for="node" attr.name="stage" attr.type="string" />
-  <key id="d1" for="node" attr.name="line_id" attr.type="string" />
-  <key id="d0" for="node" attr.name="station_name" attr.type="string" />
-  <graph edgedefault="directed">
-    <node id="STN-INB">
-      <data key="d0">Trạm nhập kho linh kiện</data>
-      <data key="d1">SHARED</data>
-      <data key="d2">INBOUND</data>
-      <data key="d3">MANUAL</data>
-      <data key="d4">60.0</data>
-    </node>
-    <node id="STN-M1">
-      <data key="d0">Máy phay CNC M1</data>
-      <data key="d1">A</data>
-      <data key="d2">MACHINING</data>
-      <data key="d3">MACHINE</data>
-      <data key="d4">28.0</data>
-    </node>
-    <node id="STN-M2">
-      <data key="d0">Máy ép thủy lực M2</data>
-      <data key="d1">A</data>
-      <data key="d2">MACHINING</data>
-      <data key="d3">MACHINE</data>
-      <data key="d4">36.0</data>
-    </node>
-    <node id="STN-HT">
-      <data key="d0">Lò nhiệt luyện HT (dùng chung)</data>
-      <data key="d1">SHARED</data>
-      <data key="d2">MACHINING</data>
-      <data key="d3">BATCH</data>
-      <data key="d4">7200.0</data>
-    </node>
-    <node id="STN-AS1">
-      <data key="d0">Lắp ráp robot AS1</data>
-      <data key="d1">A</data>
-      <data key="d2">ASSEMBLY</data>
-      <data key="d3">MACHINE</data>
-      <data key="d4">42.0</data>
-    </node>
-    <node id="STN-AS2">
-      <data key="d0">Lắp ráp thủ công AS2</data>
-      <data key="d1">B</data>
-      <data key="d2">ASSEMBLY</data>
-      <data key="d3">MANUAL</data>
-      <data key="d4">55.0</data>
-    </node>
-    <node id="STN-T1">
-      <data key="d0">Máy test tự động T1</data>
-      <data key="d1">A</data>
-      <data key="d2">QC</data>
-      <data key="d3">TEST</data>
-      <data key="d4">15.0</data>
-    </node>
-    <node id="STN-LAB">
-      <data key="d0">Phòng đo LAB</data>
-      <data key="d1">SHARED</data>
-      <data key="d2">QC</data>
-      <data key="d3">TEST</data>
-      <data key="d4">900.0</data>
-    </node>
-    <node id="STN-PK">
-      <data key="d0">Đóng gói PK</data>
-      <data key="d1">SHARED</data>
-      <data key="d2">PACKING</data>
-      <data key="d3">MANUAL</data>
-      <data key="d4">45.0</data>
-    </node>
-    <node id="STN-SHP">
-      <data key="d0">Bến xuất hàng SHP</data>
-      <data key="d1">SHARED</data>
-      <data key="d2">SHIPPING</data>
-      <data key="d3">TRANSPORT</data>
-      <data key="d4">120.0</data>
-    </node>
-    <edge source="STN-INB" target="STN-M1">
-      <data key="d5">process_sequence</data>
-      <data key="d6">4</data>
-      <data key="d7">['PROD-P1', 'PROD-P2', 'PROD-P3', 'PROD-P4']</data>
-    </edge>
-    <edge source="STN-M1" target="STN-M2">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P1', 'PROD-P2']</data>
-    </edge>
-    <edge source="STN-M1" target="STN-HT">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P3', 'PROD-P4']</data>
-    </edge>
-    <edge source="STN-M2" target="STN-HT">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P1', 'PROD-P2']</data>
-    </edge>
-    <edge source="STN-HT" target="STN-AS1">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P1', 'PROD-P2']</data>
-    </edge>
-    <edge source="STN-HT" target="STN-AS2">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P3', 'PROD-P4']</data>
-    </edge>
-    <edge source="STN-AS1" target="STN-T1">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P1', 'PROD-P2']</data>
-    </edge>
-    <edge source="STN-AS2" target="STN-T1">
-      <data key="d5">process_sequence</data>
-      <data key="d6">1</data>
-      <data key="d7">['PROD-P3']</data>
-    </edge>
-    <edge source="STN-AS2" target="STN-LAB">
-      <data key="d5">process_sequence</data>
-      <data key="d6">1</data>
-      <data key="d7">['PROD-P4']</data>
-    </edge>
-    <edge source="STN-T1" target="STN-PK">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P1', 'PROD-P3']</data>
-    </edge>
-    <edge source="STN-T1" target="STN-LAB">
-      <data key="d5">process_sequence</data>
-      <data key="d6">1</data>
-      <data key="d7">['PROD-P2']</data>
-    </edge>
-    <edge source="STN-LAB" target="STN-PK">
-      <data key="d5">process_sequence</data>
-      <data key="d6">2</data>
-      <data key="d7">['PROD-P2', 'PROD-P4']</data>
-    </edge>
-    <edge source="STN-PK" target="STN-SHP">
-      <data key="d5">process_sequence</data>
-      <data key="d6">4</data>
-      <data key="d7">['PROD-P1', 'PROD-P2', 'PROD-P3', 'PROD-P4']</data>
-    </edge>
-  </graph>
-</graphml>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d7" for="edge" attr.name="products" attr.type="string"/>
+<key id="d6" for="edge" attr.name="product_count" attr.type="long"/>
+<key id="d5" for="edge" attr.name="dependency_type" attr.type="string"/>
+<key id="d4" for="node" attr.name="cycle_time_s" attr.type="double"/>
+<key id="d3" for="node" attr.name="station_type" attr.type="string"/>
+<key id="d2" for="node" attr.name="stage" attr.type="string"/>
+<key id="d1" for="node" attr.name="line_id" attr.type="string"/>
+<key id="d0" for="node" attr.name="station_name" attr.type="string"/>
+<graph edgedefault="directed"><node id="STN-INB">
+  <data key="d0">Trạm nhập kho linh kiện</data>
+  <data key="d1">SHARED</data>
+  <data key="d2">INBOUND</data>
+  <data key="d3">MANUAL</data>
+  <data key="d4">60.0</data>
+</node>
+<node id="STN-M1">
+  <data key="d0">Máy phay CNC M1</data>
+  <data key="d1">A</data>
+  <data key="d2">MACHINING</data>
+  <data key="d3">MACHINE</data>
+  <data key="d4">28.0</data>
+</node>
+<node id="STN-M2">
+  <data key="d0">Máy ép thủy lực M2</data>
+  <data key="d1">A</data>
+  <data key="d2">MACHINING</data>
+  <data key="d3">MACHINE</data>
+  <data key="d4">36.0</data>
+</node>
+<node id="STN-HT">
+  <data key="d0">Lò nhiệt luyện HT (dùng chung)</data>
+  <data key="d1">SHARED</data>
+  <data key="d2">MACHINING</data>
+  <data key="d3">BATCH</data>
+  <data key="d4">7200.0</data>
+</node>
+<node id="STN-AS1">
+  <data key="d0">Lắp ráp robot AS1</data>
+  <data key="d1">A</data>
+  <data key="d2">ASSEMBLY</data>
+  <data key="d3">MACHINE</data>
+  <data key="d4">42.0</data>
+</node>
+<node id="STN-AS2">
+  <data key="d0">Lắp ráp thủ công AS2</data>
+  <data key="d1">B</data>
+  <data key="d2">ASSEMBLY</data>
+  <data key="d3">MANUAL</data>
+  <data key="d4">55.0</data>
+</node>
+<node id="STN-T1">
+  <data key="d0">Máy test tự động T1</data>
+  <data key="d1">A</data>
+  <data key="d2">QC</data>
+  <data key="d3">TEST</data>
+  <data key="d4">15.0</data>
+</node>
+<node id="STN-LAB">
+  <data key="d0">Phòng đo LAB</data>
+  <data key="d1">SHARED</data>
+  <data key="d2">QC</data>
+  <data key="d3">TEST</data>
+  <data key="d4">900.0</data>
+</node>
+<node id="STN-PK">
+  <data key="d0">Đóng gói PK</data>
+  <data key="d1">SHARED</data>
+  <data key="d2">PACKING</data>
+  <data key="d3">MANUAL</data>
+  <data key="d4">45.0</data>
+</node>
+<node id="STN-SHP">
+  <data key="d0">Bến xuất hàng SHP</data>
+  <data key="d1">SHARED</data>
+  <data key="d2">SHIPPING</data>
+  <data key="d3">TRANSPORT</data>
+  <data key="d4">120.0</data>
+</node>
+<edge source="STN-INB" target="STN-M1">
+  <data key="d5">process_sequence</data>
+  <data key="d6">4</data>
+  <data key="d7">['PROD-P1', 'PROD-P2', 'PROD-P3', 'PROD-P4']</data>
+</edge>
+<edge source="STN-M1" target="STN-M2">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P1', 'PROD-P2']</data>
+</edge>
+<edge source="STN-M1" target="STN-HT">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P3', 'PROD-P4']</data>
+</edge>
+<edge source="STN-M2" target="STN-HT">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P1', 'PROD-P2']</data>
+</edge>
+<edge source="STN-HT" target="STN-AS1">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P1', 'PROD-P2']</data>
+</edge>
+<edge source="STN-HT" target="STN-AS2">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P3', 'PROD-P4']</data>
+</edge>
+<edge source="STN-AS1" target="STN-T1">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P1', 'PROD-P2']</data>
+</edge>
+<edge source="STN-AS2" target="STN-T1">
+  <data key="d5">process_sequence</data>
+  <data key="d6">1</data>
+  <data key="d7">['PROD-P3']</data>
+</edge>
+<edge source="STN-AS2" target="STN-LAB">
+  <data key="d5">process_sequence</data>
+  <data key="d6">1</data>
+  <data key="d7">['PROD-P4']</data>
+</edge>
+<edge source="STN-T1" target="STN-PK">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P1', 'PROD-P3']</data>
+</edge>
+<edge source="STN-T1" target="STN-LAB">
+  <data key="d5">process_sequence</data>
+  <data key="d6">1</data>
+  <data key="d7">['PROD-P2']</data>
+</edge>
+<edge source="STN-LAB" target="STN-PK">
+  <data key="d5">process_sequence</data>
+  <data key="d6">2</data>
+  <data key="d7">['PROD-P2', 'PROD-P4']</data>
+</edge>
+<edge source="STN-PK" target="STN-SHP">
+  <data key="d5">process_sequence</data>
+  <data key="d6">4</data>
+  <data key="d7">['PROD-P1', 'PROD-P2', 'PROD-P3', 'PROD-P4']</data>
+</edge>
+</graph></graphml>

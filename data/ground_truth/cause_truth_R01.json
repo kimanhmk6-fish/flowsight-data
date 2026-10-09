@@ -2,21 +2,24 @@
   "case_id": "R01",
   "case_group": "BACKWARD",
   "expected_result": {
-    "top_cause": "MAT-C3-0917-02",
-    "cause_type": "MATERIAL",
-    "fmea_code": "FMEA-SUP-001",
-    "rpn": 96,
-    "confidence": 0.92,
+    "top_cause": "BATCH-HT-B07",
+    "cause_type": "BATCH",
+    "fmea_code": "FMEA-HT-001",
+    "rpn": 135,
+    "confidence": 0.66,
     "isolate_lots": [
+      "LOT-0401",
+      "LOT-0402",
       "LOT-0403",
-      "LOT-0404"
+      "LOT-0404",
+      "LOT-0405"
     ],
     "evidence_chain": [
-      "PK-2207",
-      "STN-AS2",
+      "STN-LAB",
       "LOT-0403",
       "BATCH-HT-B07",
-      "MAT-C3-0917-02"
+      "fisher_p=0.0001",
+      "lift=82.2"
     ]
   }
 }

@@ -15,7 +15,7 @@ CASES_R = [
     {
         "case_id": "R01", "incident_id": "INC-0013", "lot_id_ng": "LOT-0403",
         "qc_station": "STN-LAB", "qc_characteristic": "Lực ép",
-        "expected_cause": "MAT-C3-0917-02", "expected_type": "MATERIAL",
+        "expected_cause": "BATCH-HT-B07", "expected_type": "BATCH",
     },
     {
         "case_id": "R02", "incident_id": "INC-0014", "lot_id_ng": "LOT-0002",
@@ -25,32 +25,32 @@ CASES_R = [
     {
         "case_id": "R03", "incident_id": "INC-0015", "lot_id_ng": "LOT-0401",
         "qc_station": "STN-LAB", "qc_characteristic": "Độ cứng",
-        "expected_cause": "BATCH-HT-B07", "expected_type": "BATCH",
+        "expected_cause": "STN-HT", "expected_type": "PROCESS",
     },
     {
-        "case_id": "R04", "incident_id": "INC-0016", "lot_id_ng": "LOT-1050",
+        "case_id": "R04", "incident_id": "INC-0016", "lot_id_ng": "LOT-0240",
         "qc_station": "STN-AS2", "qc_characteristic": "Lực ép",
-        "expected_cause": "STN-AS2", "expected_type": "MACHINE",
+        "expected_cause": "STN-AS2", "expected_type": "HUMAN",
     },
     {
         "case_id": "R05", "incident_id": "INC-0017", "lot_id_ng": "LOT-0403",
         "qc_station": "STN-LAB", "qc_characteristic": "Lực ép",
-        "expected_cause": "LOT_LABEL_DUPLICATION", "expected_type": "DATA_QUALITY",
+        "expected_cause": "LABEL_DUPLICATION", "expected_type": "DATA_QUALITY",
     },
     {
-        "case_id": "R06", "incident_id": "INC-0018", "lot_id_ng": "LOT-1060",
+        "case_id": "R06", "incident_id": "INC-0018", "lot_id_ng": "LOT-0232",
         "qc_station": "STN-AS2", "qc_characteristic": "Lực ép",
         "expected_cause": "COMBINED", "expected_type": "COMBINED",
     },
     {
-        "case_id": "R07", "incident_id": "INC-0019", "lot_id_ng": "LOT-1070",
+        "case_id": "R07", "incident_id": "INC-0019", "lot_id_ng": "LOT-0300",
         "qc_station": "STN-LAB", "qc_characteristic": "Lực ép",
         "expected_cause": "INSUFFICIENT_EVIDENCE", "expected_type": "UNKNOWN",
     },
     {
-        "case_id": "R08", "incident_id": "INC-0020", "lot_id_ng": "LOT-1080",
+        "case_id": "R08", "incident_id": "INC-0020", "lot_id_ng": "LOT-0235",
         "qc_station": "STN-SHP", "qc_characteristic": "Lực ép",
-        "expected_cause": "MATERIAL_BATCH_ISSUE", "expected_type": "MATERIAL",
+        "expected_cause": "SUPPLIER_MAT", "expected_type": "MATERIAL",
     },
 ]
 

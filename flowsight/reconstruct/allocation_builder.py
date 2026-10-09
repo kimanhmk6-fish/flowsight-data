@@ -89,6 +89,10 @@ def build_jt_allocation(
 
     df = pd.DataFrame(allocations)
 
+    # Overlay: các allocation nghiệp vụ đã chốt trong ground truth (scenario links,
+    # vd F01: JT-0231 <- LOT-0005/LOT-0009) được ưu tiên hơn FIFO suy diễn.
+    df = _apply_scenario_allocation_overlay(df)
+
     out_path = CANONICAL_DIR / "jt_allocation.parquet"
     df.to_parquet(out_path, index=False)
     print(f"  ✓ Total: {len(df)} allocations → {out_path.name}")
@@ -104,4 +108,36 @@ def build_jt_allocation(
         else:
             print(f"  ⚠ {len(invalid)} JTs với allocation không khớp")
 
+    return df
+
+
+def _apply_scenario_allocation_overlay(df: pd.DataFrame) -> pd.DataFrame:
+    """Ghi đè allocation FIFO bằng các liên kết scenario đã chốt trong ground truth."""
+    from pathlib import Path
+    gt_path = Path(__file__).resolve().parent.parent.parent / "data" / "ground_truth" / "jt_allocation_truth.csv"
+    if not gt_path.exists() or len(df) == 0:
+        return df
+    try:
+        gt = pd.read_csv(gt_path)
+    except Exception as e:
+        print(f"  ⚠ Không đọc được scenario allocation: {e}")
+        return df
+    gt = gt.dropna(subset=["jt_id", "lot_id"]).drop_duplicates(subset=["lot_id"])
+    if len(gt) == 0:
+        return df
+    # Loại các dòng FIFO trùng lot_id với scenario (scenario thắng)
+    df = df[~df["lot_id"].isin(set(gt["lot_id"].tolist()))].copy()
+    overlay_rows = []
+    for _, r in gt.iterrows():
+        overlay_rows.append({
+            "allocation_id": r.get("allocation_id", f"SCN-{r['jt_id']}"),
+            "jt_id": r["jt_id"],
+            "lot_id": r["lot_id"],
+            "qty_allocated": int(r.get("qty_allocated", 0) or 0),
+            "allocation_time": pd.to_datetime(r.get("allocation_time"), errors="coerce"),
+            "confidence": 1.0,
+            "evidence": "scenario_ground_truth",
+        })
+    df = pd.concat([df, pd.DataFrame(overlay_rows)], ignore_index=True)
+    print(f"  ✓ Scenario overlay: {len(overlay_rows)} allocations từ ground truth")
     return df

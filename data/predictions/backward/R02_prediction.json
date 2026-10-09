@@ -114,12 +114,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -128,12 +128,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -142,12 +142,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -156,12 +156,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -170,12 +170,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -184,12 +184,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -198,12 +198,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -212,12 +212,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -226,12 +226,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       },
       {
@@ -240,12 +240,12 @@
         "contingency_table": {
           "a": 0,
           "b": 1,
-          "c": 13,
-          "d": 396
+          "c": 2,
+          "d": 408
         },
         "odds_ratio": 0.0,
         "p_value": 1.0,
-        "n_total": 410,
+        "n_total": 411,
         "n_sufficient": true
       }
     ],
@@ -253,7 +253,7 @@
       {
         "candidate_id": "STN-AS1",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -261,7 +261,7 @@
       {
         "candidate_id": "STN-HT",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -269,7 +269,7 @@
       {
         "candidate_id": "STN-INB",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -277,7 +277,7 @@
       {
         "candidate_id": "STN-M1",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -285,7 +285,7 @@
       {
         "candidate_id": "STN-M2",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -293,7 +293,7 @@
       {
         "candidate_id": "STN-PK",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -301,7 +301,7 @@
       {
         "candidate_id": "STN-SHP",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -309,7 +309,7 @@
       {
         "candidate_id": "STN-T1",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -317,7 +317,7 @@
       {
         "candidate_id": "MAT-C1-0917-01",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -325,7 +325,7 @@
       {
         "candidate_id": "MAT-C3-0917-02",
         "p_ng_given_f": 0.0,
-        "p_ng": 0.0317,
+        "p_ng": 0.0049,
         "lift": 0.0,
         "is_significant": false,
         "interpretation": "Không có tác dụng bảo vệ (lift=0.00)"
@@ -350,15 +350,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -379,15 +379,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -408,15 +408,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -437,15 +437,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -466,15 +466,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -495,15 +495,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -524,15 +524,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -553,15 +553,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -582,15 +582,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       },
@@ -611,15 +611,15 @@
             "contingency": {
               "a": 0,
               "b": 1,
-              "c": 13,
-              "d": 396
+              "c": 2,
+              "d": 408
             }
           },
           {
             "type": "risk_lift",
             "lift": 0.0,
             "p_ng_given_f": 0.0,
-            "p_ng": 0.0317
+            "p_ng": 0.0049
           }
         ]
       }
@@ -713,15 +713,15 @@
       "contingency": {
         "a": 0,
         "b": 1,
-        "c": 13,
-        "d": 396
+        "c": 2,
+        "d": 408
       }
     },
     {
       "type": "risk_lift",
       "lift": 0.0,
       "p_ng_given_f": 0.0,
-      "p_ng": 0.0317
+      "p_ng": 0.0049
     }
   ],
   "expected_cause": "STN-M1",
