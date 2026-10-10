@@ -1,8 +1,8 @@
-/* FR-01b Phân bổ nguyên nhân sự cố — trang chuyên sâu (tách từ Command Center) */
+/* FR-01b Phân bổ nguyên nhân sự cố — trang chuyên sâu (tách từ Trung tâm Điều hành) */
 (function () {
   const u = FS.ui;
   FS.pages.cause_dist = {
-    title: 'Phân bổ nguyên nhân sự cố', sub: 'Phân tích sự cố theo loại nguyên nhân, nhóm lỗi FMEA, máy/công đoạn và mức độ',
+    title: 'Phân bổ Nguyên nhân', sub: 'Thống kê sự cố theo loại nguyên nhân, nhóm lỗi FMEA, máy/công đoạn',
     render(root) {
       const incs = FS.engine.incidents(), n = FS.fmt.n;
       const fm = i => (FS.idx.fmea.get(i.fmea_code) || {}).fmea_category || 'Không rõ';

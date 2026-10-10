@@ -1,25 +1,25 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FlowSight × DENSO — Phân tích tác động sự cố theo Lot</title>
+<title>FlowSight Control Tower — Hệ thống Phân tích Tác động Sự cố & Nguyên nhân cấp Lô</title>
 <link rel="icon" type="image/png" href="assets/logoflowsight.png">
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script></head>
 <body class="locked">
 <div id="auth" class="auth"></div>
-<aside class="side"><div class="brand"><div class="brand-marks"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight" onerror="this.style.display='none'"></div><small class="brand-tagline">Sự cố → Tác động → Hành động</small></div>
+<aside class="side"><div class="brand"><div class="brand-marks"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight" onerror="this.style.display='none'"></div><small class="brand-tagline">Từ sự cố đến hành động</small></div>
 <nav class="nav" id="nav"></nav>
 <div class="side-foot"><span class="dot"></span><small>Online · 10/10/2026 12:00</small></div></aside>
 <main class="main">
 <header class="top"><button class="icon-btn" id="menu" aria-label="Menu">☰</button>
-<div class="ttl"><h1 id="title">Command Center</h1><p id="subtitle"></p></div>
+<div class="ttl"><h1 id="title">Trung tâm Điều hành</h1><p id="subtitle"></p></div>
 <input id="gs" class="gsearch" type="search" placeholder="Tìm Lot, Machine, JT, Order… (Enter)" aria-label="Tìm kiếm nhanh">
-<div class="top-r"><span class="pill demo">◇ Pilot Testing</span><button class="icon-btn" id="bell" aria-label="Thông báo"><i data-lucide="bell"></i><i class="bdot"></i></button><button class="user" id="usr" aria-label="Tài khoản"></button></div></header>
+<div class="top-r"><span class="pill demo">◇ Bản thử nghiệm</span><button class="icon-btn" id="bell" aria-label="Thông báo"><i data-lucide="bell"></i><i class="bdot"></i></button><button class="user" id="usr" aria-label="Tài khoản"></button></div></header>
 <section class="filters card" id="filters" aria-label="Bộ lọc toàn cục">
 <div class="date-presets"><button class="chip" data-range="1">Hôm nay</button><button class="chip on" data-range="7">7 ngày</button><button class="chip" data-range="30">30 ngày</button></div><label>Từ ngày<input type="date" id="f-from"></label><label>Đến ngày<input type="date" id="f-to"></label>
 <label>Máy / công đoạn<select id="f-station"></select></label>
 <label>Trạng thái sự cố<select id="f-status"><option value="">Tất cả</option><option>Đang mở</option><option>Đang xử lý</option><option>Đã đóng</option></select></label>
 <label class="grow">Tìm kiếm<input type="search" id="f-q" placeholder="Lot, máy, JT, FMEA…"></label><button class="btn ghost" id="f-reset">Đặt lại</button></section>
-<div id="view" class="view"></div><footer class="app-footer"><span><b style="color:#E60012">DENSO</b> × FlowSight · Prototype v0.4.2 · Pilot Testing</span><span class="sp"><a href="#/architecture">Kiến trúc</a><a href="#/guide">Hướng dẫn</a><a href="#" onclick="window.print();return false">In báo cáo</a></span></footer></main>
+<div id="view" class="view"></div><footer class="app-footer"><span><b style="color:#E60012">DENSO</b> × FlowSight · Phiên bản thử nghiệm v0.4.2 · Bản thử nghiệm</span><span class="sp"><a href="#/architecture">Kiến trúc</a><a href="#/guide">Hướng dẫn</a><a href="#" onclick="window.print();return false">In báo cáo</a></span></footer></main>
 <div id="toasts"></div>
 <script src="data/bundle.js"></script>
 <script src="js/core/csv.js"></script><script src="js/core/store.js"></script><script src="js/core/auth.js"></script><script src="js/core/engine.js"></script><script src="js/core/schema.js"></script><script src="js/core/ui.js"></script><script src="js/core/router.js"></script><script src="js/core/subtabs.js"></script>

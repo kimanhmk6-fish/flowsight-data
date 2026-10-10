@@ -1,4 +1,4 @@
-/* FR-01 Command Center — Kim tự tháp ngược: Cảnh báo → Định hướng hành động */
+/* FR-01 Trung tâm Điều hành — Kim tự tháp ngược: Cảnh báo → Định hướng hành động */
 (function () {
   const u = FS.ui;
   FS.pages.command = FS.pages.command || {};
@@ -10,7 +10,7 @@
     { t: 'Trạng thái', r: r => u.stat(FS.engine.incStatus(r)), x: r => FS.engine.incStatus(r) }
   ];
   Object.assign(FS.pages.command, {
-    title: 'Command Center', sub: 'Cảnh báo và định hướng hành động',
+    title: 'Trung tâm Điều hành', sub: 'Cảnh báo sự cố và định hướng hành động theo đề D3',
     render(root) {
       const incs = FS.engine.incidents(), R = FS.engine.impactAll(), S = FS.state, n = FS.fmt.n;
       const st = {

@@ -12,16 +12,16 @@ FS.auth = (function () {
   async function seed() { if (users().length) return; const U = []; for (const d of DEMO) U.push({ email: d[0], name: d[1], role: d[2], hash: await hash(d[3]), demo: 1 }); FS.persist.set('users', U); }
   function show() {
     document.body.classList.add('locked'); const A = document.getElementById('auth'); let tab = 'in', fails = 0, lockUntil = 0;
-    const draw = (msg, ok) => { A.innerHTML = `<div class="auth-l"><div class="brand"><div class="logo">F</div><div><b>FlowSight</b><small>Lot-Level Incident Impact & Cause Intelligence</small></div></div>
+    const draw = (msg, ok) => { A.innerHTML = `<div class="auth-l"><div class="brand"><div class="logo">F</div><div><b>FlowSight</b><small>Hệ thống Phân tích Tác động Sự cố & Nguyên nhân cấp Lô</small></div></div>
       <h2>Từ một sự cố máy, biết ngay lô nào, đơn (JT) nào, chuyến giao hàng nào bị ảnh hưởng.</h2>
       <p class="tagline">Nối sự cố máy với Lot, JT và chuyến giao hàng bị ảnh hưởng.</p>
-      <p class="quote">“From Incident to Action with Data & Intelligence”</p><div class="brand-footer"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><span>FlowSight Prototype</span><small>v0.4.2 · 2026-10-10</small></div></div>
+      <p class="quote">“Từ sự cố đến hành động — dựa trên dữ liệu và trí tuệ”</p><div class="brand-footer"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><span>FlowSight Control Tower</span><small>v0.4.2 · 2026-10-10</small></div></div>
       <div class="auth-r"><div class="card auth-card"><div class="steps"><span class="${tab === 'in' ? 'on' : ''}" data-t="in" style="cursor:pointer">Đăng nhập</span><span class="${tab === 'up' ? 'on' : ''}" data-t="up" style="cursor:pointer">Đăng ký</span></div>
       ${msg ? `<div class="callout ${ok ? 'ok' : 'err'}">${msg}</div>` : ''}
       ${tab === 'in' ? `<label class="fl">Email<input id="a-e" type="email" autocomplete="username" placeholder="ten@congty.com"></label><label class="fl">Mật khẩu<input id="a-p" type="password" autocomplete="current-password"></label><button class="btn wide" id="a-go">Đăng nhập</button>
         <div class="demo-acc"><small>Tài khoản dùng thử (bấm để điền):</small>${DEMO.map(d => `<button class="btn sm ghost" data-d="${d[0]}|${d[3]}">${d[2]}</button>`).join('')}</div>`
         : `<label class="fl">Họ tên<input id="r-n"></label><label class="fl">Email<input id="r-e" type="email"></label><label class="fl">Vai trò<select id="r-r">${Object.keys(PERM).filter(r => r !== 'Admin').map(r => `<option>${r}</option>`).join('')}</select></label><label class="fl">Mật khẩu (≥ 8 ký tự, có chữ và số)<input id="r-p" type="password" autocomplete="new-password"></label><label class="fl">Nhập lại mật khẩu<input id="r-p2" type="password" autocomplete="new-password"></label><button class="btn wide" id="a-reg">Tạo tài khoản</button>`}
-      <small class="muted" style="display:block;margin-top:12px">Prototype: tài khoản lưu cục bộ trong trình duyệt, mật khẩu được băm SHA-256. Môi trường thật cần máy chủ xác thực, HTTPS và nhật ký truy cập.</small></div></div>`;
+      <small class="muted" style="display:block;margin-top:12px">Bản thử nghiệm dành cho đánh giá ý tưởng cuộc thi DENSO Factory Hacks 2026.</small></div></div>`;
       A.querySelectorAll('[data-t]').forEach(s => s.onclick = () => { tab = s.dataset.t; draw(); });
       A.querySelectorAll('[data-d]').forEach(b => b.onclick = () => { const [e, p] = b.dataset.d.split('|'); A.querySelector('#a-e').value = e; A.querySelector('#a-p').value = p; });
       const q = id => A.querySelector(id), enter = e => { if (e.key === 'Enter') (q('#a-go') || q('#a-reg')).click(); }; A.querySelectorAll('input').forEach(i => i.onkeydown = enter);

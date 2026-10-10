@@ -1,7 +1,7 @@
 /* FR-04 Propagation Analysis: đồ thị lan truyền có phân loại quan hệ */
 (function () {
   const u = FS.ui, COL = ['Incident', 'Máy/Công đoạn', 'Lot', 'Vật tư / Lot con', 'JT/Order', 'Giao hàng'], TC = { 'Incident': '#ef4444', 'Máy/Công đoạn': '#f5a524', 'Lot': '#20b26b', 'Vật tư': '#18b8d9', 'JT/Order': '#2f6bff', 'Giao hàng': '#7c5cff', 'Chưa đủ dữ liệu': '#94a3b8' };
-  FS.pages.propagation = { title: 'Propagation Analysis', sub: 'Incident → Máy → Lot → Vật tư → JT/Order → Giao hàng', noFilter: true, render(root) {
+  FS.pages.propagation = { title: 'Phân tích Lan truyền', sub: 'Truy vết lan truyền rủi ro: Sự cố → Máy → Lô → Vật tư → Đơn hàng → Giao hàng', noFilter: true, render(root) {
     const all = FS.tables.incident_truth; let id = FS.q().inc || 'INC-0005', kinds = { 'Trực tiếp': 1, 'Suy luận': 1, 'Chưa xác minh': 1 }, sel = null;
     function draw() {
       const inc = all.find(i => i.incident_id === id), G = FS.engine.graph(inc), cols = {}; G.nodes.forEach(n => (cols[n.col] = cols[n.col] || []).push(n));

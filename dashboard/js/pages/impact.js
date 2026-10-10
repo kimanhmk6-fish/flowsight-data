@@ -2,7 +2,7 @@
 FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1] || '')));
 (function () {
   const u = FS.ui;
-  FS.pages.impact = { title: 'Impact Analysis', sub: 'Chọn sự cố, kiểm tra thông số, tính sản lượng mất, thiếu hụt ròng và JT/Order bị ảnh hưởng', noFilter: true, render(root) {
+  FS.pages.impact = { title: 'Phân tích Tác động', sub: 'Ước tính sản lượng tổn thất, thiếu hụt ròng và đơn hàng chịu ảnh hưởng', noFilter: true, render(root) {
     const all = FS.tables.incident_truth, q = FS.q(); let id = q.inc || all[0].incident_id, dur = q.dur != null ? +q.dur : null;
     const C = FS.config;
     function draw() {
@@ -20,7 +20,7 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
         <small class="muted">WIP không cộng với FG để tránh đếm trùng cùng một lượng sản phẩm.</small></div></div>
       <div class="card mt"><div class="card-h"><h3>JT/Order bị ảnh hưởng</h3><small>Bấm dòng để xem căn cứ liên kết</small></div><div id="t"></div></div>
       <details class="fx mt" open><summary>Giả định & công thức (tái lập được)</summary><table class="tbl mt"><tbody>${R.steps.map(s => `<tr><td><b>${s[0]}</b></td><td>${s[1]}</td><td class="muted">${s[2]}</td></tr>`).join('')}</tbody></table>
-        <ul>${R.assume.map(a => `<li>${a}</li>`).join('')}<li>Ngưỡng rủi ro: ${C.thresholdOn ? `Cao ≥ ${C.thHigh}% · TB ≥ ${C.thMid}% (ngưỡng dung sai quy định (Tolerance Threshold))` : 'Chưa cấu hình ngưỡng'}</li><li>Không khẳng định giao trễ khi chưa đối chiếu lịch giao & phương án phục hồi.</li></ul></details>`;
+        <ul>${R.assume.map(a => `<li>${a}</li>`).join('')}<li>Ngưỡng rủi ro: ${C.thresholdOn ? `Cao ≥ ${C.thHigh}% · TB ≥ ${C.thMid}% (ngưỡng dung sai quy định (ngưỡng dung sai))` : 'Chưa cấu hình ngưỡng'}</li><li>Không khẳng định giao trễ khi chưa đối chiếu lịch giao & phương án phục hồi.</li></ul></details>`;
       u.$('#i', root).onchange = e => { id = e.target.value; dur = null; draw(); };
       u.$('#go', root).onclick = () => { dur = +u.$('#d', root).value; C.schedStart = +u.$('#s1', root).value; C.schedEnd = +u.$('#s2', root).value; C.fgUsablePct = +u.$('#fg', root).value; C.useRecovery = u.$('#rc', root).checked; if (FS.auth.can('config')) FS.saveConfig('Thay đổi tham số từ Impact Analysis'); u.toast('Đã tính lại các chỉ số phụ thuộc'); draw(); };
       const rs = u.$('#rs', root); if (rs) rs.onclick = () => { dur = null; draw(); };

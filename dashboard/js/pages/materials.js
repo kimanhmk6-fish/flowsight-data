@@ -1,8 +1,8 @@
-/* FR-01c Danh mục & vật tư — trang chuyên sâu (tách từ Command Center) */
+/* FR-01c Danh mục & vật tư — trang chuyên sâu (tách từ Trung tâm Điều hành) */
 (function () {
   const u = FS.ui;
   FS.pages.materials = {
-    title: 'Danh mục & vật tư', sub: 'Tiêu thụ vật tư, tồn kho so với tồn an toàn, danh mục sản phẩm và lô vật tư',
+    title: 'Danh mục & Vật tư', sub: 'Theo dõi tiêu thụ, tồn kho an toàn và lô vật tư từ nhà cung cấp',
     render(root) {
       const S = FS.state, n = FS.fmt.n, f0 = FS.T(S.from + 'T00:00:00'), t0 = FS.T(S.to + 'T23:59:59');
       const cons = FS.tables.material_consumption_truth.filter(c => { const t = FS.T(c.consumption_time); return t >= f0 && t <= t0; });

@@ -3,7 +3,7 @@
   const u = FS.ui, DIMS = ['Completeness', 'Validity', 'Uniqueness', 'Consistency', 'Referential Integrity'];
   FS.qw = FS.persist.get('qw', { Completeness: 25, Validity: 20, Uniqueness: 20, Consistency: 15, 'Referential Integrity': 20, on: false });
   const pc = v => v == null ? '<span class="muted">N/A</span>' : `<b style="color:${v >= .99 ? '#127a47' : v >= .9 ? '#9a5b00' : '#c52a2a'}">${(v * 100).toFixed(1)}%</b>`;
-  FS.pages.health = { title: 'Data Health', sub: 'Đánh giá độ phù hợp của dữ liệu trước khi dùng cho phân tích', noFilter: true, render(root) {
+  FS.pages.health = { title: 'Sức khỏe Dữ liệu', sub: 'Đánh giá mức độ sẵn sàng của dữ liệu trước khi đưa vào phân tích', noFilter: true, render(root) {
     const Q = Object.keys(FS.SCHEMA).filter(g => FS.tables[g]).map(g => FS.quality(g, FS.tables[g])), W = FS.qw, tw = DIMS.reduce((s, d) => s + W[d], 0);
     const score = q => { let s = 0, w = 0; DIMS.forEach(d => { if (q.dims[d] != null) { s += q.dims[d] * W[d]; w += W[d]; } }); return w ? s / w : null; };
     const tot = Q.reduce((s, q) => s + q.rows, 0), bad = Q.reduce((s, q) => s + q.bad, 0), iss = Q.flatMap(q => q.issues.map(i => ({ ...i, table: q.group })));

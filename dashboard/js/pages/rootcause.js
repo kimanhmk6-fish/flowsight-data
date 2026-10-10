@@ -1,7 +1,7 @@
 /* FR-08 Root Cause & Evidence */
 (function () {
   const u = FS.ui;
-  FS.pages.rootcause = { title: 'Root Cause & Evidence', sub: 'Yếu tố liên quan, bằng chứng và giả thuyết cần xác minh — hỗ trợ đánh giá của kỹ sư', noFilter: true, render(root) {
+  FS.pages.rootcause = { title: 'Nguyên nhân & Bằng chứng', sub: 'Giả thuyết nguyên nhân kèm chuỗi bằng chứng — hỗ trợ kỹ sư đánh giá', noFilter: true, render(root) {
     const all = FS.tables.incident_truth; let id = FS.q().inc || 'INC-0013';
     root.innerHTML = `<div class="card"><label>Sự cố<select id="i">${all.map(i => `<option value="${i.incident_id}" ${i.incident_id === id ? 'selected' : ''}>${i.incident_id} · ${i.station_id} · ${i.root_cause_type}</option>`).join('')}</select></label></div><div id="o"></div>`;
     function run() {

@@ -12,7 +12,7 @@
     });
     return rel;
   }
-  FS.pages.genealogy = { title: 'Lot Genealogy', sub: 'Truy ngược / truy xuôi Lot với máy, công đoạn, vật tư, JT/Order và mốc thời gian', noFilter: true, render(root) {
+  FS.pages.genealogy = { title: 'Truy xuất Nguồn gốc Lô', sub: 'Truy ngược/truy xuôi cấp Lô: máy, công đoạn, vật tư, đơn hàng và mốc thời gian', noFilter: true, render(root) {
     const ex = FS.tables.genealogy_truth[7].parent_lot_id; let lot = FS.q().lot || 'LOT-0403';
     root.innerHTML = `<div class="card"><div class="row"><label>Lot ID<input id="l" list="ll" value="${lot}" style="width:200px"></label><datalist id="ll">${FS.tables.canonical_lots.map(l => `<option value="${l.lot_id}">`).join('')}</datalist><button class="btn" id="s">Truy vết</button><small class="muted">Gợi ý: LOT-0403, LOT-0404 (lô vật tư MAT-C3-0917-02), LOT-0147, LOT-2207</small></div></div><div id="out"></div>`;
     function run() {

@@ -110,3 +110,4 @@ body.side-collapsed .brand{display:none}
 
 #side{max-height:70vh;overflow:auto;word-break:break-word}
 #side .kv td{max-width:280px;overflow:hidden;text-overflow:ellipsis}
+.note{background:#f0f7ff;border-left:3px solid var(--pri);padding:10px 14px;border-radius:0 8px 8px 0;font-size:13px;color:#334155;margin:8px 0}

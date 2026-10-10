@@ -1,7 +1,7 @@
 /* FR-11 Reports & Export — mọi báo cáo phân biệt Thực tế / Pilot / Suy luận */
 (function () {
   const u = FS.ui, PV = r => r === 'Suy luận' ? 'Suy luận' : 'Pilot';
-  FS.pages.reports = { title: 'Báo cáo & Xuất dữ liệu', sub: 'Mỗi báo cáo kèm thời điểm, nguồn, giả định và loại dữ liệu', render(root) {
+  FS.pages.reports = { title: 'Báo cáo & Xuất dữ liệu', sub: 'Báo cáo kèm thời điểm, nguồn dữ liệu, giả định và phân loại dữ liệu', render(root) {
     const stamp = new Date().toISOString().slice(0, 19), R = FS.engine.impactAll(), incs = FS.engine.incidents();
     const items = [
       ['Danh sách sự cố & đối tượng liên quan', 'Sự cố, máy, FMEA, Lot, JT liên quan', () => FS.csv.stringify(R.flatMap(r => (r.jts.length ? r.jts : [null]).map(x => ({ incident_id: r.inc.incident_id, station_id: r.inc.station_id, bat_dau: r.inc.start_time, gio_dung: r.inc.duration_h, fmea: r.inc.fmea_code, lot_lien_quan: r.inc.affected_lots, jt_lien_quan: x ? x.jt.jt_id : '', muc_lien_ket: x ? x.link : 'Chưa đủ dữ liệu liên kết', loai_du_lieu: x ? PV(x.link) : 'Pilot', xuat_luc: stamp })))), 'su_co_doi_tuong'],
