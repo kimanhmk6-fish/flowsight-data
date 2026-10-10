@@ -12,10 +12,11 @@ FS.auth = (function () {
   async function seed() { if (users().length) return; const U = []; for (const d of DEMO) U.push({ email: d[0], name: d[1], role: d[2], hash: await hash(d[3]), demo: 1 }); FS.persist.set('users', U); }
   function show() {
     document.body.classList.add('locked'); const A = document.getElementById('auth'); let tab = 'in', fails = 0, lockUntil = 0;
-    const draw = (msg, ok) => { A.innerHTML = `<div class="auth-l"><div class="brand"><div class="logo">F</div><div><b>FlowSight</b><small>Hệ thống Phân tích Tác động Sự cố & Nguyên nhân cấp Lô</small></div></div>
-      <h2>Từ một sự cố máy, biết ngay lô nào, đơn (JT) nào, chuyến giao hàng nào bị ảnh hưởng.</h2>
-      <p class="tagline">Nối sự cố máy với Lot, JT và chuyến giao hàng bị ảnh hưởng.</p>
-      <p class="quote">“Từ sự cố đến hành động — dựa trên dữ liệu và trí tuệ”</p><div class="brand-footer"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><span>FlowSight Control Tower</span><small>v0.4.2 · 2026-10-10</small></div></div>
+    const draw = (msg, ok) => { A.innerHTML = `<div class="auth-l"><div class="brand"><div class="brand-marks"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight"></div><small class="brand-tagline">Hệ thống Phân tích Tác động Sự cố &amp; Nguyên nhân cấp Lô</small></div>
+      <div class="auth-copy"><h2>Từ một sự cố máy, nhanh chóng xác định các lô, đơn hàng và chuyến giao hàng bị ảnh hưởng.</h2>
+      <p class="tagline">Kết nối dữ liệu sự cố máy với Lot, JT và thông tin giao hàng để hỗ trợ truy xuất tác động.</p>
+      <p class="quote">“Từ sự cố đến hành động — dựa trên dữ liệu và trí tuệ.”</p></div>
+      <div class="brand-footer"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><span>Control Tower</span><small>v0.4.2 · 2026-10-10</small></div></div>
       <div class="auth-r"><div class="card auth-card"><div class="steps"><span class="${tab === 'in' ? 'on' : ''}" data-t="in" style="cursor:pointer">Đăng nhập</span><span class="${tab === 'up' ? 'on' : ''}" data-t="up" style="cursor:pointer">Đăng ký</span></div>
       ${msg ? `<div class="callout ${ok ? 'ok' : 'err'}">${msg}</div>` : ''}
       ${tab === 'in' ? `<label class="fl">Email<input id="a-e" type="email" autocomplete="username" placeholder="ten@congty.com"></label><label class="fl">Mật khẩu<input id="a-p" type="password" autocomplete="current-password"></label><button class="btn wide" id="a-go">Đăng nhập</button>

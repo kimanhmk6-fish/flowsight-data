@@ -100,6 +100,15 @@ body.locked .side,body.locked .main{display:none}.auth{display:none}body.locked 
 .subtab.on{color:var(--pri);border-bottom-color:var(--pri)}
 .subview{animation:fi .25s}
 .brand-img{height:36px;width:auto;max-width:170px;object-fit:contain;display:block}
+.auth-l .brand{align-items:flex-start;gap:12px;padding:0;margin-bottom:8px}
+.auth-l .brand-marks{gap:12px;flex-wrap:wrap}
+.auth-l .brand-tagline{display:block;margin:0;padding:0 0 0 2px;font-size:14px;color:#64748b;line-height:1.5;max-width:480px}
+.auth-l .brand-img{width:min(280px,100%);height:auto;max-width:100%;object-fit:contain}
+.auth-copy{display:grid;gap:12px;max-width:560px}
+.auth-copy h2{font-size:26px;line-height:1.35;letter-spacing:-.01em}
+.auth-copy .tagline,.auth-copy .quote{margin:0}
+.auth-copy .tagline{font-size:14px;color:var(--mut);line-height:1.6}
+.auth-copy .quote{font-size:16px;line-height:1.5}
 
 /* Sidebar collapse (desktop) */
 #menu{display:block}
@@ -228,20 +237,21 @@ FS.auth = (function () {
           <div class="brand-marks">
             <span class="brand-denso">DENSO</span>
             <span class="brand-x">×</span>
-            <img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight" 
-                onerror="this.outerHTML='<div class=\'logo\'>F</div>'">
+            <img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight">
           </div>
-          <small class="brand-tagline" style="display:block;margin-top:6px;line-height:1.4">
+          <small class="brand-tagline">
             Hệ thống Phân tích Tác động Sự cố &amp; Nguyên nhân cấp Lô
           </small>
         </div>
-        <h2>Từ một sự cố máy, biết ngay lô nào, đơn hàng nào, chuyến giao hàng nào bị ảnh hưởng.</h2>
-        <p class="tagline">Nối sự cố máy với Lot, JT và chuyến giao hàng bị ảnh hưởng.</p>
-        <p class="quote">"Từ sự cố đến hành động - dựa trên dữ liệu và trí tuệ"</p>
+        <div class="auth-copy">
+          <h2>Từ một sự cố máy, nhanh chóng xác định các lô, đơn hàng và chuyến giao hàng bị ảnh hưởng.</h2>
+          <p class="tagline">Kết nối dữ liệu sự cố máy với Lot, JT và thông tin giao hàng để hỗ trợ truy xuất tác động.</p>
+          <p class="quote">“Từ sự cố đến hành động — dựa trên dữ liệu và trí tuệ.”</p>
+        </div>
         <div class="brand-footer">
           <span class="brand-denso">DENSO</span>
           <span class="brand-x">×</span>
-          <span>FlowSight Control Tower</span>
+          <span>Control Tower</span>
           <small>v0.4.2 · 2026-10-10</small>
         </div>
       </div>
