@@ -7,7 +7,7 @@
 h1,h2,h3,h4{margin:0}small,.muted{color:var(--mut)}b{font-weight:600}a{color:var(--pri)}
 .side{width:240px;flex:none;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;padding:18px 12px;position:sticky;top:0;height:100vh;z-index:20}
 .brand{display:flex;flex-direction:column;gap:6px;padding:0 12px 18px}
-.brand-marks{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;letter-spacing:-.02em}
+.brand-marks{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;letter-spacing:-.02em}
 .brand-denso{color:#E60012;font-weight:800;letter-spacing:.04em;font-size:14px}
 .brand-x{color:#94a3b8;font-weight:400;font-size:12px}
 .brand-flowsight{display:flex;align-items:center;gap:5px;color:#0f1b3d}
@@ -68,7 +68,7 @@ details.fx{border:1px solid var(--line);border-radius:12px;padding:10px 14px;bac
 .arch{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:stretch}.arch .lay{border-radius:14px;padding:14px;border:1px solid var(--line);background:#fff}.arch h4{margin-bottom:8px}.arch .it{background:#f1f5ff;border-radius:8px;padding:5px 9px;margin:5px 0;font-size:12.5px}
 .cfg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}.cfg label{display:flex;flex-direction:column;font-size:12px;font-weight:600;color:var(--mut);gap:3px}
 @media(max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}.g21,.g12,.g3{grid-template-columns:1fr}.arch{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:860px){.side{position:fixed;left:-250px;transition:.25s}.nav-open .side{left:0;box-shadow:0 0 60px rgba(0,0,0,.3)}#menu{display:block}.g2,.g4{grid-template-columns:1fr}.main{padding:0 14px 30px}.user div:last-child{display:none}.arch{grid-template-columns:1fr}}
+@media(max-width:860px){.side{position:fixed;left:-250px;transition:.25s}.nav-open .side{left:0;box-shadow:0 0 60px rgba(0,0,0,.3)}.g2,.g4{grid-template-columns:1fr}.main{padding:0 14px 30px}.user div:last-child{display:none}.arch{grid-template-columns:1fr}}
 @media print{.side,.filters,.top-r,#menu,.btn{display:none!important}body{background:#fff}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .row>label:not(.row){display:flex;flex-direction:column;font-size:11.5px;color:var(--mut);font-weight:600;gap:3px}
@@ -99,7 +99,20 @@ body.locked .side,body.locked .main{display:none}.auth{display:none}body.locked 
 .subtab:hover{color:var(--pri)}
 .subtab.on{color:var(--pri);border-bottom-color:var(--pri)}
 .subview{animation:fi .25s}
-.brand-img{height:28px;width:auto;max-width:140px;object-fit:contain}
+.brand-img{height:36px;width:auto;max-width:170px;object-fit:contain;display:block}
+
+/* Sidebar collapse (desktop) */
+#menu{display:block}
+body.side-collapsed .side{width:64px;padding:18px 8px}
+body.side-collapsed .side .brand-marks,body.side-collapsed .side .brand-tagline,body.side-collapsed .side-foot,body.side-collapsed .nav a{font-size:0}
+body.side-collapsed .nav a i{font-size:18px;margin:0}
+body.side-collapsed .nav a{justify-content:center;padding:12px 0}
+body.side-collapsed .brand{justify-content:center}
+body.side-collapsed .brand-img{height:28px;max-width:48px}
+.side{transition:width .25s}
+
+#side{max-height:70vh;overflow:auto;word-break:break-word}
+#side .kv td{max-width:280px;overflow:hidden;text-overflow:ellipsis}
 </style>
 <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script></head>
 <body class="locked">
@@ -465,7 +478,7 @@ FS.boot = function () {
     FS.go();
   });
   u.$('#f-reset').onclick = () => { Object.assign(FS.state, { from: '2026-09-29', to: '2026-10-10', station: '', status: '', q: '' }); ['from', 'to', 'station', 'status', 'q'].forEach(k => u.$('#f-' + k).value = FS.state[k]); FS.go(); };
-  u.$('#menu').onclick = () => document.body.classList.toggle('nav-open');
+  u.$('#menu').onclick = () => { if (window.innerWidth <= 860) document.body.classList.toggle('nav-open'); else document.body.classList.toggle('side-collapsed'); };
   window.addEventListener('hashchange', () => { document.body.classList.remove('nav-open'); FS.go(); });
   u.$('#gs').onkeydown = e => { if (e.key !== 'Enter') return; const v = e.target.value.trim().toUpperCase(); if (!v) return; e.target.value = '';
     if (/^(LOT|BATCH|MAT)/.test(v)) location.hash = '#/genealogy?lot=' + v; else if (/^INC/.test(v)) location.hash = '#/impact?inc=' + v;
@@ -520,7 +533,15 @@ window.addEventListener('DOMContentLoaded', () => { try { FS.boot(); } catch (e)
 <script>/* FR-01 Command Center — Kim tự tháp ngược: Cảnh báo → Định hướng hành động */
 (function () {
   const u = FS.ui;
-  FS.pages.command = {
+  FS.pages.command = FS.pages.command || {};
+  FS.pages.command.incCols = [
+    { k: 'incident_id', t: 'Sự cố' }, { k: 'station_id', t: 'Máy' },
+    { k: 'start_time', t: 'Bắt đầu', r: r => FS.fmt.d(r.start_time) },
+    { k: 'duration_h', t: 'Dừng (h)' },
+    { k: 'severity_level', t: 'Mức độ', r: r => u.sev(r.severity_level) },
+    { t: 'Trạng thái', r: r => u.stat(FS.engine.incStatus(r)), x: r => FS.engine.incStatus(r) }
+  ];
+  Object.assign(FS.pages.command, {
     title: 'Command Center', sub: 'Cảnh báo và định hướng hành động',
     render(root) {
       const incs = FS.engine.incidents(), R = FS.engine.impactAll(), S = FS.state, n = FS.fmt.n;
@@ -609,7 +630,7 @@ window.addEventListener('DOMContentLoaded', () => { try { FS.boot(); } catch (e)
         onRow: x => location.hash = '#/incident_intel?tab=impact&inc=' + x.inc
       });
     }
-  };
+  });
 })();
 </script><script>/* FR-02 Incident Monitoring */
 (function () {
@@ -642,7 +663,7 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
     function draw() {
       const inc = all.find(i => i.incident_id === id), R = FS.engine.impact(inc, dur != null ? { durH: dur } : {}), what = dur != null && dur !== inc.duration_h;
       root.innerHTML = `<div class="card"><div class="row"><label>Sự cố<select id="i">${all.map(i => `<option value="${i.incident_id}" ${i.incident_id === id ? 'selected' : ''}>${i.incident_id} · ${i.station_id} · ${i.duration_h}h · ${i.test_case_link}</option>`).join('')}</select></label>
-        <label>Thời gian dừng (h)<input type="number" id="d" step=".5" min="0" value="${R.durH}" style="width:110px"></label>
+        <label>Thời gian dừng (h) — what-if<input type="number" id="d" step=".5" min="0" value="${R.durH}" style="width:110px"></label>
         <label>Lịch SX (giờ bắt đầu–kết thúc)<span class="row"><input type="number" id="s1" value="${C.schedStart}" style="width:62px" min="0" max="23"><input type="number" id="s2" value="${C.schedEnd}" style="width:62px" min="1" max="24"></span></label>
         <label>% FG khả dụng<input type="number" id="fg" value="${C.fgUsablePct}" style="width:80px" min="0" max="100"></label>
         <label class="row"><input type="checkbox" id="rc" ${C.useRecovery ? 'checked' : ''}> Dùng công suất bù</label>
@@ -960,12 +981,12 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
   function r01() { const t = FS.json.cause_truth_R01.expected_result, inc = FS.tables.incident_truth.find(i => i.test_case_link === 'R01'), F = FS.engine.cause(inc).filter(f => f.kind === 'Vật tư').sort((a, b) => b.conf - a.conf), top = F[0] ? F[0].factor.replace('Lô vật tư chung: ', '') : null;
     return { id: 'R01', name: 'Nguyên nhân sự cố ' + inc.incident_id, rows: [['Nguyên nhân hàng đầu', t.top_cause, top || '(chưa đủ bằng chứng)'], ['Loại nguyên nhân', t.cause_type, inc.root_cause_type], ['FMEA', t.fmea_code, inc.fmea_code], ['Lot cần cô lập', jset(t.isolate_lots).join(', '), jset(FS.lotList(inc.affected_lots)).join(', ')], ['Độ tin cậy', t.confidence, F[0] ? F[0].conf : null]], m: { hit: top === t.top_cause ? 1 : 0 }, note: 'Độ tin cậy của engine là heuristic (tỷ lệ Lot chung lô vật tư), không phải xác suất hiệu chỉnh.' }; }
   FS.pages.validation = { title: 'Validation Lab', sub: 'So sánh kết quả phân tích với dữ liệu tham chiếu (ground truth) đã xác nhận', noFilter: true, render(root) {
-    const cases = [f01(), r01()], dh = FS.json.data_health_truth, runs = FS.persist.get('valruns', []);
+    const cases = [f01(), r01()], dh = Object.fromEntries(Object.entries(FS.json || {}).filter(([k]) => k.startsWith('data_health_truth_'))), runs = FS.persist.get('valruns', []);
     root.innerHTML = `<div class="callout warn"><b>Phạm vi kiểm chứng:</b> dữ liệu tham chiếu là <b>mô phỏng</b> (${Object.keys(FS.json).length} tệp ground truth). Kết quả chỉ xác nhận <b>logic hệ thống</b>, không chứng minh hiệu năng thực tế tại nhà máy. Chỉ có 2 ca có tham chiếu (F01, R01) nên <b>không công bố độ chính xác tổng thể</b>.</div>
     ${cases.map(c => { const ok = (a, b) => String(a) === String(b); return `<div class="card mt"><div class="card-h"><h3>${c.id} · ${c.name}</h3><span class="sp">${u.badge('Dữ liệu: ' + (c.id === 'F01' ? 'impact_truth_F01.json' : 'cause_truth_R01.json'), 'blue', '◇')}</span></div>
       <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Chỉ tiêu</th><th>Tham chiếu</th><th>FlowSight</th><th>Kết quả</th></tr></thead><tbody>${c.rows.map(r => `<tr><td>${r[0]}</td><td>${r[1] ?? '—'}</td><td>${r[2] ?? '—'}</td><td>${r[2] == null ? u.badge('Chưa đủ dữ liệu', 'gray', '?') : ok(r[1], r[2]) ? u.badge('Khớp', 'green', '✔') : u.badge('Lệch', 'red', '✕')}</td></tr>`).join('')}</tbody></table></div>
       <div class="row mt">${Object.entries(c.m).map(([k, v]) => `<div class="card" style="padding:8px 14px"><small>${{ err: 'Sai số (dự báo − thực)', ape: 'APE', p: 'Precision (JT)', r: 'Recall (JT)', hit: 'Top-1 đúng' }[k]}</small><div class="kpi-v" style="font-size:20px">${v == null ? '—' : k === 'err' ? FS.fmt.n(v) : (v * 100).toFixed(0) + '%'}</div></div>`).join('')}</div><small class="muted">${c.note}</small></div>`; }).join('')}
-    <div class="card mt"><div class="card-h"><h3>Tham chiếu chất lượng dữ liệu (D01–D04)</h3></div>${u.kv(Object.entries(dh).map(([k, v]) => [k, Object.entries(v).map(([a, b]) => `${a}: <b>${typeof b === 'object' ? JSON.stringify(b) : b}</b>`).join(' · ')]))}<div class="callout info">Kiểm chứng D01–D04 cần dữ liệu thô có lỗi chèn (raw). Repo hiện chỉ có ground truth sạch → Chưa đủ dữ liệu để so sánh; có thể tải CSV thô ở trang Import & Mapping.</div></div>
+    <div class="card mt"><div class="card-h"><h3>Tham chiếu chất lượng dữ liệu (D01–D04)</h3></div>${Object.keys(dh).length ? u.kv(Object.entries(dh).map(([k, v]) => [k, v && typeof v === 'object' ? Object.entries(v).map(([a, b]) => `${a}: <b>${typeof b === 'object' ? JSON.stringify(b) : b}</b>`).join(' · ') : String(v ?? '—')])) : u.empty('Chưa có dữ liệu tham chiếu chất lượng')}<div class="callout info">Kiểm chứng D01–D04 cần dữ liệu thô có lỗi chèn (raw). Repo hiện chỉ có ground truth sạch → Chưa đủ dữ liệu để so sánh; có thể tải CSV thô ở trang Import & Mapping.</div></div>
     <div class="card mt"><details class="fx"><summary>Định nghĩa chỉ số</summary><ul><li><b>Sai số</b> = dự báo − thực tế · <b>APE</b> = |sai số| / thực tế</li><li><b>Precision</b> = TP / số JT engine báo nguy cơ · <b>Recall</b> = TP / số JT tham chiếu trễ</li><li><b>Top-1</b> = nguyên nhân hàng đầu trùng tham chiếu</li></ul></details>
       <div class="row mt"><button class="btn" id="sv">Lưu phiên bản kiểm chứng</button><small class="muted">Lưu cấu hình ${FS.config.version}, tham số lịch ${FS.config.schedStart}–${FS.config.schedEnd}h, FG ${FS.config.fgUsablePct}%</small></div>
       ${runs.map(r => `<div class="tl"><div><b>${r.t}</b> · ${r.cfg} · F01 sai số ${r.err ?? '—'} · R01 ${r.hit ? 'đúng' : 'lệch'} · dữ liệu: ${r.data}</div></div>`).join('')}</div>`;

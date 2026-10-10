@@ -33,7 +33,7 @@ FS.boot = function () {
     FS.go();
   });
   u.$('#f-reset').onclick = () => { Object.assign(FS.state, { from: '2026-09-29', to: '2026-10-10', station: '', status: '', q: '' }); ['from', 'to', 'station', 'status', 'q'].forEach(k => u.$('#f-' + k).value = FS.state[k]); FS.go(); };
-  u.$('#menu').onclick = () => document.body.classList.toggle('nav-open');
+  u.$('#menu').onclick = () => { if (window.innerWidth <= 860) document.body.classList.toggle('nav-open'); else document.body.classList.toggle('side-collapsed'); };
   window.addEventListener('hashchange', () => { document.body.classList.remove('nav-open'); FS.go(); });
   u.$('#gs').onkeydown = e => { if (e.key !== 'Enter') return; const v = e.target.value.trim().toUpperCase(); if (!v) return; e.target.value = '';
     if (/^(LOT|BATCH|MAT)/.test(v)) location.hash = '#/genealogy?lot=' + v; else if (/^INC/.test(v)) location.hash = '#/impact?inc=' + v;

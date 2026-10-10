@@ -1,7 +1,15 @@
 /* FR-01 Command Center — Kim tự tháp ngược: Cảnh báo → Định hướng hành động */
 (function () {
   const u = FS.ui;
-  FS.pages.command = {
+  FS.pages.command = FS.pages.command || {};
+  FS.pages.command.incCols = [
+    { k: 'incident_id', t: 'Sự cố' }, { k: 'station_id', t: 'Máy' },
+    { k: 'start_time', t: 'Bắt đầu', r: r => FS.fmt.d(r.start_time) },
+    { k: 'duration_h', t: 'Dừng (h)' },
+    { k: 'severity_level', t: 'Mức độ', r: r => u.sev(r.severity_level) },
+    { t: 'Trạng thái', r: r => u.stat(FS.engine.incStatus(r)), x: r => FS.engine.incStatus(r) }
+  ];
+  Object.assign(FS.pages.command, {
     title: 'Command Center', sub: 'Cảnh báo và định hướng hành động',
     render(root) {
       const incs = FS.engine.incidents(), R = FS.engine.impactAll(), S = FS.state, n = FS.fmt.n;
@@ -90,5 +98,5 @@
         onRow: x => location.hash = '#/incident_intel?tab=impact&inc=' + x.inc
       });
     }
-  };
+  });
 })();
