@@ -1,0 +1,76 @@
+{
+  "generated_from": "flowsight-data main",
+  "f01": {
+    "incident_id": "INC-0001",
+    "station": "STN-M2",
+    "duration_h": 8.0,
+    "qty_lost": 736,
+    "jt_late": "JT-0231",
+    "shortfall": 29,
+    "p_late": 100.0,
+    "action": "resequencing + OT2",
+    "affected_lots": [
+      "LOT-0002",
+      "LOT-0005",
+      "LOT-0010",
+      "LOT-0013",
+      "LOT-0018",
+      "LOT-0021",
+      "LOT-0026",
+      "LOT-0029"
+    ],
+    "what_if": [
+      {
+        "id": "A",
+        "name": "Do nothing",
+        "p_late": 100.0,
+        "cost": 740000.0,
+        "recommended": false
+      },
+      {
+        "id": "B",
+        "name": "OT2 — Tăng ca 2h",
+        "p_late": 26.6,
+        "cost": 2200000.0,
+        "recommended": false
+      },
+      {
+        "id": "C",
+        "name": "OT4 — Tăng ca 4h",
+        "p_late": 0.0,
+        "cost": 4400000.0,
+        "recommended": false
+      },
+      {
+        "id": "D",
+        "name": "Resequencing",
+        "p_late": 25.6,
+        "cost": 1500000.0,
+        "recommended": false
+      },
+      {
+        "id": "E",
+        "name": "Resequencing + OT2",
+        "p_late": 1.0,
+        "cost": 3700000.0,
+        "recommended": true
+      }
+    ],
+    "optimal": "E"
+  },
+  "r01": {
+    "lot_ng": "LOT-0403",
+    "top_cause": "BATCH-HT-B07",
+    "cause_type": "BATCH",
+    "p_value": 0.0001,
+    "lift": 82.2,
+    "confidence": 0.66,
+    "isolate_lots": [
+      "LOT-0401",
+      "LOT-0402",
+      "LOT-0403",
+      "LOT-0404",
+      "LOT-0405"
+    ]
+  }
+}

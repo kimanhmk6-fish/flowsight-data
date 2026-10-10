@@ -1,6 +1,22 @@
+# Core data processing
 pandas>=2.0,<3.0
 numpy>=2.0,<3.0
-simpy>=4.0,<5.0
-openpyxl>=3.0,<4.0
 pyarrow>=15.0
 pyyaml>=6.0
+
+# Simulation
+simpy>=4.0,<5.0
+
+# Excel I/O
+openpyxl>=3.0,<4.0
+
+# Graph
+networkx>=3.0
+
+# Statistics
+scipy>=1.10
+
+# Machine Learning & Visualization
+scikit-learn>=1.4
+matplotlib>=3.8
+tqdm>=4.66
