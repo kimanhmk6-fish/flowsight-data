@@ -118,7 +118,7 @@ body.side-collapsed .brand{display:none}
 <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script></head>
 <body class="locked">
 <div id="auth" class="auth"></div>
-<aside class="side"><div class="brand"><div class="brand-marks"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight" onerror="this.style.display='none'"></div><small class="brand-tagline">Sự cố → Tác động → Hành động</small></div>
+<aside class="side"><div class="brand"><div class="brand-marks"><span class="brand-denso">DENSO</span><span class="brand-x"></span><img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight" onerror="this.style.display='none'"></div>
 <nav class="nav" id="nav"></nav>
 <div class="side-foot"><span class="dot"></span><small>Online · 10/10/2026 12:00</small></div></aside>
 <main class="main">
@@ -664,7 +664,7 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
     function draw() {
       const inc = all.find(i => i.incident_id === id), R = FS.engine.impact(inc, dur != null ? { durH: dur } : {}), what = dur != null && dur !== inc.duration_h;
       root.innerHTML = `<div class="card"><div class="row"><label>Sự cố<select id="i">${all.map(i => `<option value="${i.incident_id}" ${i.incident_id === id ? 'selected' : ''}>${i.incident_id} · ${i.station_id} · ${i.duration_h}h · ${i.test_case_link}</option>`).join('')}</select></label>
-        <label>Thời gian dừng (h) — what-if<input type="number" id="d" step=".5" min="0" value="${R.durH}" style="width:110px"></label>
+        <label>Thời gian dừng (h)<input type="number" id="d" step=".5" min="0" value="${R.durH}" style="width:110px"></label>
         <label>Lịch SX (giờ bắt đầu–kết thúc)<span class="row"><input type="number" id="s1" value="${C.schedStart}" style="width:62px" min="0" max="23"><input type="number" id="s2" value="${C.schedEnd}" style="width:62px" min="1" max="24"></span></label>
         <label>% FG khả dụng<input type="number" id="fg" value="${C.fgUsablePct}" style="width:80px" min="0" max="100"></label>
         <label class="row"><input type="checkbox" id="rc" ${C.useRecovery ? 'checked' : ''}> Dùng công suất bù</label>
