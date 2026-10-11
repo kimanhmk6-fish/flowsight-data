@@ -24,7 +24,7 @@
     <div class="card mt"><div class="card-h"><h3>Thứ tự xử lý JT/Order</h3><small>Bấm dòng để xem lý do & ghi nhận quyết định</small></div><div id="t"></div></div>
     <div class="card mt"><div class="card-h"><h3>Mô phỏng phương án xử lý (F01)</h3><span class="sp"><small class="muted">Từ Python engine · Monte Carlo 20.000 lần</small></span></div>
       <div class="tbl-wrap"><table class="tbl"><thead><tr><th>PA</th><th>Phương án</th><th>Mô tả</th><th>P(trễ)</th><th>Chi phí</th><th></th></tr></thead><tbody>
-      ${WHATIF_F01.map(o => `<tr${o.rec ? ' style="background:#f0fdf4"' : ''}><td><b>${o.id}</b></td><td>${o.name}</td><td><small>${o.desc}</small></td><td>${(o.p * 100).toFixed(1)}%</td><td>${FS.fmt.n(o.cost)}đ</td><td>${o.rec ? u.badge('Khuyến nghị', 'green', '★') : ''}</td></tr>`).join('')}
+      ${WHATIF_F01.map(o => `<tr${o.rec ? ' style="background:#f0fdf4"' : ''}><td><b>${o.id}</b></td><td>${o.name}</td><td><small>${o.desc}</small></td><td>${(o.p * 100).toFixed(1)}%</td><td>${FS.fmt.n(o.cost)}đ</td><td>${o.rec ? u.badge('Khuyến nghị', 'green') : ''}</td></tr>`).join('')}
       </tbody></table></div>
       <small class="muted">Phương án E được khuyến nghị: chi phí thấp nhất trong các phương án giảm P(trễ) dưới ngưỡng.</small></div>
     <div class="card mt"><div class="card-h"><h3>Lịch sử quyết định</h3></div>${FS.wf.hist.filter(h => h.what.startsWith('JT')).slice(0, 8).map(h => `<div class="tl"><div><b>${h.what}</b> <small>${h.t}</small></div></div>`).join('') || '<small class="muted">Chưa có quyết định nào.</small>'}</div>
