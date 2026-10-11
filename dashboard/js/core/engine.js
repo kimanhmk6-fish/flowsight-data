@@ -37,21 +37,46 @@ FS.engine = (function () {
     FS.tables.jt_order_truth.forEach(j => { if (conf.has(j.jt_id) || j.status !== 'OPEN') return;
       const due = FS.T(j.due_ts); if ((st.line_id === 'SHARED' || j.line_id === st.line_id) && due >= a && due <= b + 72 * H)
         jts.push({ jt: j, link: 'Suy luận', basis: `Cùng line ${j.line_id}, hạn giao trong 72h sau sự cố (quy tắc R-LINK-01)` }); });
-    const prods = [...new Set(jts.map(x => x.jt.product_id))];
-    let fg = 0, fgMissing = 0; prods.forEach(p => { const s = latestFG(p, a); s ? fg += s.qty : fgMissing++; });
-    const fgUsable = fg * C.fgUsablePct / 100; if (prods.length) assume.push(`Tồn FG khả dụng = ${C.fgUsablePct}% tồn snapshot gần nhất (giả định, chưa xét QC-hold/vị trí)`);
-    const deficit = lostQty == null ? null : Math.max(0, lostQty - fgUsable);
+    // Cấp phát ATP theo đáo hạn (FCFS) — cùng thuật toán với forward engine (Python):
+    // supply khả dụng trước mỗi ngày đáo hạn = tồn đầu kỳ + SX các ngày trước đó
+    // (SX trong ngày đáo hạn chưa kịp hoàn tất để giao). JT đã DEPARTED đủ số
+    // lượng được trừ supply nhưng không xét trễ. Tổn thất quy về 1 product chính
+    // của sự cố (đa số trong các lot bị ảnh hưởng).
+    const prodCount = {};
+    lots.forEach(l => { const p = (FS.idx.lot.get(l) || {}).product_id; if (p) prodCount[p] = (prodCount[p] || 0) + 1; });
+    const atpProduct = Object.keys(prodCount).sort((x, y) => prodCount[y] - prodCount[x])[0] || (jts[0] && jts[0].jt.product_id) || 'PROD-P1';
+    const fgSnap = latestFG(atpProduct, a), opening = fgSnap ? (+fgSnap.qty || 0) : 0;
+    const dayQty = {};
+    (FS.tables.canonical_lots || []).forEach(r => { if (r.product_id === atpProduct && r.created_ts) { const d = String(r.created_ts).slice(0, 10); dayQty[d] = (dayQty[d] || 0) + (+r.qty || 0); } });
+    const dayVals = Object.values(dayQty), dailyProd = dayVals.length ? dayVals.reduce((s, v) => s + v, 0) / dayVals.length : 0;
+    const HORIZON = 14, d0 = Date.UTC(+String(inc.start_time).slice(0, 4), +String(inc.start_time).slice(5, 7) - 1, +String(inc.start_time).slice(8, 10));
+    const dayIdx = s => Math.round((Date.UTC(+String(s).slice(0, 4), +String(s).slice(5, 7) - 1, +String(s).slice(8, 10)) - d0) / D);
+    const prod = []; for (let d = 0; d < HORIZON; d++) prod.push(d === 0 && lostQty != null ? Math.max(0, dailyProd - lostQty) : dailyProd);
+    const fulfilled = new Set((FS.tables.shipment_truth || []).filter(s => String(s.status).toUpperCase() === 'DEPARTED').map(s => s.jt_id));
+    const shortMap = new Map(); let remaining = opening, lastDue = -1, totalShort = 0;
+    (FS.tables.jt_order_truth || []).filter(j => j.product_id === atpProduct).sort((p, q) => (FS.T(p.due_ts) - FS.T(q.due_ts)) || (p.jt_id < q.jt_id ? -1 : 1)).forEach(j => {
+      if (!j.due_ts) return; const di = dayIdx(j.due_ts); if (di < 0 || di > HORIZON) return;
+      for (let d = lastDue + 1; d < di; d++) remaining += prod[d] || 0;
+      lastDue = Math.max(lastDue, di - 1);
+      const need = +j.qty || 0;
+      if (fulfilled.has(j.jt_id)) { remaining -= need; return; }
+      if (remaining >= need) remaining -= need;
+      else { const sh = need - remaining; remaining = 0; totalShort += sh; shortMap.set(j.jt_id, (shortMap.get(j.jt_id) || 0) + sh); }
+    });
+    const fgUsable = opening, deficit = lostQty == null ? null : Math.max(0, lostQty - opening);
     const perDay = C.useRecovery && rate ? (st.spare_capacity_h_per_day || 0) * rate : 0;
-    steps.push(['Tồn FG khả dụng', FS.fmt.n(fgUsable) + ' sp', 'Σ snapshot FG gần nhất trước sự cố × %khả dụng (không cộng WIP)'], ['Thiếu hụt sau tồn kho', deficit == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(deficit) + ' sp', 'sản lượng mất − FG khả dụng'], ['Công suất bù / ngày', FS.fmt.n(perDay) + ' sp', 'spare_capacity_h_per_day × công suất']);
+    if (fgSnap) assume.push(`Cấp phát ATP: FCFS theo đáo hạn, horizon ${HORIZON} ngày; tồn đầu kỳ = snapshot FG thực tế (không nhân % khả dụng)`);
+    else assume.push(`Không có snapshot FG trước sự cố cho ${atpProduct} — tồn đầu kỳ = 0`);
+    steps.push(['Tồn FG đầu kỳ (' + atpProduct + ')', FS.fmt.n(opening) + ' sp', 'snapshot FG gần nhất trước sự cố (inventory_truth)'], ['Sản lượng/ngày', FS.fmt.n(dailyProd) + ' sp', 'trung bình ngày từ canonical_lots'], ['Sản lượng ngày sự cố', FS.fmt.n(prod[0]) + ' sp', 'sản lượng/ngày − sản lượng mất lý thuyết'], ['Thiếu hụt sau tồn đầu kỳ', deficit == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(deficit) + ' sp', 'sản lượng mất − tồn đầu kỳ (căn cứ ước tính giờ bù)'], ['Công suất bù / ngày', FS.fmt.n(perDay) + ' sp', 'spare_capacity_h_per_day × công suất']);
     jts.forEach(x => { const j = x.jt, due = FS.T(j.due_ts); x.slackH = (due - b) / H;
-      x.exposure = deficit == null ? null : Math.min(j.qty, Math.max(0, deficit - perDay * Math.max(0, (due - b) / D)));
+      x.exposure = j.product_id === atpProduct ? (shortMap.get(j.jt_id) || 0) : null;
       x.ratio = x.exposure == null ? null : x.exposure / j.qty; x.alloc = (FS.idx.allocByJt.get(j.jt_id) || []).reduce((s, r) => s + r.qty_allocated, 0);
       x.ship = FS.idx.shipByJt.get(j.jt_id) || []; x.risk = riskLabel(x.ratio); });
     jts.sort((p, q) => (q.exposure || 0) - (p.exposure || 0) || p.slackH - q.slackH);
-    const atRisk = jts.filter(x => x.exposure > 0), net = deficit == null ? null : (jts.length ? Math.max(0, ...jts.map(x => x.exposure || 0)) : deficit);
-    const status = rate == null ? 'Chưa đủ dữ liệu' : (!jts.length || fgMissing) ? 'Ước tính một phần' : 'Đủ dữ liệu';
-    steps.push(['Thiếu hụt ròng', net == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(net) + ' sp', 'max exposure JT (không cộng trùng cùng một thiếu hụt)'], ['JT/Order có nguy cơ', atRisk.length + ' / ' + jts.length, 'exposure > 0 sau khi trừ công suất bù đến hạn giao']);
-    return { inc, st, durH, lostH, lostQty, rate, fg, fgUsable, deficit, perDay, jts, atRisk, net, status, steps, assume, lots,
+    const atRisk = jts.filter(x => x.exposure > 0), net = lostQty == null ? null : Math.round(totalShort);
+    const status = rate == null ? 'Chưa đủ dữ liệu' : (!jts.length || !fgSnap) ? 'Ước tính một phần' : 'Đủ dữ liệu';
+    steps.push(['Thiếu hụt ròng (ATP)', net == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(net) + ' sp', 'Σ shortfall sau cấp phát FCFS theo đáo hạn'], ['JT/Order có nguy cơ', atRisk.length + ' / ' + jts.length, 'shortfall > 0 sau cấp phát ATP']);
+    return { inc, st, durH, lostH, lostQty, rate, fgUsable, deficit, perDay, jts, atRisk, net, status, steps, assume, lots,
       shipRisk: atRisk.flatMap(x => x.ship.filter(s => s.status !== 'DEPARTED' || s.qty_actual < s.qty_planned)).filter((s, i, arr) => arr.findIndex(z => z.shipment_id === s.shipment_id) === i) };
   }
   function riskLabel(ratio) {

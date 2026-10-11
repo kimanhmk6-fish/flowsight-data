@@ -295,21 +295,46 @@ FS.engine = (function () {
     FS.tables.jt_order_truth.forEach(j => { if (conf.has(j.jt_id) || j.status !== 'OPEN') return;
       const due = FS.T(j.due_ts); if ((st.line_id === 'SHARED' || j.line_id === st.line_id) && due >= a && due <= b + 72 * H)
         jts.push({ jt: j, link: 'Suy luận', basis: `Cùng line ${j.line_id}, hạn giao trong 72h sau sự cố (quy tắc R-LINK-01)` }); });
-    const prods = [...new Set(jts.map(x => x.jt.product_id))];
-    let fg = 0, fgMissing = 0; prods.forEach(p => { const s = latestFG(p, a); s ? fg += s.qty : fgMissing++; });
-    const fgUsable = fg * C.fgUsablePct / 100; if (prods.length) assume.push(`Tồn FG khả dụng = ${C.fgUsablePct}% tồn snapshot gần nhất (giả định, chưa xét QC-hold/vị trí)`);
-    const deficit = lostQty == null ? null : Math.max(0, lostQty - fgUsable);
+    // Cấp phát ATP theo đáo hạn (FCFS) — cùng thuật toán với forward engine (Python):
+    // supply khả dụng trước mỗi ngày đáo hạn = tồn đầu kỳ + SX các ngày trước đó
+    // (SX trong ngày đáo hạn chưa kịp hoàn tất để giao). JT đã DEPARTED đủ số
+    // lượng được trừ supply nhưng không xét trễ. Tổn thất quy về 1 product chính
+    // của sự cố (đa số trong các lot bị ảnh hưởng).
+    const prodCount = {};
+    lots.forEach(l => { const p = (FS.idx.lot.get(l) || {}).product_id; if (p) prodCount[p] = (prodCount[p] || 0) + 1; });
+    const atpProduct = Object.keys(prodCount).sort((x, y) => prodCount[y] - prodCount[x])[0] || (jts[0] && jts[0].jt.product_id) || 'PROD-P1';
+    const fgSnap = latestFG(atpProduct, a), opening = fgSnap ? (+fgSnap.qty || 0) : 0;
+    const dayQty = {};
+    (FS.tables.canonical_lots || []).forEach(r => { if (r.product_id === atpProduct && r.created_ts) { const d = String(r.created_ts).slice(0, 10); dayQty[d] = (dayQty[d] || 0) + (+r.qty || 0); } });
+    const dayVals = Object.values(dayQty), dailyProd = dayVals.length ? dayVals.reduce((s, v) => s + v, 0) / dayVals.length : 0;
+    const HORIZON = 14, d0 = Date.UTC(+String(inc.start_time).slice(0, 4), +String(inc.start_time).slice(5, 7) - 1, +String(inc.start_time).slice(8, 10));
+    const dayIdx = s => Math.round((Date.UTC(+String(s).slice(0, 4), +String(s).slice(5, 7) - 1, +String(s).slice(8, 10)) - d0) / D);
+    const prod = []; for (let d = 0; d < HORIZON; d++) prod.push(d === 0 && lostQty != null ? Math.max(0, dailyProd - lostQty) : dailyProd);
+    const fulfilled = new Set((FS.tables.shipment_truth || []).filter(s => String(s.status).toUpperCase() === 'DEPARTED').map(s => s.jt_id));
+    const shortMap = new Map(); let remaining = opening, lastDue = -1, totalShort = 0;
+    (FS.tables.jt_order_truth || []).filter(j => j.product_id === atpProduct).sort((p, q) => (FS.T(p.due_ts) - FS.T(q.due_ts)) || (p.jt_id < q.jt_id ? -1 : 1)).forEach(j => {
+      if (!j.due_ts) return; const di = dayIdx(j.due_ts); if (di < 0 || di > HORIZON) return;
+      for (let d = lastDue + 1; d < di; d++) remaining += prod[d] || 0;
+      lastDue = Math.max(lastDue, di - 1);
+      const need = +j.qty || 0;
+      if (fulfilled.has(j.jt_id)) { remaining -= need; return; }
+      if (remaining >= need) remaining -= need;
+      else { const sh = need - remaining; remaining = 0; totalShort += sh; shortMap.set(j.jt_id, (shortMap.get(j.jt_id) || 0) + sh); }
+    });
+    const fgUsable = opening, deficit = lostQty == null ? null : Math.max(0, lostQty - opening);
     const perDay = C.useRecovery && rate ? (st.spare_capacity_h_per_day || 0) * rate : 0;
-    steps.push(['Tồn FG khả dụng', FS.fmt.n(fgUsable) + ' sp', 'Σ snapshot FG gần nhất trước sự cố × %khả dụng (không cộng WIP)'], ['Thiếu hụt sau tồn kho', deficit == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(deficit) + ' sp', 'sản lượng mất − FG khả dụng'], ['Công suất bù / ngày', FS.fmt.n(perDay) + ' sp', 'spare_capacity_h_per_day × công suất']);
+    if (fgSnap) assume.push(`Cấp phát ATP: FCFS theo đáo hạn, horizon ${HORIZON} ngày; tồn đầu kỳ = snapshot FG thực tế (không nhân % khả dụng)`);
+    else assume.push(`Không có snapshot FG trước sự cố cho ${atpProduct} — tồn đầu kỳ = 0`);
+    steps.push(['Tồn FG đầu kỳ (' + atpProduct + ')', FS.fmt.n(opening) + ' sp', 'snapshot FG gần nhất trước sự cố (inventory_truth)'], ['Sản lượng/ngày', FS.fmt.n(dailyProd) + ' sp', 'trung bình ngày từ canonical_lots'], ['Sản lượng ngày sự cố', FS.fmt.n(prod[0]) + ' sp', 'sản lượng/ngày − sản lượng mất lý thuyết'], ['Thiếu hụt sau tồn đầu kỳ', deficit == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(deficit) + ' sp', 'sản lượng mất − tồn đầu kỳ (căn cứ ước tính giờ bù)'], ['Công suất bù / ngày', FS.fmt.n(perDay) + ' sp', 'spare_capacity_h_per_day × công suất']);
     jts.forEach(x => { const j = x.jt, due = FS.T(j.due_ts); x.slackH = (due - b) / H;
-      x.exposure = deficit == null ? null : Math.min(j.qty, Math.max(0, deficit - perDay * Math.max(0, (due - b) / D)));
+      x.exposure = j.product_id === atpProduct ? (shortMap.get(j.jt_id) || 0) : null;
       x.ratio = x.exposure == null ? null : x.exposure / j.qty; x.alloc = (FS.idx.allocByJt.get(j.jt_id) || []).reduce((s, r) => s + r.qty_allocated, 0);
       x.ship = FS.idx.shipByJt.get(j.jt_id) || []; x.risk = riskLabel(x.ratio); });
     jts.sort((p, q) => (q.exposure || 0) - (p.exposure || 0) || p.slackH - q.slackH);
-    const atRisk = jts.filter(x => x.exposure > 0), net = deficit == null ? null : (jts.length ? Math.max(0, ...jts.map(x => x.exposure || 0)) : deficit);
-    const status = rate == null ? 'Chưa đủ dữ liệu' : (!jts.length || fgMissing) ? 'Ước tính một phần' : 'Đủ dữ liệu';
-    steps.push(['Thiếu hụt ròng', net == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(net) + ' sp', 'max exposure JT (không cộng trùng cùng một thiếu hụt)'], ['JT/Order có nguy cơ', atRisk.length + ' / ' + jts.length, 'exposure > 0 sau khi trừ công suất bù đến hạn giao']);
-    return { inc, st, durH, lostH, lostQty, rate, fg, fgUsable, deficit, perDay, jts, atRisk, net, status, steps, assume, lots,
+    const atRisk = jts.filter(x => x.exposure > 0), net = lostQty == null ? null : Math.round(totalShort);
+    const status = rate == null ? 'Chưa đủ dữ liệu' : (!jts.length || !fgSnap) ? 'Ước tính một phần' : 'Đủ dữ liệu';
+    steps.push(['Thiếu hụt ròng (ATP)', net == null ? 'Chưa đủ dữ liệu' : FS.fmt.n(net) + ' sp', 'Σ shortfall sau cấp phát FCFS theo đáo hạn'], ['JT/Order có nguy cơ', atRisk.length + ' / ' + jts.length, 'shortfall > 0 sau cấp phát ATP']);
+    return { inc, st, durH, lostH, lostQty, rate, fgUsable, deficit, perDay, jts, atRisk, net, status, steps, assume, lots,
       shipRisk: atRisk.flatMap(x => x.ship.filter(s => s.status !== 'DEPARTED' || s.qty_actual < s.qty_planned)).filter((s, i, arr) => arr.findIndex(z => z.shipment_id === s.shipment_id) === i) };
   }
   function riskLabel(ratio) {
@@ -685,11 +710,10 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
       root.innerHTML = `<div class="card"><div class="row"><label>Sự cố<select id="i">${all.map(i => `<option value="${i.incident_id}" ${i.incident_id === id ? 'selected' : ''}>${i.incident_id} · ${i.station_id} · ${i.duration_h}h · ${i.test_case_link}</option>`).join('')}</select></label>
         <label>Thời gian dừng (h) — what-if<input type="number" id="d" step=".5" min="0" value="${R.durH}" style="width:110px"></label>
         <label>Lịch SX (giờ bắt đầu–kết thúc)<span class="row"><input type="number" id="s1" value="${C.schedStart}" style="width:62px" min="0" max="23"><input type="number" id="s2" value="${C.schedEnd}" style="width:62px" min="1" max="24"></span></label>
-        <label>% FG khả dụng<input type="number" id="fg" value="${C.fgUsablePct}" style="width:80px" min="0" max="100"></label>
         <label class="row"><input type="checkbox" id="rc" ${C.useRecovery ? 'checked' : ''}> Dùng công suất bù</label>
         <button class="btn" id="go">Tính lại</button>${what ? `<button class="btn ghost" id="rs">Về giá trị gốc (${inc.duration_h}h)</button>` : ''}<span class="sp">${u.prov(R.status)} ${what ? u.badge('What-if', 'violet', '✎') : ''}</span></div></div>
-      <div class="grid g4 mt">${u.kpi({ label: 'Giờ SX bị mất', value: R.lostH, unit: 'h', icon: '⏱', color: 'blue', def: 'Thời gian dừng giao với lịch sản xuất' })}${u.kpi({ label: 'Sản lượng mất lý thuyết', value: R.lostQty, unit: 'sp', icon: '▤', color: 'amber', nodata: R.lostQty == null, def: 'giờ mất × công suất' })}${u.kpi({ label: 'Thiếu hụt ròng', value: R.net, unit: 'sp', icon: '◔', color: 'red', nodata: R.net == null, sub: R.status, def: 'Sau tồn kho khả dụng & công suất bù' })}${u.kpi({ label: 'JT/Order có nguy cơ', value: R.atRisk.length, unit: '/ ' + R.jts.length, icon: '☰', color: 'violet', def: 'exposure > 0' })}</div>
-      <div class="grid g2 mt"><div class="card"><div class="card-h"><h3>Kế hoạch – tồn kho – dự báo</h3><span class="sp">${u.badge('Dự báo', 'amber', '≈')}</span></div>${u.bars([{ k: 'Mất lý thuyết', v: R.lostQty || 0, c: u.C.red }, { k: 'FG khả dụng', v: R.fgUsable, c: u.C.green }, { k: 'Thiếu sau tồn', v: R.deficit || 0, c: u.C.amber }, { k: 'Bù / ngày', v: R.perDay, c: u.C.cyan }, { k: 'Thiếu ròng', v: R.net || 0, c: u.C.violet }], ' sp')}
+      <div class="grid g4 mt">${u.kpi({ label: 'Giờ SX bị mất', value: R.lostH, unit: 'h', icon: '⏱', color: 'blue', def: 'Thời gian dừng giao với lịch sản xuất' })}${u.kpi({ label: 'Sản lượng mất lý thuyết', value: R.lostQty, unit: 'sp', icon: '▤', color: 'amber', nodata: R.lostQty == null, def: 'giờ mất × công suất' })}${u.kpi({ label: 'Thiếu hụt ròng', value: R.net, unit: 'sp', icon: '◔', color: 'red', nodata: R.net == null, sub: R.status, def: 'Cấp phát ATP theo đáo hạn (FCFS)' })}${u.kpi({ label: 'JT/Order có nguy cơ', value: R.atRisk.length, unit: '/ ' + R.jts.length, icon: '☰', color: 'violet', def: 'shortfall > 0 sau cấp phát ATP' })}</div>
+      <div class="grid g2 mt"><div class="card"><div class="card-h"><h3>Kế hoạch – tồn kho – dự báo</h3><span class="sp">${u.badge('Dự báo', 'amber', '≈')}</span></div>${u.bars([{ k: 'Mất lý thuyết', v: R.lostQty || 0, c: u.C.red }, { k: 'Tồn FG đầu kỳ', v: R.fgUsable, c: u.C.green }, { k: 'Thiếu sau tồn', v: R.deficit || 0, c: u.C.amber }, { k: 'Bù / ngày', v: R.perDay, c: u.C.cyan }, { k: 'Thiếu ATP ròng', v: R.net || 0, c: u.C.violet }], ' sp')}
         <div class="callout info">Số liệu <b>thực tế</b>: thời gian dừng, tồn kho snapshot. <b>Giả định</b>: lịch SX, %FG khả dụng, công suất bù. <b>Dự báo</b>: sản lượng mất, thiếu hụt, JT nguy cơ.</div></div>
         <div class="card"><div class="card-h"><h3>Chuỗi ảnh hưởng</h3></div><div class="chain">${[['⚙', 'Sự cố', inc.station_id, 'c-red'], ['▤', 'Mất SL', FS.fmt.n(R.lostQty), 'c-amber'], ['▣', 'FG/WIP', FS.fmt.n(R.fgUsable), 'c-green'], ['☰', 'JT', R.atRisk.length, 'c-blue'], ['▷', 'Giao hàng', R.shipRisk.length, 'c-violet']].map((s, i, a) => `<div class="step"><div class="ic ${s[3]}">${s[0]}</div><b>${s[2]}</b><small>${s[1]}</small></div>${i < a.length - 1 ? '<span class="ar">→</span>' : ''}`).join('')}</div>
         <small class="muted">WIP không cộng với FG để tránh đếm trùng cùng một lượng sản phẩm.</small></div></div>
@@ -697,7 +721,7 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
       <details class="fx mt" open><summary>Giả định & công thức (tái lập được)</summary><table class="tbl mt"><tbody>${R.steps.map(s => `<tr><td><b>${s[0]}</b></td><td>${s[1]}</td><td class="muted">${s[2]}</td></tr>`).join('')}</tbody></table>
         <ul>${R.assume.map(a => `<li>${a}</li>`).join('')}<li>Ngưỡng rủi ro: ${C.thresholdOn ? `Cao ≥ ${C.thHigh}% · TB ≥ ${C.thMid}% (ngưỡng dung sai quy định (ngưỡng dung sai))` : 'Chưa cấu hình ngưỡng'}</li><li>Không khẳng định giao trễ khi chưa đối chiếu lịch giao & phương án phục hồi.</li></ul></details>` + `<div class="row mt"><a class="btn" href="#/incident_intel?tab=propagation&inc=${id}" style="text-decoration:none">Xem lan truyền rủi ro →</a></div>`;
       u.$('#i', root).onchange = e => { id = e.target.value; dur = null; draw(); };
-      u.$('#go', root).onclick = () => { dur = +u.$('#d', root).value; C.schedStart = +u.$('#s1', root).value; C.schedEnd = +u.$('#s2', root).value; C.fgUsablePct = +u.$('#fg', root).value; C.useRecovery = u.$('#rc', root).checked; if (FS.auth.can('config')) FS.saveConfig('Thay đổi tham số từ Impact Analysis'); u.toast('Đã tính lại các chỉ số phụ thuộc'); draw(); };
+      u.$('#go', root).onclick = () => { dur = +u.$('#d', root).value; C.schedStart = +u.$('#s1', root).value; C.schedEnd = +u.$('#s2', root).value; C.useRecovery = u.$('#rc', root).checked; if (FS.auth.can('config')) FS.saveConfig('Thay đổi tham số từ Impact Analysis'); u.toast('Đã tính lại các chỉ số phụ thuộc'); draw(); };
       const rs = u.$('#rs', root); if (rs) rs.onclick = () => { dur = null; draw(); };
       u.table(u.$('#t', root), { rows: R.jts, export: 'jt_bi_anh_huong_' + id, pageSize: 8, empty: 'Không xác định được JT liên quan — Chưa đủ dữ liệu liên kết', cols: [
         { t: 'JT/Order', r: x => x.jt.jt_id, x: x => x.jt.jt_id }, { t: 'SP', r: x => x.jt.product_id, x: x => x.jt.product_id }, { t: 'SL', r: x => x.jt.qty, x: x => x.jt.qty }, { t: 'Hạn giao', r: x => FS.fmt.d(x.jt.due_ts), x: x => x.jt.due_ts },
@@ -1159,9 +1183,9 @@ Tồn so với an toàn: tồn snapshot COMPONENT mới nhất < safety_stock_qt
 Hành động ưu tiên = top 5 JT theo exposure + tối đa 2 sự cố thiếu liên kết Lot</div>`, 'Sản lượng kế hoạch lấy từ qty_in (lot đã phát hành) vì dữ liệu pilot không có kế hoạch riêng.'),
       S(3, '2 · Incident Monitoring (FR-02)', 'Quản lý sự cố — điểm bắt đầu của phân tích tác động.', ['Bấm một dòng để xem chi tiết: máy, mốc thời gian, FMEA, Lot liên quan, nguồn dữ liệu.', 'Đổi trạng thái (Đang mở / Đang xử lý / Đã đóng) rồi Lưu; lịch sử thay đổi hiển thị bên dưới.', 'Từ chi tiết bấm "Phân tích tác động" hoặc "Lan truyền" để đi tiếp.'],
         '<div class="note">Chi tiết kỹ thuật được mô tả trong tài liệu hệ thống.</div>'),
-      S(4, '3 · Impact Analysis (FR-03) — thuật toán chính', 'Ước tính sản lượng mất, thiếu hụt ròng, JT/Order và giao hàng có nguy cơ cho một sự cố, có thể what-if.', ['Chọn sự cố (dropdown hiện mã ca kiểm thử như F01, R01); sửa "Thời gian dừng" (what-if), lịch SX, % FG khả dụng, bật/tắt công suất bù; bấm "Tính lại".', 'Đọc 4 KPI, biểu đồ so sánh, chuỗi ảnh hưởng, bảng JT (bấm dòng để xem căn cứ liên kết).', 'Mở "Giả định & công thức" để tái lập từng bước.', 'Cuối trang bấm "Xem lan truyền rủi ro →" để sang bước tiếp theo, giữ nguyên sự cố đang xem.'],
+      S(4, '3 · Impact Analysis (FR-03) — thuật toán chính', 'Ước tính sản lượng mất, thiếu hụt ròng, JT/Order và giao hàng có nguy cơ cho một sự cố, có thể what-if.', ['Chọn sự cố (dropdown hiện mã ca kiểm thử như F01, R01); sửa "Thời gian dừng" (what-if), lịch SX, bật/tắt công suất bù; bấm "Tính lại".', 'Đọc 4 KPI, biểu đồ so sánh, chuỗi ảnh hưởng, bảng JT (bấm dòng để xem căn cứ liên kết).', 'Mở "Giả định & công thức" để tái lập từng bước.', 'Cuối trang bấm "Xem lan truyền rủi ro →" để sang bước tiếp theo, giữ nguyên sự cố đang xem.'],
         `<div class="note">Hệ thống tính giờ sản xuất bị mất, sản lượng tổn thất và thiếu hụt ròng dựa trên tồn kho hiện có.</div>
-<p><b>Ví dụ trực tiếp ${I.incident_id}</b> (${I.station_id}, ${I.duration_h}h): giờ mất ${n(R.lostH)}h × ${n(R.rate)} sp/h = <b>${n(R.lostQty)}</b> sp; FG khả dụng ${n(R.fgUsable)}; thiếu sau tồn ${n(R.deficit)}; bù/ngày ${n(R.perDay)}; thiếu ròng <b>${n(R.net)}</b> sp${top ? `; JT đầu bảng ${top.jt.jt_id} (${top.link}) exposure ${n(top.exposure)}` : ''}.</p>
+<p><b>Ví dụ trực tiếp ${I.incident_id}</b> (${I.station_id}, ${I.duration_h}h): giờ mất ${n(R.lostH)}h × ${n(R.rate)} sp/h = <b>${n(R.lostQty)}</b> sp; tồn FG đầu kỳ ${n(R.fgUsable)}; thiếu sau tồn ${n(R.deficit)}; bù/ngày ${n(R.perDay)}; thiếu ATP ròng <b>${n(R.net)}</b> sp${top ? `; JT đầu bảng ${top.jt.jt_id} (${top.link}) exposure ${n(top.exposure)}` : ''}.</p>
 <p>JT liên quan gồm <b>đã xác nhận</b> (qua khóa <code>jt_allocation_truth</code>: Lot bị ảnh hưởng → JT) và <b>suy luận</b> (quy tắc R-LINK-01: cùng line, hạn giao trong 72h sau sự cố).</p>`, 'Thiếu công suất ⇒ "Chưa đủ dữ liệu"; thiếu JT hoặc tồn kho ⇒ "Ước tính một phần". Không khẳng định giao trễ khi chưa có lịch giao.'),
       S(5, '4 · Propagation (FR-04)', 'Đồ thị lan truyền rủi ro từ sự cố qua máy, lô sản xuất, vật tư, đơn hàng đến giao hàng.', ['Chọn sự cố; bật/tắt từng loại quan hệ (trực tiếp / suy luận / chưa xác minh).', 'Bấm nút hoặc đường nối để xem thuộc tính, nguồn dữ liệu, căn cứ; bảng bên dưới liệt kê mọi liên kết.', 'Cuối trang bấm "Điều tra nguyên nhân →" để sang bước tiếp theo.'],
         '<div class="note">Hệ thống truy vết mối liên hệ giữa sự cố, máy, lô sản xuất, vật tư, đơn hàng và giao hàng.</div>'),
@@ -1187,7 +1211,7 @@ Hành động ưu tiên = top 5 JT theo exposure + tối đa 2 sự cố thiếu
         '<div class="note">Chi tiết kỹ thuật được mô tả trong tài liệu hệ thống.</div>', 'Tệp gốc chỉ được đọc, không bị sửa. Cần quyền Nhập dữ liệu.'),
       S(12, '11 · Báo cáo & Xuất (FR-11)', 'Xuất CSV/Markdown có thời điểm, nguồn, giả định và nhãn loại dữ liệu.', ['Bấm nút của từng báo cáo; báo cáo tác động chọn sự cố rồi xuất .md hoặc In/PDF.'], '<p>Mỗi dòng xuất có cột <code>loai_du_lieu</code> (Pilot / Dự báo / Suy luận) và <code>xuat_luc</code>. Cần quyền Xuất dữ liệu.</p>'),
       S(13, '12 · Đăng nhập, đăng ký, phân quyền (NFR-04)', 'Giới hạn quyền xem/nhập/xuất/cấu hình theo vai trò và ghi nhật ký.', ['Đăng nhập bằng tài khoản dùng thử hoặc tự đăng ký (≥ 8 ký tự, có chữ và số).', 'Bấm tên người dùng góc phải để xem quyền và đăng xuất.'], '<p>Mật khẩu băm SHA-256; sai 5 lần khóa 30 giây; mọi đăng nhập/xuất/bị từ chối ghi vào nhật ký (trang Kiến trúc).</p>', 'Chỉ là bảo mật phía trình duyệt cho prototype; triển khai thật cần máy chủ xác thực + HTTPS.'),
-      S(14, '13 · Kiến trúc & Cấu hình (FR-12) và kiểm thử (NFR-08)', 'Xem sơ đồ lớp, chỉnh tham số, chạy bộ ca kiểm thử.', ['Sửa tham số (lịch SX, % FG, ngưỡng, trọng số) → Lưu cấu hình (Admin).', 'Bấm "Chạy kiểm thử" để chạy 9 ca: dữ liệu đủ, thiếu dữ liệu, khóa trùng, quan hệ không tìm thấy, tái lập…'], '<p>Công thức nằm riêng trong <code>js/core/engine.js</code>, tách khỏi giao diện; mỗi quy tắc có mã (R-IMP-01…) và ca kiểm thử.</p>')].join('');
+      S(14, '13 · Kiến trúc & Cấu hình (FR-12) và kiểm thử (NFR-08)', 'Xem sơ đồ lớp, chỉnh tham số, chạy bộ ca kiểm thử.', ['Sửa tham số (lịch SX, ngưỡng, trọng số) → Lưu cấu hình (Admin).', 'Bấm "Chạy kiểm thử" để chạy 9 ca: dữ liệu đủ, thiếu dữ liệu, khóa trùng, quan hệ không tìm thấy, tái lập…'], '<p>Công thức nằm riêng trong <code>js/core/engine.js</code>, tách khỏi giao diện; mỗi quy tắc có mã (R-IMP-01…) và ca kiểm thử.</p>')].join('');
     root.innerHTML = `<div class="callout info">Trang này mô tả đầy đủ cách dùng và thuật toán. Các con số ví dụ được tính trực tiếp từ dữ liệu hiện tại nên khớp với màn hình Impact Analysis.</div>${sec}`;
   } };
 })();
