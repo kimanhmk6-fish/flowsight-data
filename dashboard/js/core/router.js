@@ -39,7 +39,7 @@ FS.boot = function () {
     if (/^(LOT|BATCH|MAT)/.test(v)) location.hash = '#/genealogy?lot=' + v; else if (/^INC/.test(v)) location.hash = '#/impact?inc=' + v;
     else if (/^JT/.test(v)) { const r = FS.engine.impactAll().find(r => r.jts.some(x => x.jt.jt_id === v)) || { inc: { incident_id: 'INC-0001' } }; location.hash = '#/impact?inc=' + r.inc.incident_id; }
     else { FS.state.q = v; u.$('#f-q').value = v; location.hash = '#/incidents'; FS.go(); } };
-  u.$('#bell').onclick = () => { const L = FS.tables.incident_truth.filter(i => ['CRITICAL', 'HIGH'].includes(i.severity_level)).slice(-6).reverse(); u.modal('Cảnh báo sự cố nghiêm trọng', L.map(i => `<div class="act"><div>${u.sev(i.severity_level)}</div><div><b>${i.incident_id} · ${i.station_id}</b><br><small>${FS.fmt.d(i.start_time)} · ${i.duration_h}h · ${i.fmea_code}</small></div><a class="sp" href="#/impact?inc=${i.incident_id}" onclick="document.querySelector('.modal-bg').remove()">Phân tích →</a></div>`).join('')); };
+  u.$('#bell').onclick = () => { const L = FS.tables.incident_truth.filter(i => ['CRITICAL', 'HIGH'].includes(i.severity_level)).slice(-6).reverse(); u.modal('Cảnh báo sự cố nghiêm trọng', L.map(i => `<div class="act"><div>${u.sev(i.severity_level)}</div><div><b>${i.incident_id} · ${i.station_id}</b><br><small>${FS.fmt.d(i.start_time)} · ${i.duration_h}h · ${i.fmea_code}</small></div><a class="sp" href="#/incident_intel?tab=impact&inc=${i.incident_id}" onclick="document.querySelector('.modal-bg').remove()">Phân tích →</a></div>`).join('')); };
   FS.auth.init(() => FS.go());
 };
 window.addEventListener('DOMContentLoaded', () => { try { FS.boot(); } catch (e) { document.body.innerHTML = '<pre style="padding:24px">' + e.message + '</pre>'; } });
