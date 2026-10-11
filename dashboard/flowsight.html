@@ -661,7 +661,7 @@ window.addEventListener('DOMContentLoaded', () => { try { FS.boot(); } catch (e)
     const dup = FS.tables.incident_truth.filter(x => x.station_id === i.station_id && x.start_time === i.start_time && x.incident_id !== i.incident_id); if (dup.length) flags.push('Nhiều bản ghi cùng máy/thời điểm: ' + dup.map(d => d.incident_id).join(', ') + ' → cần đối soát');
     const st = FS.engine.incStatus(i), m = u.modal('Chi tiết ' + i.incident_id, `${u.kv([['Máy / Line', `${i.station_id} · ${(FS.idx.station.get(i.station_id) || {}).station_name || '—'} · line ${(FS.idx.station.get(i.station_id) || {}).line_id || '—'}`], ['Bắt đầu', FS.fmt.d(i.start_time)], ['Kết thúc', st === 'Đang mở' && b > FS.NOW ? 'Đang mở' : FS.fmt.d(i.end_time)], ['Thời gian dừng', `${i.duration_h} h — tính từ ${i.start_time} → ${i.end_time}`], ['Mức độ', u.sev(i.severity_level)], ['Loại nguyên nhân', i.root_cause_type], ['FMEA', fm ? `${fm.fmea_code} · ${fm.fmea_description} (RPN ${fm.rpn})` : (i.fmea_code + ' — không có trong registry')], ['Lot liên quan', FS.lotList(i.affected_lots).join(', ') || 'Chưa đủ dữ liệu liên kết'], ['Nguồn', 'incident_truth.csv · ' + u.prov('Pilot')]])}
       ${flags.length ? `<div class="callout warn"><b>Cần đối soát:</b><ul>${flags.map(f => `<li>${f}</li>`).join('')}</ul></div>` : '<div class="callout ok">Bản ghi hợp lệ: đủ khóa và mốc thời gian, thời lượng khớp.</div>'}
-      <div class="row"><label>Cập nhật trạng thái xử lý <select id="ss">${['Đang mở', 'Đang xử lý', 'Đã đóng'].map(s => `<option ${s === st ? 'selected' : ''}>${s}</option>`).join('')}</select></label><button class="btn sm" id="sv">Lưu</button><a class="btn sm ghost" href="#/impact?inc=${i.incident_id}" style="text-decoration:none">Phân tích tác động →</a><a class="btn sm ghost" href="#/propagation?inc=${i.incident_id}" style="text-decoration:none">Lan truyền →</a></div>`);
+      <div class="row"><label>Cập nhật trạng thái xử lý <select id="ss">${['Đang mở', 'Đang xử lý', 'Đã đóng'].map(s => `<option ${s === st ? 'selected' : ''}>${s}</option>`).join('')}</select></label><button class="btn sm" id="sv">Lưu</button><a class="btn sm ghost" href="#/incident_intel?tab=impact&inc=${i.incident_id}" style="text-decoration:none">Phân tích tác động →</a><a class="btn sm ghost" href="#/incident_intel?tab=propagation&inc=${i.incident_id}" style="text-decoration:none">Lan truyền →</a></div>`);
     u.$('#sv', m.el).onclick = () => { if (!FS.auth.need('decide')) return; FS.wf.inc[i.incident_id] = u.$('#ss', m.el).value; FS.wf.hist.unshift({ t: new Date().toISOString().slice(0, 19), what: i.incident_id + ' → ' + u.$('#ss', m.el).value }); FS.saveWf(); m.close(); u.toast('Đã cập nhật trạng thái'); FS.go(); };
   }
   FS.pages.incidents = { title: 'Giám sát Sự cố', sub: 'Danh mục sự cố, chi tiết và truy vết mốc thời gian', render(root) {
@@ -705,6 +705,11 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
         { t: 'Liên kết', r: x => u.prov(x.link), x: x => x.link }, { t: 'Rủi ro', r: x => u.badge(x.risk.t, x.risk.c, x.risk.i), x: x => x.risk.t }, { t: 'Giao hàng', r: x => x.ship.map(s => s.status).join(', ') || 'Chưa có lịch giao', x: x => x.ship.map(s => s.status).join(',') }],
         onRow: x => u.modal('Căn cứ ' + x.jt.jt_id, u.kv([['Liên kết', u.prov(x.link)], ['Căn cứ', x.basis], ['Khách hàng', x.jt.customer], ['Ưu tiên', x.jt.priority], ['Line', x.jt.line_id], ['Giao hàng', x.ship.map(s => `${s.shipment_id}: ${s.qty_actual}/${s.qty_planned} ${s.status}`).join('<br>') || 'Chưa có dữ liệu lịch giao → không kết luận trễ']])) });
     }
+    /* Nút bước tiếp theo */
+    const _nav = document.createElement('div');
+    _nav.className = 'row mt';
+    _nav.innerHTML = `<a class="btn" href="#/incident_intel?tab=propagation&inc=${id}" style="text-decoration:none">Xem lan truyền rủi ro →</a>`;
+    root.appendChild(_nav);
     draw();
   } };
 })();
@@ -735,6 +740,11 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
       const vis = G.edges.filter(e => kinds[e.kind]); u.$$('.ge', root).forEach(p => p.onclick = () => { const e = vis[+p.dataset.e]; show(u.kv([['Từ', e.f], ['Đến', e.t], ['Loại quan hệ', e.kind], ['Căn cứ', u.esc(e.basis)], ['Nguồn', e.src]])); });
       u.table(u.$('#t', root), { rows: G.edges, export: 'lien_ket_' + id, pageSize: 8, cols: [{ k: 'f', t: 'Từ' }, { k: 't', t: 'Đến' }, { t: 'Quan hệ', r: e => u.badge(e.kind, e.kind === 'Trực tiếp' ? 'blue' : e.kind === 'Suy luận' ? 'amber' : 'gray'), x: e => e.kind }, { k: 'basis', t: 'Căn cứ' }, { k: 'src', t: 'Nguồn' }] });
     }
+    /* Nút bước tiếp theo */
+    const _nav = document.createElement('div');
+    _nav.className = 'row mt';
+    _nav.innerHTML = `<a class="btn" href="#/incident_intel?tab=rootcause&inc=${FS.q().inc || ''}" style="text-decoration:none">Điều tra nguyên nhân →</a>`;
+    root.appendChild(_nav);
     draw();
   } };
 })();
@@ -763,7 +773,7 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
         <div class="card" style="grid-column:span 2"><div class="card-h"><h3>Quan hệ truy vết</h3><span class="sp"><button class="btn sm ghost" id="ex">⭳ Xuất danh sách</button></span></div><div id="rt"></div></div></div>
       <div class="grid g2 mt"><div class="card"><div class="card-h"><h3>Dòng thời gian công đoạn</h3></div><div class="tl">${ev.map(e => `<div><b>${e.station_id}</b> ${e.event_type} · ${FS.fmt.d(e.start_time)} <small>(${e.shift}, in ${e.qty_in} / out ${e.qty_out}${e.qty_ng ? ' / NG ' + e.qty_ng : ''})</small>${e.is_physical_anomaly ? ' ' + u.badge('Bất thường ' + (e.anomaly_type || ''), 'red', '▲') : ''}</div>`).join('') || '<small class="muted">Chưa đủ dữ liệu sự kiện</small>'}</div></div>
         <div class="card"><div class="card-h"><h3>Kết quả QC</h3></div><div id="qt"></div></div></div>`;
-      u.table(u.$('#rt', root), { rows: rel, pageSize: 8, cols: [{ k: 'dir', t: 'Hướng', r: r => u.badge(r.dir, r.dir === 'Truy ngược' ? 'violet' : 'blue') }, { k: 'type', t: 'Đối tượng' }, { k: 'id', t: 'ID', r: r => r.id.startsWith('LOT') ? `<a href="#/genealogy?lot=${r.id}" data-lot="${r.id}">${r.id}</a>` : r.id }, { k: 'qty', t: 'SL' }, { t: 'Thời điểm', r: r => FS.fmt.d(r.time), x: r => r.time }, { t: 'Mức xác nhận', r: r => u.prov(r.lvl), x: r => r.lvl }, { k: 'src', t: 'Nguồn' }], empty: 'Chưa đủ dữ liệu quan hệ cho Lot này' });
+      u.table(u.$('#rt', root), { rows: rel, pageSize: 8, cols: [{ k: 'dir', t: 'Hướng', r: r => u.badge(r.dir, r.dir === 'Truy ngược' ? 'violet' : 'blue') }, { k: 'type', t: 'Đối tượng' }, { k: 'id', t: 'ID', r: r => r.id.startsWith('LOT') ? `<a href="#/supply_chain?tab=genealogy&lot=${r.id}" data-lot="${r.id}">${r.id}</a>` : r.id }, { k: 'qty', t: 'SL' }, { t: 'Thời điểm', r: r => FS.fmt.d(r.time), x: r => r.time }, { t: 'Mức xác nhận', r: r => u.prov(r.lvl), x: r => r.lvl }, { k: 'src', t: 'Nguồn' }], empty: 'Chưa đủ dữ liệu quan hệ cho Lot này' });
       u.table(u.$('#qt', root), { rows: qc, pageSize: 6, search: false, cols: [{ k: 'station_id', t: 'Trạm' }, { k: 'characteristic', t: 'Đặc tính' }, { t: 'Giá trị', r: q => `${q.value} <small>[${q.lsl}–${q.usl}]</small>`, x: q => q.value }, { t: 'KQ', r: q => u.badge(q.result, q.result === 'OK' ? 'green' : 'red', q.result === 'OK' ? '✔' : '✕'), x: q => q.result }], empty: 'Không có dữ liệu QC' });
       u.$('#ex', root).onclick = () => FS.csv.download('truy_vet_' + lot + '.csv', FS.csv.stringify(rel.map(r => ({ lot_goc: lot, huong: r.dir, doi_tuong: r.type, id: r.id, so_luong: r.qty, thoi_diem: r.time, muc_xac_nhan: r.lvl, nguon: r.src, ghi_chu: r.note || '' }))));
       u.$$('[data-lot]', root).forEach(a => a.onclick = e => { e.preventDefault(); u.$('#l', root).value = a.dataset.lot; run(); });
@@ -780,11 +790,16 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
     function run() {
       const inc = all.find(i => i.incident_id === id), F = FS.engine.cause(inc), o = u.$('#o', root);
       o.innerHTML = `<div class="callout warn mt">Phân tích dùng <b>quy tắc nghiệp vụ & thống kê mô tả</b> (chưa dùng ML). Tương quan không được hiểu là nhân quả. Kết quả <b>không</b> tự đóng sự cố hay thay thế đánh giá kỹ sư.</div>
-      ${F.length ? `<div class="grid g21"><div class="card"><div class="card-h"><h3>Yếu tố liên quan & bằng chứng</h3></div><div id="t"></div></div><div class="card"><h3>Mốc thời gian</h3><div class="tl"><div><b>${FS.fmt.d(inc.start_time)}</b> Sự cố bắt đầu tại ${inc.station_id}</div><div><b>${FS.fmt.d(inc.end_time)}</b> Kết thúc (${inc.duration_h}h)</div>${FS.lotList(inc.affected_lots).map(l => `<div>Lot liên quan: <a href="#/genealogy?lot=${l}">${l}</a></div>`).join('')}</div><div class="callout info">Timestamp chỉ dùng để sắp xếp; thứ tự nhân quả cần xác nhận khi đồng hồ nguồn chưa đồng bộ.</div></div></div>`
+      ${F.length ? `<div class="grid g21"><div class="card"><div class="card-h"><h3>Yếu tố liên quan & bằng chứng</h3></div><div id="t"></div></div><div class="card"><h3>Mốc thời gian</h3><div class="tl"><div><b>${FS.fmt.d(inc.start_time)}</b> Sự cố bắt đầu tại ${inc.station_id}</div><div><b>${FS.fmt.d(inc.end_time)}</b> Kết thúc (${inc.duration_h}h)</div>${FS.lotList(inc.affected_lots).map(l => `<div>Lot liên quan: <a href="#/supply_chain?tab=genealogy&lot=${l}">${l}</a></div>`).join('')}</div><div class="callout info">Timestamp chỉ dùng để sắp xếp; thứ tự nhân quả cần xác nhận khi đồng hồ nguồn chưa đồng bộ.</div></div></div>`
         : `<div class="card mt">${u.empty('Chưa đủ bằng chứng để kết luận', 'Sự cố thiếu Lot liên quan, FMEA hoặc loại nguyên nhân hợp lệ.')}</div>`}`;
       if (F.length) u.table(u.$('#t', o), { rows: F, search: false, cols: [{ k: 'factor', t: 'Yếu tố' }, { k: 'kind', t: 'Nhóm' }, { k: 'ev', t: 'Bằng chứng' }, { t: 'Độ tin cậy', r: f => f.conf == null ? '<span class="muted">—</span>' : `<div class="bar"><i style="width:${f.conf * 100}%"></i></div><small>${Math.round(f.conf * 100)}% (heuristic)</small>`, x: f => f.conf }, { t: 'Trạng thái', r: f => u.prov(f.level), x: f => f.level }, { k: 'src', t: 'Nguồn' }, { k: 'action', t: 'Gợi ý' }] });
     }
     u.$('#i', root).onchange = e => { id = e.target.value; run(); }; run();
+    /* Nút bước tiếp theo */
+    const _nav = document.createElement('div');
+    _nav.className = 'row mt';
+    _nav.innerHTML = `<a class="btn" href="#/priority" style="text-decoration:none">Ưu tiên hành động →</a>`;
+    root.appendChild(_nav);
   } };
 })();
 </script><script>/* FR-09 Ưu tiên & đề xuất hành động */
@@ -975,12 +990,12 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
       u.table(u.$('#m-lots', root), {
         cols: [{ k: 'mat_lot_id', t: 'Lô vật tư' }, { k: 'component_id', t: 'Vật tư' }, { k: 'qty_received', t: 'SL nhận' }, { k: 'supplier_code', t: 'NCC' }, { t: 'Ngày nhận', r: r => FS.fmt.d(r.received_time || r.receipt_time) }],
         rows: mlots, pageSize: 8, export: 'lo_vat_tu',
-        onRow: r => location.hash = '#/genealogy?lot=' + r.mat_lot_id
+        onRow: r => location.hash = '#/supply_chain?tab=genealogy&lot=' + r.mat_lot_id
       });
       /* Danh mục sản phẩm */
       const prods = FS.tables.dim_product || [];
       u.$('#m-prod', root).innerHTML = prods.length
-        ? `<div class="grid g2">${prods.map(p => `<div class="card"><b>${p.product_id}</b> <small>${u.esc(p.product_family || '')}</small><br><small class="muted">Mục tiêu/ngày: <b>${n(p.target_daily_qty)}</b> sp</small><br><a href="#/genealogy">Truy vết Lot →</a></div>`).join('')}</div>`
+        ? `<div class="grid g2">${prods.map(p => `<div class="card"><b>${p.product_id}</b> <small>${u.esc(p.product_family || '')}</small><br><small class="muted">Mục tiêu/ngày: <b>${n(p.target_daily_qty)}</b> sp</small><br><a href="#/supply_chain?tab=genealogy">Truy vết Lot →</a></div>`).join('')}</div>`
         : u.empty('Chưa có danh mục sản phẩm');
     }
   };

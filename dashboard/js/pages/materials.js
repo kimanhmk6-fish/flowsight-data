@@ -45,12 +45,12 @@
       u.table(u.$('#m-lots', root), {
         cols: [{ k: 'mat_lot_id', t: 'Lô vật tư' }, { k: 'component_id', t: 'Vật tư' }, { k: 'qty_received', t: 'SL nhận' }, { k: 'supplier_code', t: 'NCC' }, { t: 'Ngày nhận', r: r => FS.fmt.d(r.received_time || r.receipt_time) }],
         rows: mlots, pageSize: 8, export: 'lo_vat_tu',
-        onRow: r => location.hash = '#/genealogy?lot=' + r.mat_lot_id
+        onRow: r => location.hash = '#/supply_chain?tab=genealogy&lot=' + r.mat_lot_id
       });
       /* Danh mục sản phẩm */
       const prods = FS.tables.dim_product || [];
       u.$('#m-prod', root).innerHTML = prods.length
-        ? `<div class="grid g2">${prods.map(p => `<div class="card"><b>${p.product_id}</b> <small>${u.esc(p.product_family || '')}</small><br><small class="muted">Mục tiêu/ngày: <b>${n(p.target_daily_qty)}</b> sp</small><br><a href="#/genealogy">Truy vết Lot →</a></div>`).join('')}</div>`
+        ? `<div class="grid g2">${prods.map(p => `<div class="card"><b>${p.product_id}</b> <small>${u.esc(p.product_family || '')}</small><br><small class="muted">Mục tiêu/ngày: <b>${n(p.target_daily_qty)}</b> sp</small><br><a href="#/supply_chain?tab=genealogy">Truy vết Lot →</a></div>`).join('')}</div>`
         : u.empty('Chưa có danh mục sản phẩm');
     }
   };

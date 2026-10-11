@@ -31,6 +31,11 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
         { t: 'Liên kết', r: x => u.prov(x.link), x: x => x.link }, { t: 'Rủi ro', r: x => u.badge(x.risk.t, x.risk.c, x.risk.i), x: x => x.risk.t }, { t: 'Giao hàng', r: x => x.ship.map(s => s.status).join(', ') || 'Chưa có lịch giao', x: x => x.ship.map(s => s.status).join(',') }],
         onRow: x => u.modal('Căn cứ ' + x.jt.jt_id, u.kv([['Liên kết', u.prov(x.link)], ['Căn cứ', x.basis], ['Khách hàng', x.jt.customer], ['Ưu tiên', x.jt.priority], ['Line', x.jt.line_id], ['Giao hàng', x.ship.map(s => `${s.shipment_id}: ${s.qty_actual}/${s.qty_planned} ${s.status}`).join('<br>') || 'Chưa có dữ liệu lịch giao → không kết luận trễ']])) });
     }
+    /* Nút bước tiếp theo */
+    const _nav = document.createElement('div');
+    _nav.className = 'row mt';
+    _nav.innerHTML = `<a class="btn" href="#/incident_intel?tab=propagation&inc=${id}" style="text-decoration:none">Xem lan truyền rủi ro →</a>`;
+    root.appendChild(_nav);
     draw();
   } };
 })();

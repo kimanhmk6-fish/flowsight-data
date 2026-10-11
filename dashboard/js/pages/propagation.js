@@ -25,6 +25,11 @@
       const vis = G.edges.filter(e => kinds[e.kind]); u.$$('.ge', root).forEach(p => p.onclick = () => { const e = vis[+p.dataset.e]; show(u.kv([['Từ', e.f], ['Đến', e.t], ['Loại quan hệ', e.kind], ['Căn cứ', u.esc(e.basis)], ['Nguồn', e.src]])); });
       u.table(u.$('#t', root), { rows: G.edges, export: 'lien_ket_' + id, pageSize: 8, cols: [{ k: 'f', t: 'Từ' }, { k: 't', t: 'Đến' }, { t: 'Quan hệ', r: e => u.badge(e.kind, e.kind === 'Trực tiếp' ? 'blue' : e.kind === 'Suy luận' ? 'amber' : 'gray'), x: e => e.kind }, { k: 'basis', t: 'Căn cứ' }, { k: 'src', t: 'Nguồn' }] });
     }
+    /* Nút bước tiếp theo */
+    const _nav = document.createElement('div');
+    _nav.className = 'row mt';
+    _nav.innerHTML = `<a class="btn" href="#/incident_intel?tab=rootcause&inc=${FS.q().inc || ''}" style="text-decoration:none">Điều tra nguyên nhân →</a>`;
+    root.appendChild(_nav);
     draw();
   } };
 })();
