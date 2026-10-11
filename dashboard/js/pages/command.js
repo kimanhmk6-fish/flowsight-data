@@ -92,7 +92,7 @@
           const k = el.dataset.kpi;
           if (k === 'incidents') location.hash = '#/incident_intel?tab=incidents';
           else if (k === 'impact') {
-            const top = incs.find(i => FS.engine.incStatus(i) !== 'Đã đóng') || incs[0];
+            const top = incs.find(i => i.test_case_link === 'F01') || incs.find(i => FS.engine.incStatus(i) !== 'Đã đóng') || incs[0];
             location.hash = '#/incident_intel?tab=impact' + (top ? '&inc=' + top.incident_id : '');
           }
           else if (k === 'priority') location.hash = '#/priority';
