@@ -41,10 +41,10 @@
       root.innerHTML = `
       <!-- KPI ROW: 4 chỉ số cốt lõi -->
       <div class="grid g4">
-        ${u.kpi({ label: 'Sự cố trong kỳ', value: incs.length, unit: 'sự cố', icon: '⚠', color: 'red', sub: `${st.open.length} mở · ${st.prog.length} xử lý · ${st.done.length} đóng`, def: 'Đếm incident_id duy nhất trong bộ lọc' })}
-        ${u.kpi({ label: 'Thiếu hụt ước tính', value: short, unit: 'sp', icon: '◔', color: 'amber', sub: `${nets.length} sự cố có ước tính`, def: 'Σ thiếu hụt ròng từng sự cố' })}
-        ${u.kpi({ label: 'JT có nguy cơ', value: jts.length, unit: 'JT', icon: '☰', color: 'violet', sub: `${jts.filter(x => x.risk.t === 'Cao').length} mức cao`, def: 'JT duy nhất có exposure > 0' })}
-        ${u.kpi({ label: 'Lot bị ảnh hưởng', value: lotSet.size, unit: 'lot', icon: '▣', color: 'blue', def: 'Lot duy nhất từ affected_lots' })}
+        ${u.kpi({ label: 'Sự cố trong kỳ', value: incs.length, unit: 'sự cố', icon: '⚠', color: 'red', sub: `${st.open.length} mở · ${st.prog.length} xử lý · ${st.done.length} đóng`, def: 'Đếm incident_id duy nhất trong bộ lọc. Bấm để xem danh sách.', click: 'incidents' })}
+        ${u.kpi({ label: 'Thiếu hụt ước tính', value: short, unit: 'sp', icon: '◔', color: 'amber', sub: `${nets.length} sự cố có ước tính`, def: 'Σ thiếu hụt ròng từng sự cố. Bấm để xem cách tính.', click: 'impact' })}
+        ${u.kpi({ label: 'JT có nguy cơ', value: jts.length, unit: 'JT', icon: '☰', color: 'violet', sub: `${jts.filter(x => x.risk.t === 'Cao').length} mức cao`, def: 'JT duy nhất có exposure > 0. Bấm để xem danh sách ưu tiên.', click: 'priority' })}
+        ${u.kpi({ label: 'Lot bị ảnh hưởng', value: lotSet.size, unit: 'lot', icon: '▣', color: 'blue', def: 'Lot duy nhất từ affected_lots. Bấm để truy vết.', click: 'genealogy' })}
       </div>
 
       <!-- TREND + ALERT FEED -->
@@ -84,6 +84,22 @@
         .map(([k, v]) => ({ k, v })).sort((a, b) => b.v - a.v);
       const ccCause = u.$('#cc-cause', root);
       if (ccCause) ccCause.innerHTML = causeData.length ? u.donut(causeData, incs.length) : u.empty('Không có sự cố');
+
+      /* KPI drill-down: bấm vào số → sang trang chi tiết */
+      u.$$('[data-kpi]', root).forEach(el => {
+        el.style.cursor = 'pointer';
+        el.onclick = () => {
+          const k = el.dataset.kpi;
+          if (k === 'incidents') location.hash = '#/incident_intel?tab=incidents';
+          else if (k === 'impact') {
+            const top = incs.find(i => FS.engine.incStatus(i) !== 'Đã đóng') || incs[0];
+            location.hash = '#/incident_intel?tab=impact' + (top ? '&inc=' + top.incident_id : '');
+          }
+          else if (k === 'priority') location.hash = '#/priority';
+          else if (k === 'genealogy') location.hash = '#/supply_chain?tab=genealogy';
+        };
+        el.onkeydown = e => { if (e.key === 'Enter') el.onclick(); };
+      });
 
       /* Bảng JT */
       u.table(u.$('#cc-jt', root), {
