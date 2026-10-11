@@ -1,5 +1,15 @@
 /* FR-09 Ưu tiên & đề xuất hành động */
 (function () {
+  /* Kết quả mô phỏng What-if từ Python engine (Monte Carlo 20.000 lần) — dữ liệu tham khảo */
+  const WHATIF_F01 = [
+    { id: 'A', name: 'Giữ nguyên', desc: 'Để yên, chấp nhận rủi ro', p: 1.0, cost: 740000, rec: false },
+    { id: 'B', name: 'Tăng ca 2h', desc: 'Tăng ca 2h ngày hôm sau để bù sản lượng', p: 0.2658, cost: 2200000, rec: false },
+    { id: 'C', name: 'Tăng ca 4h', desc: 'Tăng ca 4h để bù toàn bộ', p: 0.0, cost: 4400000, rec: false },
+    { id: 'D', name: 'Đổi thứ tự SX', desc: 'Ưu tiên JT-0231 trước', p: 0.256, cost: 1500000, rec: false },
+    { id: 'E', name: 'Đổi thứ tự + Tăng ca 2h', desc: 'Kết hợp đổi thứ tự và tăng ca', p: 0.0098, cost: 3700000, rec: true },
+    { id: 'F', name: 'Chuyển line khác', desc: 'Chuyển sang dây chuyền dự phòng', p: 1.0, cost: 520000, rec: false },
+    { id: 'G', name: 'Giao gấp', desc: 'Thuê vận chuyển nhanh', p: 1.0, cost: 15720000, rec: false },
+  ];
   const u = FS.ui, STS = ['Chưa xem xét', 'Đang xem xét', 'Đã chấp nhận', 'Từ chối', 'Cần xác minh'];
   FS.pages.priority = { title: 'Ưu tiên & Hành động', sub: 'Xếp hạng theo từng chỉ báo; điểm tổng hợp chỉ khi trọng số được xác nhận', render(root) {
     const R = FS.engine.impactAll(), C = FS.config, map = new Map();
@@ -12,6 +22,11 @@
     root.innerHTML = `<div class="card"><div class="card-h"><h3>Cách xếp hạng</h3><span class="sp"><label class="row"><input type="checkbox" id="uw" ${C.useWeights ? 'checked' : ''}> Dùng điểm tổng hợp (trọng số demo)</label></span></div>
       ${C.useWeights ? `<div class="callout warn">Trọng số đang dùng là <b>demo, chưa được DENSO xác nhận</b>: thiếu hụt ${C.wShort} · slack ${C.wSlack} · liên kết ${C.wLink} · lan truyền ${C.wBreadth} · tin cậy ${C.wConf}. Chỉnh tại Kiến trúc & Cấu hình.</div>` : '<div class="callout info">Chưa có trọng số thống nhất → hiển thị <b>từng chỉ báo riêng</b>, sắp xếp theo thiếu hụt ước tính. Không tạo điểm ưu tiên tổng hợp.</div>'}</div>
     <div class="card mt"><div class="card-h"><h3>Thứ tự xử lý JT/Order</h3><small>Bấm dòng để xem lý do & ghi nhận quyết định</small></div><div id="t"></div></div>
+    <div class="card mt"><div class="card-h"><h3>Mô phỏng phương án xử lý (F01)</h3><span class="sp"><small class="muted">Từ Python engine · Monte Carlo 20.000 lần</small></span></div>
+      <div class="tbl-wrap"><table class="tbl"><thead><tr><th>PA</th><th>Phương án</th><th>Mô tả</th><th>P(trễ)</th><th>Chi phí</th><th></th></tr></thead><tbody>
+      ${WHATIF_F01.map(o => `<tr${o.rec ? ' style="background:#f0fdf4"' : ''}><td><b>${o.id}</b></td><td>${o.name}</td><td><small>${o.desc}</small></td><td>${(o.p * 100).toFixed(1)}%</td><td>${FS.fmt.n(o.cost)}đ</td><td>${o.rec ? u.badge('Khuyến nghị', 'green', '★') : ''}</td></tr>`).join('')}
+      </tbody></table></div>
+      <small class="muted">Phương án E được khuyến nghị: chi phí thấp nhất trong các phương án giảm P(trễ) dưới ngưỡng.</small></div>
     <div class="card mt"><div class="card-h"><h3>Lịch sử quyết định</h3></div>${FS.wf.hist.filter(h => h.what.startsWith('JT')).slice(0, 8).map(h => `<div class="tl"><div><b>${h.what}</b> <small>${h.t}</small></div></div>`).join('') || '<small class="muted">Chưa có quyết định nào.</small>'}</div>
     <div class="callout info">FlowSight không gửi lệnh điều khiển máy hay đổi kế hoạch trong hệ thống nguồn; mọi đề xuất chỉ để người dùng xem xét.</div>`;
     u.$('#uw', root).onchange = e => { C.useWeights = e.target.checked; FS.saveConfig('Bật/tắt điểm tổng hợp'); FS.go(); };

@@ -100,15 +100,6 @@ body.locked .side,body.locked .main{display:none}.auth{display:none}body.locked 
 .subtab.on{color:var(--pri);border-bottom-color:var(--pri)}
 .subview{animation:fi .25s}
 .brand-img{height:36px;width:auto;max-width:170px;object-fit:contain;display:block}
-.auth-l .brand{align-items:flex-start;gap:12px;padding:0;margin-bottom:8px}
-.auth-l .brand-marks{gap:12px;flex-wrap:wrap}
-.auth-l .brand-tagline{display:block;margin:0;padding:0 0 0 2px;font-size:14px;color:#64748b;line-height:1.5;max-width:480px}
-.auth-l .brand-img{width:min(280px,100%);height:auto;max-width:100%;object-fit:contain}
-.auth-copy{display:grid;gap:12px;max-width:560px}
-.auth-copy h2{font-size:26px;line-height:1.35;letter-spacing:-.01em}
-.auth-copy .tagline,.auth-copy .quote{margin:0}
-.auth-copy .tagline{font-size:14px;color:var(--mut);line-height:1.6}
-.auth-copy .quote{font-size:16px;line-height:1.5}
 
 /* Sidebar collapse (desktop) */
 #menu{display:block}
@@ -231,30 +222,10 @@ FS.auth = (function () {
   async function seed() { if (users().length) return; const U = []; for (const d of DEMO) U.push({ email: d[0], name: d[1], role: d[2], hash: await hash(d[3]), demo: 1 }); FS.persist.set('users', U); }
   function show() {
     document.body.classList.add('locked'); const A = document.getElementById('auth'); let tab = 'in', fails = 0, lockUntil = 0;
-    const draw = (msg, ok) => { 
-      A.innerHTML = `<div class="auth-l">
-        <div class="brand">
-          <div class="brand-marks">
-            <span class="brand-denso">DENSO</span>
-            <span class="brand-x">×</span>
-            <img class="brand-img" src="assets/logoflowsight.png" alt="FlowSight">
-          </div>
-          <small class="brand-tagline">
-            Hệ thống Phân tích Tác động Sự cố &amp; Nguyên nhân cấp Lô
-          </small>
-        </div>
-        <div class="auth-copy">
-          <h2>Từ một sự cố máy, nhanh chóng xác định các lô, đơn hàng và chuyến giao hàng bị ảnh hưởng.</h2>
-          <p class="tagline">Kết nối dữ liệu sự cố máy với Lot, JT và thông tin giao hàng để hỗ trợ truy xuất tác động.</p>
-          <p class="quote">“Từ sự cố đến hành động — dựa trên dữ liệu và trí tuệ.”</p>
-        </div>
-        <div class="brand-footer">
-          <span class="brand-denso">DENSO</span>
-          <span class="brand-x">×</span>
-          <span>Control Tower</span>
-          <small>v0.4.2 · 2026-10-10</small>
-        </div>
-      </div>
+    const draw = (msg, ok) => { A.innerHTML = `<div class="auth-l"><div class="brand"><div class="logo">F</div><div><b>FlowSight</b><small>Hệ thống Phân tích Tác động Sự cố & Nguyên nhân cấp Lô</small></div></div>
+      <h2>Từ một sự cố máy, biết ngay lô nào, đơn (JT) nào, chuyến giao hàng nào bị ảnh hưởng.</h2>
+      <p class="tagline">Nối sự cố máy với Lot, JT và chuyến giao hàng bị ảnh hưởng.</p>
+      <p class="quote">“Từ sự cố đến hành động — dựa trên dữ liệu và trí tuệ”</p><div class="brand-footer"><span class="brand-denso">DENSO</span><span class="brand-x">×</span><span>FlowSight Control Tower</span><small>v0.4.2 · 2026-10-10</small></div></div>
       <div class="auth-r"><div class="card auth-card"><div class="steps"><span class="${tab === 'in' ? 'on' : ''}" data-t="in" style="cursor:pointer">Đăng nhập</span><span class="${tab === 'up' ? 'on' : ''}" data-t="up" style="cursor:pointer">Đăng ký</span></div>
       ${msg ? `<div class="callout ${ok ? 'ok' : 'err'}">${msg}</div>` : ''}
       ${tab === 'in' ? `<label class="fl">Email<input id="a-e" type="email" autocomplete="username" placeholder="ten@congty.com"></label><label class="fl">Mật khẩu<input id="a-p" type="password" autocomplete="current-password"></label><button class="btn wide" id="a-go">Đăng nhập</button>
@@ -800,6 +771,16 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
 })();
 </script><script>/* FR-09 Ưu tiên & đề xuất hành động */
 (function () {
+  /* Kết quả mô phỏng What-if từ Python engine (Monte Carlo 20.000 lần) — dữ liệu tham khảo */
+  const WHATIF_F01 = [
+    { id: 'A', name: 'Giữ nguyên', desc: 'Để yên, chấp nhận rủi ro', p: 1.0, cost: 740000, rec: false },
+    { id: 'B', name: 'Tăng ca 2h', desc: 'Tăng ca 2h ngày hôm sau để bù sản lượng', p: 0.2658, cost: 2200000, rec: false },
+    { id: 'C', name: 'Tăng ca 4h', desc: 'Tăng ca 4h để bù toàn bộ', p: 0.0, cost: 4400000, rec: false },
+    { id: 'D', name: 'Đổi thứ tự SX', desc: 'Ưu tiên JT-0231 trước', p: 0.256, cost: 1500000, rec: false },
+    { id: 'E', name: 'Đổi thứ tự + Tăng ca 2h', desc: 'Kết hợp đổi thứ tự và tăng ca', p: 0.0098, cost: 3700000, rec: true },
+    { id: 'F', name: 'Chuyển line khác', desc: 'Chuyển sang dây chuyền dự phòng', p: 1.0, cost: 520000, rec: false },
+    { id: 'G', name: 'Giao gấp', desc: 'Thuê vận chuyển nhanh', p: 1.0, cost: 15720000, rec: false },
+  ];
   const u = FS.ui, STS = ['Chưa xem xét', 'Đang xem xét', 'Đã chấp nhận', 'Từ chối', 'Cần xác minh'];
   FS.pages.priority = { title: 'Ưu tiên & Hành động', sub: 'Xếp hạng theo từng chỉ báo; điểm tổng hợp chỉ khi trọng số được xác nhận', render(root) {
     const R = FS.engine.impactAll(), C = FS.config, map = new Map();
@@ -812,6 +793,11 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
     root.innerHTML = `<div class="card"><div class="card-h"><h3>Cách xếp hạng</h3><span class="sp"><label class="row"><input type="checkbox" id="uw" ${C.useWeights ? 'checked' : ''}> Dùng điểm tổng hợp (trọng số demo)</label></span></div>
       ${C.useWeights ? `<div class="callout warn">Trọng số đang dùng là <b>demo, chưa được DENSO xác nhận</b>: thiếu hụt ${C.wShort} · slack ${C.wSlack} · liên kết ${C.wLink} · lan truyền ${C.wBreadth} · tin cậy ${C.wConf}. Chỉnh tại Kiến trúc & Cấu hình.</div>` : '<div class="callout info">Chưa có trọng số thống nhất → hiển thị <b>từng chỉ báo riêng</b>, sắp xếp theo thiếu hụt ước tính. Không tạo điểm ưu tiên tổng hợp.</div>'}</div>
     <div class="card mt"><div class="card-h"><h3>Thứ tự xử lý JT/Order</h3><small>Bấm dòng để xem lý do & ghi nhận quyết định</small></div><div id="t"></div></div>
+    <div class="card mt"><div class="card-h"><h3>Mô phỏng phương án xử lý (F01)</h3><span class="sp"><small class="muted">Từ Python engine · Monte Carlo 20.000 lần</small></span></div>
+      <div class="tbl-wrap"><table class="tbl"><thead><tr><th>PA</th><th>Phương án</th><th>Mô tả</th><th>P(trễ)</th><th>Chi phí</th><th></th></tr></thead><tbody>
+      ${WHATIF_F01.map(o => `<tr${o.rec ? ' style="background:#f0fdf4"' : ''}><td><b>${o.id}</b></td><td>${o.name}</td><td><small>${o.desc}</small></td><td>${(o.p * 100).toFixed(1)}%</td><td>${FS.fmt.n(o.cost)}đ</td><td>${o.rec ? u.badge('Khuyến nghị', 'green', '★') : ''}</td></tr>`).join('')}
+      </tbody></table></div>
+      <small class="muted">Phương án E được khuyến nghị: chi phí thấp nhất trong các phương án giảm P(trễ) dưới ngưỡng.</small></div>
     <div class="card mt"><div class="card-h"><h3>Lịch sử quyết định</h3></div>${FS.wf.hist.filter(h => h.what.startsWith('JT')).slice(0, 8).map(h => `<div class="tl"><div><b>${h.what}</b> <small>${h.t}</small></div></div>`).join('') || '<small class="muted">Chưa có quyết định nào.</small>'}</div>
     <div class="callout info">FlowSight không gửi lệnh điều khiển máy hay đổi kế hoạch trong hệ thống nguồn; mọi đề xuất chỉ để người dùng xem xét.</div>`;
     u.$('#uw', root).onchange = e => { C.useWeights = e.target.checked; FS.saveConfig('Bật/tắt điểm tổng hợp'); FS.go(); };
