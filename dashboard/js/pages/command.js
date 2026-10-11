@@ -19,7 +19,7 @@
         done: incs.filter(i => FS.engine.incStatus(i) === 'Đã đóng')
       };
       const jtMap = new Map();
-      R.forEach(r => r.atRisk.forEach(x => { const o = jtMap.get(x.jt.jt_id); if (!o || x.exposure > o.exposure) jtMap.set(x.jt.jt_id, x); }));
+      R.forEach(r => r.atRisk.forEach(x => { const o = jtMap.get(x.jt.jt_id); if (!o || x.exposure > o.exposure) jtMap.set(x.jt.jt_id, Object.assign({}, x, { inc: r.inc.incident_id })); }));
       const jts = [...jtMap.values()].sort((a, b) => b.exposure - a.exposure);
       const lotSet = new Set(incs.flatMap(i => FS.lotList(i.affected_lots)));
       const nets = R.filter(r => r.net != null), short = nets.reduce((s, r) => s + r.net, 0);

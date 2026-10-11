@@ -4,6 +4,7 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
   const u = FS.ui;
   FS.pages.impact = { title: 'Phân tích Tác động', sub: 'Ước tính sản lượng tổn thất, thiếu hụt ròng và đơn hàng chịu ảnh hưởng', noFilter: true, render(root) {
     const all = FS.tables.incident_truth, q = FS.q(); let id = q.inc || all[0].incident_id, dur = q.dur != null ? +q.dur : null;
+    if (!all.some(i => i.incident_id === id)) id = all[0].incident_id;
     const C = FS.config;
     function draw() {
       const inc = all.find(i => i.incident_id === id), R = FS.engine.impact(inc, dur != null ? { durH: dur } : {}), what = dur != null && dur !== inc.duration_h;

@@ -41,7 +41,7 @@
         u.table(u.$('#cd-table', root), {
           cols: [{ k: 'incident_id', t: 'Sự cố' }, { k: 'station_id', t: 'Máy' }, { t: 'Nhóm', r: r => r._g }, { k: 'fmea_code', t: 'FMEA' }, { t: 'Mô tả lỗi', r: r => fmn(r) }, { k: 'rpn', t: 'RPN' }, { k: 'duration_h', t: 'Dừng (h)' }, { t: 'Mức độ', r: r => u.sev(r.severity_level) }],
           rows, pageSize: 10, export: 'phan_bo_nguyen_nhan',
-          onRow: r => location.hash = '#/impact?inc=' + r.incident_id
+          onRow: r => location.hash = '#/incident_intel?tab=impact&inc=' + r.incident_id
         });
       }
       /* Top FMEA */
