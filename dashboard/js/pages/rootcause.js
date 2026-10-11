@@ -3,7 +3,7 @@
   const u = FS.ui;
   FS.pages.rootcause = { title: 'Nguyên nhân & Bằng chứng', sub: 'Giả thuyết nguyên nhân kèm chuỗi bằng chứng — hỗ trợ kỹ sư đánh giá', noFilter: true, render(root) {
     const all = FS.tables.incident_truth; let id = FS.q().inc || 'INC-0013';
-    root.innerHTML = `<div class="card"><label>Sự cố<select id="i">${all.map(i => `<option value="${i.incident_id}" ${i.incident_id === id ? 'selected' : ''}>${i.incident_id} · ${i.station_id} · ${i.root_cause_type}</option>`).join('')}</select></label></div><div id="o"></div>`;
+    root.innerHTML = `<div class="card"><label>Sự cố<select id="i">${all.map(i => `<option value="${i.incident_id}" ${i.incident_id === id ? 'selected' : ''}>${i.incident_id} · ${i.station_id} · ${i.test_case_link || '—'}</option>`).join('')}</select></label></div><div id="o"></div>`;
     function run() {
       const inc = all.find(i => i.incident_id === id), F = FS.engine.cause(inc), o = u.$('#o', root);
       o.innerHTML = `<div class="callout warn mt">Phân tích dùng <b>quy tắc nghiệp vụ & thống kê mô tả</b> (chưa dùng ML). Tương quan không được hiểu là nhân quả. Kết quả <b>không</b> tự đóng sự cố hay thay thế đánh giá kỹ sư.</div>
