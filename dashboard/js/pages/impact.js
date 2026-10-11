@@ -21,7 +21,7 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
         <small class="muted">WIP không cộng với FG để tránh đếm trùng cùng một lượng sản phẩm.</small></div></div>
       <div class="card mt"><div class="card-h"><h3>JT/Order bị ảnh hưởng</h3><small>Bấm dòng để xem căn cứ liên kết</small></div><div id="t"></div></div>
       <details class="fx mt" open><summary>Giả định & công thức (tái lập được)</summary><table class="tbl mt"><tbody>${R.steps.map(s => `<tr><td><b>${s[0]}</b></td><td>${s[1]}</td><td class="muted">${s[2]}</td></tr>`).join('')}</tbody></table>
-        <ul>${R.assume.map(a => `<li>${a}</li>`).join('')}<li>Ngưỡng rủi ro: ${C.thresholdOn ? `Cao ≥ ${C.thHigh}% · TB ≥ ${C.thMid}% (ngưỡng dung sai quy định (ngưỡng dung sai))` : 'Chưa cấu hình ngưỡng'}</li><li>Không khẳng định giao trễ khi chưa đối chiếu lịch giao & phương án phục hồi.</li></ul></details>`;
+        <ul>${R.assume.map(a => `<li>${a}</li>`).join('')}<li>Ngưỡng rủi ro: ${C.thresholdOn ? `Cao ≥ ${C.thHigh}% · TB ≥ ${C.thMid}% (ngưỡng dung sai quy định (ngưỡng dung sai))` : 'Chưa cấu hình ngưỡng'}</li><li>Không khẳng định giao trễ khi chưa đối chiếu lịch giao & phương án phục hồi.</li></ul></details>` + `<div class="row mt"><a class="btn" href="#/incident_intel?tab=propagation&inc=${id}" style="text-decoration:none">Xem lan truyền rủi ro →</a></div>`;
       u.$('#i', root).onchange = e => { id = e.target.value; dur = null; draw(); };
       u.$('#go', root).onclick = () => { dur = +u.$('#d', root).value; C.schedStart = +u.$('#s1', root).value; C.schedEnd = +u.$('#s2', root).value; C.fgUsablePct = +u.$('#fg', root).value; C.useRecovery = u.$('#rc', root).checked; if (FS.auth.can('config')) FS.saveConfig('Thay đổi tham số từ Impact Analysis'); u.toast('Đã tính lại các chỉ số phụ thuộc'); draw(); };
       const rs = u.$('#rs', root); if (rs) rs.onclick = () => { dur = null; draw(); };
@@ -31,11 +31,6 @@ FS.q = () => Object.fromEntries(new URLSearchParams((location.hash.split('?')[1]
         { t: 'Liên kết', r: x => u.prov(x.link), x: x => x.link }, { t: 'Rủi ro', r: x => u.badge(x.risk.t, x.risk.c, x.risk.i), x: x => x.risk.t }, { t: 'Giao hàng', r: x => x.ship.map(s => s.status).join(', ') || 'Chưa có lịch giao', x: x => x.ship.map(s => s.status).join(',') }],
         onRow: x => u.modal('Căn cứ ' + x.jt.jt_id, u.kv([['Liên kết', u.prov(x.link)], ['Căn cứ', x.basis], ['Khách hàng', x.jt.customer], ['Ưu tiên', x.jt.priority], ['Line', x.jt.line_id], ['Giao hàng', x.ship.map(s => `${s.shipment_id}: ${s.qty_actual}/${s.qty_planned} ${s.status}`).join('<br>') || 'Chưa có dữ liệu lịch giao → không kết luận trễ']])) });
     }
-    /* Nút bước tiếp theo */
-    const _nav = document.createElement('div');
-    _nav.className = 'row mt';
-    _nav.innerHTML = `<a class="btn" href="#/incident_intel?tab=propagation&inc=${id}" style="text-decoration:none">Xem lan truyền rủi ro →</a>`;
-    root.appendChild(_nav);
     draw();
   } };
 })();
